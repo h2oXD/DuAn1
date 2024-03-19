@@ -3,6 +3,8 @@
     require_once "commons/env.php";
     require_once "commons/helper.php";
     require_once "commons/connect-db.php";
+    require_once "commons/model.php";
+
 
     //Require các file trong controllers, models, views
     require_file(PATH_CONTROLLER);
