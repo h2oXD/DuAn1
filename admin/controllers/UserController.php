@@ -6,7 +6,7 @@ function userListtAll(){
     $script2 = 'users/script';
     $style = 'datatable';
     $users = listAll('users');
-    debug($users);
+
     require_once PATH_VIEW_ADMIN . "layouts/master.php";
 }
 function userCreate(){

@@ -19,6 +19,11 @@
         'users-update' => userUpdate($_GET['id']),
         'users-delete' => userDelete($_GET['id']),
         
-
+        // CRUD loại hàng
+        'Catagories' => Categories_ListtAll(),
+        'Catagories-detail' => Catagory_ShowOne($_GET['id']),
+        'Catagories-create' => Category_Create(),
+        'Catagories-update' => Category_Update($_GET['id']),
+        'Catagories-delete' => Category_Delete($_GET['id']),
     };
 

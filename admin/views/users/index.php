@@ -18,33 +18,40 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
-                            <th>Name</th>
-                            <th>Position</th>
-                            <th>Office</th>
-                            <th>Age</th>
-                            <th>Start date</th>
-                            <th>Salary</th>
+                            <th>ID</th>
+                            <th>Full name</th>
+                            <th>Email</th>
+                            <th>Password</th>
+                            <th>Phone number</th>
+                            <th>Address</th>
+                            <th>Role</th>
+                            <th>Active</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
-                    <tfoot>
-                        <tr>
-                            <th>Name</th>
-                            <th>Position</th>
-                            <th>Office</th>
-                            <th>Age</th>
-                            <th>Start date</th>
-                            <th>Salary</th>
-                        </tr>
-                    </tfoot>
                     <tbody>
-                        <tr>
-                            <td>Tiger Nixon</td>
-                            <td>System Architect</td>
-                            <td>Edinburgh</td>
-                            <td>61</td>
-                            <td>2011/04/25</td>
-                            <td>$320,800</td>
-                        </tr>
+                        <?php foreach($users as $user) : ?>
+                            <tr>
+                                <td><?= $user['id'] ?></td>
+                                <td><?= $user['name'] ?></td>
+                                <td><?= $user['email'] ?></td>
+                                <td><?= $user['password'] ?></td>
+                                <td><?= $user['phone_number'] ?></td>
+                                <td><?= $user['address'] ?></td>
+                                <td>
+                                    <?php
+                                        if ($user['role']) {
+                                            
+                                        }
+                                    ?>
+                                </td>
+                                <td><?= $user['is_active'] ?></td>
+                                <td>
+                                    <a href="">Sửa</a>
+                                    <a href="">Xóa</a>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
                     </tbody>
                 </table>
             </div>
@@ -52,7 +59,7 @@
     </div>
 </div>
 <script>
-        // Call the dataTables jQuery plugin
+    // Call the dataTables jQuery plugin
     $(document).ready(function() {
     $('#dataTable').DataTable();
     });
