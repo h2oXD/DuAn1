@@ -50,8 +50,8 @@
                 </a>
                 <div id="collapseThree" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=Catagories' ?>">Danh sách</a>
-                        <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=Catagory-create' ?>">Thêm mới</a>
+                        <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=categories' ?>">Danh sách</a>
+                        <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=category-create' ?>">Thêm mới</a>
 
 
             <li class="nav-item">

@@ -21,20 +21,20 @@
                     <div class="col-md-4">
                         <div class="mb-3 mt-3">
                             <label for="name" class="form-label">Name:</label>
-                            <input value="<?= $categories['name'] ?>" type="name" class="form-control" id="name" placeholder="Enter name" name="name">
+                            <input value="<?= $category['name'] ?>" type="name" class="form-control" id="name" placeholder="Enter name" name="name">
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="mb-3 mt-3">
                             <label for="name" class="form-label">Is_active:</label>
-                            <input value="<?= $categories['is_active'] ?>" type="name" class="form-control" id="name" placeholder="Enter name" name="name">
+                            <input value="<?= $category['is_active'] ?>" type="text" class="form-control" id="is_active" placeholder="Enter active" name="is_active">
                         </div>
                     </div>
                 </div>
 
 
                 <button type="submit" class="btn btn-primary">Submit</button>
-                <a class="btn btn-danger" href="<?= BASE_URL_ADMIN ?>?act=users">Danh sách</a> 
+                <a class="btn btn-danger" href="<?= BASE_URL_ADMIN ?>?act=categories">Danh sách</a> 
             </form>
         </div>
     </div>

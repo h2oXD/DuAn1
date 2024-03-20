@@ -2,7 +2,7 @@
     <!-- Page Heading -->
     <h1 class="h3 mb-2 text-gray-800">
         <?= $title ?? null ?>
-        <a class="btn btn-primary" href="<?= BASE_URL_ADMIN ?>?act=Catagory-create">Thêm mới</a> 
+        <a class="btn btn-primary" href="<?= BASE_URL_ADMIN ?>?act=category-create">Thêm mới</a> 
     </h1>
     <p class="mb-4">
         
@@ -16,6 +16,15 @@
                 Datatable
             </h6>
         </div>
+        <?php if(isset($_SESSION['success'])): ?>
+        <div class="alert alert-success">
+            <ul>
+                
+                <li><?= $_SESSION['success'] ?></li>
+                
+            </ul>
+        </div> <?php unset($_SESSION['success']); ?>
+        <?php endif; ?>
         <div class="card-body">
             <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -39,8 +48,8 @@
                                                 : '<span class="badge badge-danger">Block</span>'?></td>
                             
                             <td>
-                                <a class="btn btn-primary" href="<?= BASE_URL_ADMIN ?>?act=Catagory-update&id=<?= $category['id']?>">Sửa</a> 
-                                <a class="btn btn-danger" onclick="return confirm('Bạn có chắc chắn xóa không')" href="<?= BASE_URL_ADMIN ?>?act=Catagory-delete&id=<?= $user['id']?>">Xóa</a> 
+                                <a class="btn btn-primary" href="<?= BASE_URL_ADMIN ?>?act=category-update&id=<?= $category['id']?>">Sửa</a> 
+                                <a class="btn btn-danger" onclick="return confirm('Bạn có chắc chắn xóa không')" href="<?= BASE_URL_ADMIN ?>?act=category-delete&id=<?= $category['id']?>">Xóa</a> 
                                 
                             </td>
                         </tr>
