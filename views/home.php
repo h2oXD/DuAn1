@@ -6,6 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Trang chủ nè</h1>
+    <h1>Trang chủ</h1>
 </body>
 </html>
