@@ -1,7 +1,7 @@
 <script>
-    $(document).ready(function () {
-        $('#dataTable').DataTable(
-            "oder" =false
-        );
+    $(document).ready(function() {
+        $('#dataTable').DataTable({
+            "order":false
+        });
     });
 </script>
