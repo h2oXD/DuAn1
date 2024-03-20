@@ -1,6 +1,9 @@
 <div class="container-fluid">
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800">Tables</h1>
+    <h1 class="h3 mb-2 text-gray-800">
+        <?= $title ?? null ?>
+        <a class="btn btn-primary" href="<?= BASE_URL_ADMIN ?>?act=users-create">Thêm mới</a> 
+    </h1>
     <p class="mb-4">
         
         
@@ -18,42 +21,40 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
+                            <th>ID</th>
                             <th>Name</th>
-                            <th>Position</th>
-                            <th>Office</th>
-                            <th>Age</th>
-                            <th>Start date</th>
-                            <th>Salary</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                            <th>Active</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
-                    <tfoot>
-                        <tr>
-                            <th>Name</th>
-                            <th>Position</th>
-                            <th>Office</th>
-                            <th>Age</th>
-                            <th>Start date</th>
-                            <th>Salary</th>
-                        </tr>
-                    </tfoot>
                     <tbody>
+                        <?php foreach($users as $user): ?>
+                        
+                        
                         <tr>
-                            <td>Tiger Nixon</td>
-                            <td>System Architect</td>
-                            <td>Edinburgh</td>
-                            <td>61</td>
-                            <td>2011/04/25</td>
-                            <td>$320,800</td>
+                            <td><?= $user['id']?></td>
+                            <td><?= $user['name']?></td>
+                            <td><?= $user['email']?></td>
+                            <td><?= $user['role'] 
+                                            ? '<span class="badge badge-success">Admin</span>' 
+                                                : '<span class="badge badge-warning">Member</span>'?></td>
+                            <td><?= $user['is_active'] 
+                                            ? '<span class="badge badge-success">Active</span>' 
+                                                : '<span class="badge badge-danger">Block</span>'?></td>
+                            
+                            <td>
+                                <a class="btn btn-info" href="<?= BASE_URL_ADMIN ?>?act=users-detail&id=<?= $user['id']?>">Chi tiết</a> 
+                                <a class="btn btn-primary" href="<?= BASE_URL_ADMIN ?>?act=users-update&id=<?= $user['id']?>">Sửa</a> 
+                                
+                            </td>
                         </tr>
+                        <?php endforeach; ?>
                     </tbody>
                 </table>
+                
             </div>
         </div>
     </div>
 </div>
-<script>
-        // Call the dataTables jQuery plugin
-    $(document).ready(function() {
-    $('#dataTable').DataTable();
-    });
-</script>
