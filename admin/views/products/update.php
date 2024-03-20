@@ -16,7 +16,7 @@
             </h6>
         </div>
         <div class="card-body">
-            <form action="" method="post">
+            <form action="" method="post" enctype="multipart/form-data">
                 <div class="row">
                     <div class="col-md-4">
                         <div class="mb-3 mt-3">
@@ -36,7 +36,7 @@
                         </div>
                         <div class="mb-3 mt-3">
                             <label for="thumbnail" class="form-label">Thumbnail:</label>
-                            <input value="<?= $product['thumbnail'] ?>" type="text" class="form-control" id="thumbnail"
+                            <input value="<?= $product['thumbnail'] ?>" type="file" class="form-control" id="thumbnail"
                                 placeholder="Enter thumbnail" name="thumbnail">
                         </div>
                     </div>
@@ -63,3 +63,4 @@
         </div>
     </div>
 </div>
+

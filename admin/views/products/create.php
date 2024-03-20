@@ -16,23 +16,23 @@
             </h6>
         </div>
         <div class="card-body">
-            <form action="" method="post">
+            <form action="" method="post" enctype="multipart/form-data">
                 <div class="row">
                     <div class="col-md-6">
                     <div class="mb-3 mt-3">
-                            <label for="name" class="form-label">Name:</label>
-                            <input type="name" class="form-control" id="name" placeholder="Enter name" name="name">
+                            <label for="Title" class="form-label">Title:</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter Title" name="title">
                         </div>
                         <div class="mb-3 mt-3">
-                            <label for="email" class="form-label">Email:</label>
-                            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                            <label for="price" class="form-label">Price:</label>
+                            <input type="number" min="0" class="form-control" id="price" placeholder="Enter price" name="price">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="mb-3 mt-3">
-                            <label for="password" class="form-label">Password:</label>
-                            <input type="password" class="form-control" id="password" placeholder="Enter password"
-                                name="password">
+                            <label for="sale" class="form-label">Sale:</label>
+                            <input type="number" min="0" class="form-control" id="sale" placeholder="Enter sale"
+                                name="sale">
                         </div>
                         <div class="mb-3 mt-3">
                             <label for="role" class="form-label">Role:</label>
@@ -44,26 +44,12 @@
                     </div>
                     <div class="col-md-6">
                     <div class="mb-3 mt-3">
-                            <label for="name" class="form-label">Name:</label>
-                            <input type="name" class="form-control" id="name" placeholder="Enter name" name="name">
+                            <label for="Thumbnail" class="form-label">Thumbnail:</label>
+                            <input type="file" class="form-control" id="name" placeholder="Enter Thumbnail" name="thumbnail">
                         </div>
                         <div class="mb-3 mt-3">
-                            <label for="email" class="form-label">Email:</label>
-                            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="mb-3 mt-3">
-                            <label for="password" class="form-label">Password:</label>
-                            <input type="password" class="form-control" id="password" placeholder="Enter password"
-                                name="password">
-                        </div>
-                        <div class="mb-3 mt-3">
-                            <label for="role" class="form-label">Role:</label>
-                            <Select class="form-control" class="form-control" name="role">
-                                <option value="1">Admin</option>
-                                <option value="0">Member</option>
-                            </Select>
+                            <label for="price" class="form-label">Price:</label>
+                            <input type="number" min="0" class="form-control" id="price" placeholder="Enter price" name="price">
                         </div>
                     </div>
                 </div>

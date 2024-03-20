@@ -71,7 +71,7 @@ function Category_validateCreate($data){
         $errors[] = "Trường name là bắt buộc";
     }elseif(strlen($data['name']) > 50){
         $errors[] = "Trường name độ dài tối đa 50 kí tự";
-    }elseif(!checkUniqueName('categories', $data['name'])){
+    }elseif(!checkUniqueName('product_categories', $data['name'])){
         $errors[] = "Name đã được sử dụng";
     }
 
@@ -88,7 +88,7 @@ function Category_validateUpdate($id, $data){
         $errors[] = "Trường name là bắt buộc";
     }elseif(strlen($data['name']) > 50){
         $errors[] = "Trường name độ dài tối đa 50 kí tự";
-    }elseif(!checkUniqcheck_UniqueName_For_UpdateName('categories', $id, $data['name'])){
+    }elseif(!checkUniqcheck_UniqueName_For_UpdateName('product_categories', $id, $data['name'])){
         $errors[] = "Name đã được sử dụng";
     }
 
