@@ -23,6 +23,7 @@ function Catagory_ShowOne($id){
 function Category_Update($id){
     $view = 'categories/update';
     $title = 'Cập nhật User';
+
     require_once PATH_VIEW_ADMIN . "layouts/master.php";
 }
 
@@ -40,6 +41,23 @@ function validateCreate($data){
     }elseif(strlen($data['name']) > 50){
         $errors[] = "Trường name độ dài tối đa 50 kí tự";
     }elseif(!checkUniqueName('categories', $data['name'])){
+        $errors[] = "Name đã được sử dụng";
+    }
+
+    return $errors;
+    
+}
+
+function validateUpdate($id, $data){
+    // name - bắt buộc, độ dài tối đa 50 kí tự, không được trùng
+
+    $errors = [];
+
+    if(empty($data['name'])){
+        $errors[] = "Trường name là bắt buộc";
+    }elseif(strlen($data['name']) > 50){
+        $errors[] = "Trường name độ dài tối đa 50 kí tự";
+    }elseif(!check_UniqueName_For_Update('categories', $id, $data['name'])){
         $errors[] = "Name đã được sử dụng";
     }
 
