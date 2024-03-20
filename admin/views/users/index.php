@@ -16,6 +16,15 @@
                 Datatable
             </h6>
         </div>
+        <?php if(isset($_SESSION['success'])): ?>
+        <div class="alert alert-success">
+            <ul>
+                
+                <li><?= $_SESSION['success'] ?></li>
+                
+            </ul>
+        </div> <?php unset($_SESSION['success']); ?>
+        <?php endif; ?>
         <div class="card-body">
             <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">

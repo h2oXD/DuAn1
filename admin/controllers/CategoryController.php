@@ -52,7 +52,7 @@ function Category_Delete($id){
     header("Location: ".BASE_URL_ADMIN."?act=Catagories");
 }
 
-function validateCreate($data){
+function Category_validateCreate($data){
     // name - bắt buộc, độ dài tối đa 50 kí tự, không được trùng
 
     $errors = [];
@@ -69,7 +69,7 @@ function validateCreate($data){
     
 }
 
-function validateUpdate($id, $data){
+function Category_validateUpdate($id, $data){
     // name - bắt buộc, độ dài tối đa 50 kí tự, không được trùng
 
     $errors = [];
