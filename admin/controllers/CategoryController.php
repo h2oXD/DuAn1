@@ -22,6 +22,7 @@ function Category_Create(){
             $_SESSION['errors'] = $errors;
             $_SESSION['data'] = $data;
         }else{
+        
             insert('product_categories',$data);
             $_SESSION['success'] = "Thao tác thành công";
             header("Location: " . BASE_URL_ADMIN . "?act=categories");
