@@ -6,6 +6,7 @@ if (!function_exists('get_str_keys')) {
         return implode(',', array_keys($data));
     }
 }
+
 if (!function_exists('get_virtual_params')) {
     function get_virtual_params($data)
     {
@@ -17,6 +18,7 @@ if (!function_exists('get_virtual_params')) {
         return implode(',', $tmp);
     }
 }
+
 if (!function_exists('get_set_params')) {
     function get_set_params($data)
     {
@@ -52,6 +54,7 @@ if (!function_exists('insert')) {
 
     }
 }
+
 if (!function_exists('listAll')) {
     function listAll($tableName)
     {
@@ -69,6 +72,7 @@ if (!function_exists('listAll')) {
 
     }
 }
+
 if (!function_exists('showOne')) {
     function showOne($tableName, $id)
     {

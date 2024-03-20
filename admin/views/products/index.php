@@ -22,11 +22,13 @@
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>title</th>
-                            <th>product_category_id</th>
-                            <th>price</th>
-                            <th>tags</th>
-                            <th>action</th>
+                            <th>Title</th>
+                            <th>Product_category_id</th>
+                            <th>Price</th>
+                            <th>Sale</th>
+                            <th>Thumbnail</th>
+                            <th>Tags</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -38,6 +40,8 @@
                             <td><?= $product['title']?></td>
                             <td><?= $product['product_category_id']?></td>
                             <td><?= $product['price']?></td>
+                            <td><?= $product['sale']?></td>
+                            <td><?= $product['thumbnail']?></td>
                             <td><?= $product['tags']?></td>
                             <td>
                                 <a class="btn btn-info" href="<?= BASE_URL_ADMIN ?>?act=products-detail&id=<?= $product['id']?>">Chi tiết</a> 
