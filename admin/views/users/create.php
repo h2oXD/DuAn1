@@ -31,7 +31,7 @@
                     <div class="col-md-6">
                         <div class="mb-3 mt-3">
                             <label for="name" class="form-label">Name:</label>
-                            <input value="<?= isset($_SESSION['data']) ? $_SESSION['data']['name'] : null ?>" type="name" class="form-control" id="name" placeholder="Enter name" name="name">
+                            <input value="<?= isset($_SESSION['data']) ? $_SESSION['data']['name'] : null ?>" type="text" class="form-control" id="name" placeholder="Enter name" name="name">
                         </div>
                         <div class="mb-3 mt-3">
                             <label for="email" class="form-label">Email:</label>

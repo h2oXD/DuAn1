@@ -17,11 +17,21 @@ function Category_Create(){
         $data = [
             "name" => $_POST['name'],
         ];
-        insert('product_categories',$data);
+        $errors = Category_validateCreate($data);
+        if(!empty($errors)){
+            $_SESSION['errors'] = $errors;
+            $_SESSION['data'] = $data;
+        }else{
+        
+            insert('product_categories',$data);
+            $_SESSION['success'] = "Thao tác thành công";
+            header("Location: " . BASE_URL_ADMIN . "?act=categories");
+        }
+
     }
     require_once PATH_VIEW_ADMIN . "layouts/master.php";
 }
-function Catagory_ShowOne($id){
+function Category_ShowOne($id){
     $category = showOne('product_categories',$id);
     if(empty($category)){
         e404();
@@ -38,9 +48,10 @@ function Category_Update($id){
     if(!empty($_POST)){
         $data = [
             "name" => $_POST['name'] ?? null,
-            "is_active" => $_POST['name'],
+            "is_active" => $_POST['is_active'],
         ];
         update('product_categories',$id,$data);
+        header("Location: ".BASE_URL_ADMIN."?act=categories");
     }
     $view = 'categories/update';
     $title = 'Cập nhật';
@@ -49,7 +60,7 @@ function Category_Update($id){
 
 function Category_Delete($id){
     delete2('product_categories',$id);
-    header("Location: ".BASE_URL_ADMIN."?act=Catagories");
+    header("Location: ".BASE_URL_ADMIN."?act=categories");
 }
 
 function Category_validateCreate($data){
@@ -61,7 +72,7 @@ function Category_validateCreate($data){
         $errors[] = "Trường name là bắt buộc";
     }elseif(strlen($data['name']) > 50){
         $errors[] = "Trường name độ dài tối đa 50 kí tự";
-    }elseif(!checkUniqueName('categories', $data['name'])){
+    }elseif(!checkUniqueName('product_categories', $data['name'])){
         $errors[] = "Name đã được sử dụng";
     }
 
@@ -78,7 +89,7 @@ function Category_validateUpdate($id, $data){
         $errors[] = "Trường name là bắt buộc";
     }elseif(strlen($data['name']) > 50){
         $errors[] = "Trường name độ dài tối đa 50 kí tự";
-    }elseif(!checkUniqcheck_UniqueName_For_UpdateName('categories', $id, $data['name'])){
+    }elseif(!checkUniqueNameForUpdate('product_categories', $id, $data['name'])){
         $errors[] = "Name đã được sử dụng";
     }
 
