@@ -22,6 +22,7 @@ function Category_Create(){
             $_SESSION['errors'] = $errors;
             $_SESSION['data'] = $data;
         }else{
+        
             insert('product_categories',$data);
             $_SESSION['success'] = "Thao tác thành công";
             header("Location: " . BASE_URL_ADMIN . "?act=categories");
@@ -88,7 +89,7 @@ function Category_validateUpdate($id, $data){
         $errors[] = "Trường name là bắt buộc";
     }elseif(strlen($data['name']) > 50){
         $errors[] = "Trường name độ dài tối đa 50 kí tự";
-    }elseif(!checkUniqcheck_UniqueName_For_UpdateName('product_categories', $id, $data['name'])){
+    }elseif(!checkUniqueNameForUpdate('product_categories', $id, $data['name'])){
         $errors[] = "Name đã được sử dụng";
     }
 
