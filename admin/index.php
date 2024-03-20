@@ -35,5 +35,7 @@
         'Catagory-create' => Category_Create(),
         'Catagory-update' => Category_Update($_GET['id']),
         'Catagory-delete' => Category_Delete($_GET['id']),
+
     };
+
 
