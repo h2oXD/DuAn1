@@ -15,30 +15,40 @@
                 Create
             </h6>
         </div>
+        
+        <?php if(isset($_SESSION['errors'])): ?>
+        <div class="alert alert-danger">
+            <ul>
+                <?php foreach($_SESSION['errors'] as $error): ?>
+                <li><?= $error ?></li>
+                <?php endforeach; ?>
+            </ul>
+        </div> <?php unset($_SESSION['errors']); ?>
+        <?php endif; ?>
         <div class="card-body">
             <form action="" method="post">
                 <div class="row">
                     <div class="col-md-6">
                         <div class="mb-3 mt-3">
                             <label for="name" class="form-label">Name:</label>
-                            <input type="name" class="form-control" id="name" placeholder="Enter name" name="name">
+                            <input value="<?= isset($_SESSION['data']) ? $_SESSION['data']['name'] : null ?>" type="name" class="form-control" id="name" placeholder="Enter name" name="name">
                         </div>
                         <div class="mb-3 mt-3">
                             <label for="email" class="form-label">Email:</label>
-                            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                            <input value="<?= isset($_SESSION['data']) ? $_SESSION['data']['email'] : null ?>" type="email" class="form-control" id="email" placeholder="Enter email" name="email">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="mb-3 mt-3">
                             <label for="password" class="form-label">Password:</label>
-                            <input type="password" class="form-control" id="password" placeholder="Enter password"
+                            <input value="<?= isset($_SESSION['data']) ? $_SESSION['data']['password'] : null ?>" type="password" class="form-control" id="password" placeholder="Enter password"
                                 name="password">
                         </div>
                         <div class="mb-3 mt-3">
                             <label for="role" class="form-label">Role:</label>
                             <Select class="form-control" class="form-control" name="role">
-                                <option value="1">Admin</option>
-                                <option value="0">Member</option>
+                                <option <?= isset($_SESSION['data']) && $_SESSION['data']['role'] == 1 ? 'selected' : null ?> value="1">Admin</option>
+                                <option <?= isset($_SESSION['data']) && $_SESSION['data']['role'] == 0 ? 'selected' : null ?> value="0">Member</option>
                             </Select>
                         </div>
                     </div>
@@ -51,3 +61,4 @@
         </div>
     </div>
 </div>
+<?php if(isset($_SESSION['data'])) unset($_SESSION['data']); ?>

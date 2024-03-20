@@ -30,12 +30,11 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
-                     <i class="fas fa-user"></i>
-                    <span>Người dùng</span>
+                    <i class="fas fa-user"></i>
+                    <span>Quản lý người dùng</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Người dùng:</h6>
                         <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=users' ?>">Danh sách</a>
                         <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=users-create' ?>">Thêm mới</a>
                     </div>
@@ -53,6 +52,19 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=Catagories' ?>">Danh sách</a>
                         <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=Catagory-create' ?>">Thêm mới</a>
+
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFour"
+                    aria-expanded="true" aria-controls="collapseFour">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Sản phẩm</span>
+                </a>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Người dùng:</h6>
+                        <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=products' ?>">Danh sách</a>
+                        <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=products-create' ?>">Thêm mới</a>
                     </div>
                 </div>
             </li>

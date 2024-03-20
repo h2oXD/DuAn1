@@ -7,7 +7,7 @@ if(!function_exists('checkUniqueName')){
 }
 
 
-if(!function_exists('check_UniqueName_For_Update')){
+if(!function_exists('checkUniqcheck_UniqueName_For_UpdateueName')){
     function checkUniqcheck_UniqueName_For_UpdateueName($tableName, $id, $name){
         
     }
