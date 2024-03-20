@@ -30,10 +30,10 @@
         'products-delete' => productDelete($_GET['id']),
         
         // CRUD loại hàng
-        'Catagories' => Categories_ListtAll(),
-        'Catagory-detail' => Catagory_ShowOne($_GET['id']),
-        'Catagory-create' => Category_Create(),
-        'Catagory-update' => Category_Update($_GET['id']),
-        'Catagory-delete' => Category_Delete($_GET['id']),
+        'categories' => Categories_ListtAll(),
+        'category-detail' => Category_ShowOne($_GET['id']),
+        'category-create' => Category_Create(),
+        'category-update' => Category_Update($_GET['id']),
+        'category-delete' => Category_Delete($_GET['id']),
     };
 

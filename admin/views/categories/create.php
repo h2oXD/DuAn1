@@ -25,6 +25,7 @@
                         <?php endforeach; ?>
                     </ul>
                 </div>
+                <?php unset($_SESSION['errors']); ?>
             <?php endif; ?>
 
             <form action="" method="post">
@@ -39,8 +40,9 @@
 
 
                 <button type="submit" class="btn btn-primary">Submit</button>
-                <a class="btn btn-danger" href="<?= BASE_URL_ADMIN ?>?act=Catagories">Danh sách</a> 
+                <a class="btn btn-danger" href="<?= BASE_URL_ADMIN ?>?act=categories">Danh sách</a> 
             </form>
         </div>
     </div>
 </div>
+<?php if(isset($_SESSION['data'])) unset($_SESSION['data']); ?>
