@@ -22,7 +22,7 @@ if (!function_exists('get_set_params')) {
     {
         $keys = array_keys($data);
         $tmp = [];
-        foreach ($keys as $key => $value) {
+        foreach ($keys as $key) {
             $tmp[] = "$key = :$key";
         }
         return implode(',', $tmp);
@@ -94,13 +94,13 @@ if (!function_exists('update')) {
     {
         try {
             $setParams = get_set_params($data);
-
+            
             $sql = "
                 UPDATE $tableName
                 SET $setParams
                 WHERE id = :id
             ";
-
+            
             $stmt = $GLOBALS['conn']->prepare($sql);
 
             foreach ($data as $fieldName => &$value) {
@@ -118,12 +118,13 @@ if (!function_exists('update')) {
     }
 }
 if (!function_exists('delete')) {
-    function delete($tableName, $id)
+    function delete2($tableName, $id)
     {
         try {
             $sql = "DELETE FROM $tableName WHERE id = :id";
 
             $stmt = $GLOBALS['conn']->prepare($sql);
+            $stmt->bindParam(":id", $id);
 
             $stmt->execute();
 

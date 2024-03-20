@@ -46,6 +46,7 @@
 
 
                 <button type="submit" class="btn btn-primary">Submit</button>
+                <a class="btn btn-danger" href="<?= BASE_URL_ADMIN ?>?act=users">Danh sách</a> 
             </form>
         </div>
     </div>
