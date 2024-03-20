@@ -78,7 +78,7 @@ function Category_validateUpdate($id, $data){
         $errors[] = "Trường name là bắt buộc";
     }elseif(strlen($data['name']) > 50){
         $errors[] = "Trường name độ dài tối đa 50 kí tự";
-    }elseif(!check_UniqueName_For_Update('categories', $id, $data['name'])){
+    }elseif(!checkUniqcheck_UniqueName_For_UpdateName('categories', $id, $data['name'])){
         $errors[] = "Name đã được sử dụng";
     }
 
