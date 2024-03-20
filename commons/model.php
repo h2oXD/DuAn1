@@ -134,7 +134,6 @@ if (!function_exists('delete')) {
 
     }
 }
-
 if (!function_exists('checkUniqueName')) {
     function checkUniqueName($tableName, $name) {
         try {

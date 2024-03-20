@@ -17,15 +17,19 @@
         </div>
         <div class="card-body">
             <table class="table">
-                <?php foreach ($tag as $fieldName => $value): ?>
+                <?php foreach ($product as $fieldName => $value): ?>
                     <tr>
                         <th>
                             <?= ucfirst($fieldName) ?>
                         </th>
+                        <th>
+                            <?= ucfirst($value) ?>
+                        </th>
                     </tr>
+                    
                 <?php endforeach; ?>
             </table>
-            <a class="btn btn-danger" href="<?= BASE_URL_ADMIN ?>?act=tags">Danh sách</a> 
+            <a class="btn btn-danger" href="<?= BASE_URL_ADMIN ?>?act=products">Danh sách</a> 
         </div>
     </div>
 </div>

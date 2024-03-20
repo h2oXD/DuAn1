@@ -20,12 +20,12 @@
         'users-update' => userUpdate($_GET['id']),
         'users-delete' => userDelete($_GET['id']),
 
-        //tag
-        'tags' => tagListtAll(),
-        'tags-detail' => tagShowOne($_GET['id']),
-        'tags-create' => tagCreate(),
-        'tags-update' => tagUpdate($_GET['id']),
-        'tags-delete' => tagDelete($_GET['id']),
+        //product
+        'products' => productListtAll(),
+        'products-detail' => productShowOne($_GET['id']),
+        'products-create' => productCreate(),
+        'products-update' => productUpdate($_GET['id']),
+        'products-delete' => productDelete($_GET['id']),
         
 
     };
