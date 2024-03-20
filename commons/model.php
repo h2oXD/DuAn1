@@ -52,8 +52,8 @@ if (!function_exists('insert')) {
 
     }
 }
-if (!function_exists('selectAll')) {
-    function selectAll($tableName)
+if (!function_exists('listAll')) {
+    function listAll($tableName)
     {
         try {
             $sql = "SELECT * FROM $tableName";
