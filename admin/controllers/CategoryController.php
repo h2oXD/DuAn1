@@ -6,29 +6,50 @@ function Categories_ListtAll(){
     $script = 'datatable';
     $script2 = 'categories/script';
     $style = 'datatable';
-    $categories = listAll('categories');
+    $categories = listAll('product_categories');
 
     require_once PATH_VIEW_ADMIN . "layouts/master.php";
 }
 function Category_Create(){
     $view = 'categories/create';
-    $title = 'Thêm mới User';
+    $title = 'Thêm mới Categories';
+    if(!empty($_POST)){
+        $data = [
+            "name" => $_POST['name'],
+        ];
+        insert('product_categories',$data);
+    }
     require_once PATH_VIEW_ADMIN . "layouts/master.php";
 }
 function Catagory_ShowOne($id){
+    $category = showOne('product_categories',$id);
+    if(empty($category)){
+        e404();
+    }
     $view = 'categories/show';
-    $title = 'Chi tiết User';
+    $title = 'Chi tiết Categories';
     require_once PATH_VIEW_ADMIN . "layouts/master.php";
 }
 function Category_Update($id){
+    $category = showOne('product_categories',$id);
+    if(empty($category)){
+        e404();
+    }
+    if(!empty($_POST)){
+        $data = [
+            "name" => $_POST['name'] ?? null,
+            "is_active" => $_POST['name'],
+        ];
+        update('product_categories',$id,$data);
+    }
     $view = 'categories/update';
-    $title = 'Cập nhật User';
-
+    $title = 'Cập nhật';
     require_once PATH_VIEW_ADMIN . "layouts/master.php";
 }
 
 function Category_Delete($id){
-
+    delete2('product_categories',$id);
+    header("Location: ".BASE_URL_ADMIN."?act=Catagories");
 }
 
 function validateCreate($data){

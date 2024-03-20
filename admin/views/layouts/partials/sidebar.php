@@ -30,7 +30,7 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
+                    <i class="fas fa-user"></i>
                     <span>Người dùng</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
@@ -42,17 +42,17 @@
                 </div>
             </li>
 
+            <!-- Loại hàng -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>Loại hàng</span>
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree"
+                    aria-expanded="true" aria-controls="collapseThree">
+                    <i class="fas fa-box"></i>
+                    <span>Quản lí loại hàng</span>
                 </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div id="collapseThree" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Loại hàng:</h6>
-                        <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=users' ?>">Danh sách</a>
-                        <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=users-create' ?>">Thêm mới</a>
+                        <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=Catagories' ?>">Danh sách</a>
+                        <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=Catagory-create' ?>">Thêm mới</a>
                     </div>
                 </div>
             </li>

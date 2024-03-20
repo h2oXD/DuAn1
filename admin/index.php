@@ -4,6 +4,7 @@
     require_once "../commons/helper.php";
     require_once "../commons/connect-db.php";
     require_once "../commons/model.php";
+    require_once "./models/Category.php";
 
     //Require các file trong controllers, models, views
     require_file(PATH_CONTROLLER_ADMIN);
@@ -21,9 +22,9 @@
         
         // CRUD loại hàng
         'Catagories' => Categories_ListtAll(),
-        'Catagories-detail' => Catagory_ShowOne($_GET['id']),
-        'Catagories-create' => Category_Create(),
-        'Catagories-update' => Category_Update($_GET['id']),
-        'Catagories-delete' => Category_Delete($_GET['id']),
+        'Catagory-detail' => Catagory_ShowOne($_GET['id']),
+        'Catagory-create' => Category_Create(),
+        'Catagory-update' => Category_Update($_GET['id']),
+        'Catagory-delete' => Category_Delete($_GET['id']),
     };
 
