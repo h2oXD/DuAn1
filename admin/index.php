@@ -30,20 +30,11 @@
         'products-delete' => productDelete($_GET['id']),
         
         // CRUD loại hàng
-<<<<<<< HEAD
-        'Catagories' => Categories_ListtAll(),
-        'Catagory-detail' => Catagory_ShowOne($_GET['id']),
-        'Catagory-create' => Category_Create(),
-        'Catagory-update' => Category_Update($_GET['id']),
-        'Catagory-delete' => Category_Delete($_GET['id']),
-
-=======
         'categories' => Categories_ListtAll(),
         'category-detail' => Category_ShowOne($_GET['id']),
         'category-create' => Category_Create(),
         'category-update' => Category_Update($_GET['id']),
         'category-delete' => Category_Delete($_GET['id']),
->>>>>>> 54f1b534a7aac99c2fd718cc60275b5a20c5982d
     };
 
 
