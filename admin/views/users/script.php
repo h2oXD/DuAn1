@@ -1,5 +1,7 @@
 <script>
     $(document).ready(function () {
-        $('#dataTable').DataTable();
+        $('#dataTable').DataTable(
+            "oder" =false
+        );
     });
 </script>

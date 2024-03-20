@@ -16,3 +16,9 @@ if(!function_exists('debug')){
         die;
     }
 }
+if(!function_exists('e404')){
+    function e404(){
+        echo "404 not found";
+        die;
+    }
+}
