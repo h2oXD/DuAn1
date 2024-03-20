@@ -13,11 +13,19 @@
     $act = $_GET['act'] ?? '/';
     match($act){
         '/' => dashboard(),
+
         'users' => userListtAll(),
         'users-detail' => userShowOne($_GET['id']),
         'users-create' => userCreate(),
         'users-update' => userUpdate($_GET['id']),
         'users-delete' => userDelete($_GET['id']),
+
+        //tag
+        'tags' => tagListtAll(),
+        'tags-detail' => tagShowOne($_GET['id']),
+        'tags-create' => tagCreate(),
+        'tags-update' => tagUpdate($_GET['id']),
+        'tags-delete' => tagDelete($_GET['id']),
         
 
     };

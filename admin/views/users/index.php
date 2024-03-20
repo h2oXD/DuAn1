@@ -47,6 +47,7 @@
                             <td>
                                 <a class="btn btn-info" href="<?= BASE_URL_ADMIN ?>?act=users-detail&id=<?= $user['id']?>">Chi tiết</a> 
                                 <a class="btn btn-primary" href="<?= BASE_URL_ADMIN ?>?act=users-update&id=<?= $user['id']?>">Sửa</a> 
+                                <a class="btn btn-danger" onclick="return confirm('Bạn có chắc chắn xóa không')" href="<?= BASE_URL_ADMIN ?>?act=users-delete&id=<?= $user['id']?>">Xóa</a> 
                                 
                             </td>
                         </tr>

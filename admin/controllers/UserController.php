@@ -32,10 +32,26 @@ function userShowOne($id){
     require_once PATH_VIEW_ADMIN . "layouts/master.php";
 }
 function userUpdate($id){
+    $user = showOne('users',$id);
+    if(empty($user)){
+        e404();
+    }
+    if(!empty($_POST)){
+        $data = [
+            "name" => $_POST['name'],
+            "email" => $_POST['email'],
+            "password" => $_POST['password'],
+            "phone_number" => $_POST['phone_number'],
+            "address" => $_POST['address'],
+            "role" => $_POST['role']
+        ];
+        update('users',$id,$data);
+    }
     $view = 'users/update';
     $title = 'Cập nhật';
     require_once PATH_VIEW_ADMIN . "layouts/master.php";
 }
 function userDelete($id){
-
+    delete2('users',$id);
+    header("Location: ".BASE_URL_ADMIN."?act=users");
 }
