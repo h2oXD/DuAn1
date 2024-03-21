@@ -69,11 +69,11 @@
             </div>
         </div>
     </li>
-    <!-- Sản phẩm -->
+    <!-- Tag -->
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse6" aria-expanded="true"
             aria-controls="collapse6">
-            <i class="fas fa-fw fa-cog"></i>
+            <i class="fas fa-tags"></i>
             <span>Tags sản phẩm</span>
         </a>
         <div id="collapse6" class="collapse" aria-labelledby="heading6" data-parent="#accordionSidebar">
@@ -99,14 +99,30 @@
         </div>
     </li>
 
-    <!-- brand -->
+    <!-- Orders -->
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true"
             aria-controls="collapseSix">
+            <i class="fas fa-truck"></i>
+            <span>Quản lí đơn hàng</span>
+        </a>
+        <div id="collapseSix" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=orders' ?>">Danh sách</a>
+                <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=order-create' ?>">Thêm mới</a>
+                <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=order_details' ?>">Thông tin đơn hàng</a>
+            </div>
+        </div>
+    </li>
+
+    <!-- brand -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true"
+            aria-controls="collapseSeven">
             <i class="fas fa-wrench"></i>
             <span>Thương hiệu</span>
         </a>
-        <div id="collapseSix" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div id="collapseSeven" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=brands' ?>">Danh sách</a>
                 <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=brands-create' ?>">Thêm mới</a>

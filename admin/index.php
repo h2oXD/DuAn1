@@ -54,6 +54,20 @@
         'setting-form' => settingShowForm(),
         'setting-save' => settingSave(),
 
+        // CRUD orders
+        'orders' => orders_ListtAll(),
+        'order-detail' => order_ShowOne($_GET['id']),
+        'order-create' => order_Create(),
+        'order-update' => order_Update($_GET['id']),
+        'order-delete' => order_Delete($_GET['id']),
+
+        // CRUD order_details
+        'order_details' => order_details_ListtAll(),
+        'order_detail-detail' => order_detail_ShowOne($_GET['id']),
+        'order_detail-create' => order_detail_Create(),
+        'order_detail-update' => order_detail_Update($_GET['id']),
+        'order_detail-delete' => order_detail_Delete($_GET['id']),
+
         //tag
         'tags' => tagListtAll(),
         'tags-detail' => tagShowOne($_GET['id']),
