@@ -104,9 +104,17 @@
 
     <!--  Setting -->
     <li class="nav-item">
-        <a class="nav-link" href="<?= BASE_URL_ADMIN . '?act=setting-form' ?>">
-        <i class="fas fa-wrench"></i>
-            <span>Setting</span></a>
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true"
+            aria-controls="collapseSeven">
+            <i class="fas fa-wrench"></i>
+            <span>Setting</span>
+        </a>
+        <div id="collapseSeven" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=setting-form' ?>">Logo</a>
+                <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=brands-create' ?>">Banner</a>
+            </div>
+        </div>
     </li>
 
     <!-- Divider -->

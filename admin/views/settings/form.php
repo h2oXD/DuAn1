@@ -23,6 +23,7 @@
                             <input type="text" class="form-control" name="logo" value="<?= $settings['logo'] ?? null ?>">
                         </td>
                     </tr>
+                    
 
                 </table>
 
