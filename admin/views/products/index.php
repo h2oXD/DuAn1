@@ -41,7 +41,7 @@
                             <td><?= $product['product_category_id']?></td>
                             <td><?= $product['price']?></td>
                             <td><?= $product['sale']?></td>
-                            <td><?= $product['thumbnail']?></td>
+                            <td><img src="<?= $product['thumbnail']?>" width="200px" alt=""></td>
                             <td><?= $product['tags']?></td>
                             <td>
                                 <a class="btn btn-info" href="<?= BASE_URL_ADMIN ?>?act=products-detail&id=<?= $product['id']?>">Chi tiết</a> 
