@@ -60,6 +60,13 @@
         'order-create' => order_Create(),
         'order-update' => order_Update($_GET['id']),
         'order-delete' => order_Delete($_GET['id']),
+
+        // CRUD order_details
+        'orders_details' => orders_details_ListtAll(),
+        'orders_detail-detail' => orders_detail_ShowOne($_GET['id']),
+        'orders_detail-create' => orders_detail_Create(),
+        'orders_detail-update' => orders_detail_Update($_GET['id']),
+        'orders_detail-delete' => orders_detail_Delete($_GET['id']),
     };
 
 
