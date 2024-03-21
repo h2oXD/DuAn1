@@ -2,7 +2,7 @@
     <!-- Page Heading -->
     <h1 class="h3 mb-2 text-gray-800">
         <?= $title ?? null ?>
-        <a class="btn btn-primary" href="<?= BASE_URL_ADMIN ?>?act=colors-create">Thêm mới</a> 
+        <a class="btn btn-primary" href="<?= BASE_URL_ADMIN ?>?act=tags-create">Thêm mới</a> 
     </h1>
     <p class="mb-4">
         
@@ -31,23 +31,19 @@
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Color name</th>
-                            <th>Active</th>
+                            <th>Name</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach($color as $color): ?>
-                        
-                        
+                        <?php foreach($tags as $tag): ?>
                         <tr>
-                            <td><?= $color['id']?></td>
-                            <td><?= $color['name']?></td>
-                            <td><?= $color['is_active']?></td>
-                            <td> 
-                                <a class="btn btn-primary" href="<?= BASE_URL_ADMIN ?>?act=colors-update&id=<?= $color['id']?>">Sửa</a> 
-                                <a class="btn btn-danger" onclick="return confirm('Bạn có chắc chắn xóa không')" href="<?= BASE_URL_ADMIN ?>?act=colors-delete&id=<?= $color['id']?>">Xóa</a> 
-                                
+                            <td><?= $tag['id']?></td>
+                            <td><?= $tag['name']?></td>
+                            <td>
+                                <a class="btn btn-info" href="<?= BASE_URL_ADMIN ?>?act=tags-detail&id=<?= $tag['id']?>">Chi tiết</a> 
+                                <a class="btn btn-primary" href="<?= BASE_URL_ADMIN ?>?act=tags-update&id=<?= $tag['id']?>">Sửa</a> 
+                                <a class="btn btn-danger" onclick="return confirm('Bạn có chắc chắn xóa không')" href="<?= BASE_URL_ADMIN ?>?act=tags-delete&id=<?= $tag['id']?>">Xóa</a> 
                             </td>
                         </tr>
                         <?php endforeach; ?>
@@ -58,4 +54,3 @@
         </div>
     </div>
 </div>
-

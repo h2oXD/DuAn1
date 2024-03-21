@@ -16,6 +16,15 @@
                 Datatable
             </h6>
         </div>
+        <?php if(isset($_SESSION['success'])): ?>
+        <div class="alert alert-success">
+            <ul>
+                
+                <li><?= $_SESSION['success'] ?></li>
+                
+            </ul>
+        </div> <?php unset($_SESSION['success']); ?>
+        <?php endif; ?>
         <div class="card-body">
             <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -27,7 +36,6 @@
                             <th>Price</th>
                             <th>Sale</th>
                             <th>Thumbnail</th>
-                            <th>Tags</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -38,11 +46,10 @@
                         <tr>
                             <td><?= $product['id']?></td>
                             <td><?= $product['title']?></td>
-                            <td><?= $product['product_category_id'] ?></td>
+                            <td><?= $product['name'] ?></td>
                             <td><?= $product['price']?></td>
                             <td><?= $product['sale']?></td>
                             <td><img src="<?= BASE_URL.$product['thumbnail']?>" width="80px" alt=""></td>
-                            <td><?= $product['tags']?></td>
                             <td>
                                 <a class="btn btn-info" href="<?= BASE_URL_ADMIN ?>?act=products-detail&id=<?= $product['id']?>">Chi tiết</a> 
                                 <a class="btn btn-primary" href="<?= BASE_URL_ADMIN ?>?act=products-update&id=<?= $product['id']?>">Sửa</a> 

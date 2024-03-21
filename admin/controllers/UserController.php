@@ -112,12 +112,12 @@ function userUpdate($id)
     }
     if (!empty ($_POST)) {
         $data = [
-            "name" => $_POST['name'] ?? null,
-            "email" => $_POST['email'] ?? null,
-            "password" => $_POST['password'] ?? null,
-            "phone_number" => $_POST['phone_number'] ?? null,
-            "address" => $_POST['address'] ?? null,
-            "role" => $_POST['role'] ?? null
+            "name" => $_POST['name'] ?? $user['name'],
+            "email" => $_POST['email'] ?? $user['email'],
+            "password" => $_POST['password'] ?? $user['password'],
+            "phone_number" => $_POST['phone_number'] ?? $user['phone_number'],
+            "address" => $_POST['address'] ?? $user['address'],
+            "role" => $_POST['role'] ?? $user['role']
         ];
         $errors = validateUpdate($id, $data);
         if (!empty ($errors)) {

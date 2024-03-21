@@ -64,9 +64,9 @@
                         <label for="tags" class="form-label">Tags:</label>
                         <input value="<?= $product['tags'] ?>" type="text" class="form-control" id="name" placeholder="Enter tags" name="tags">
                     </div>
-                    <div class="mb-3 mt-3 col-md-6">
+                    <div class="mb-3 mt-3 col">
                         <label for="description" class="form-label">Description:</label>
-                        <textarea name="description" class="form-control" id="" cols="30" rows="10"><?= $product['description'] ?></textarea>
+                        <textarea name="description" class="form-control" id="abc" cols="30" rows="10"><?= $product['description'] ?></textarea>
                     </div>
                 </div>
 

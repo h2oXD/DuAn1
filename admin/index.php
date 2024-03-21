@@ -22,12 +22,7 @@
         'users-update' => userUpdate($_GET['id']),
         'users-delete' => userDelete($_GET['id']),
 
-        //product
-        'products' => productListtAll(),
-        'products-detail' => productShowOne($_GET['id']),
-        'products-create' => productCreate(),
-        'products-update' => productUpdate($_GET['id']),
-        'products-delete' => productDelete($_GET['id']),
+        
         
         // CRUD loại hàng
         'categories' => Categories_ListtAll(),
@@ -35,7 +30,12 @@
         'category-create' => Category_Create(),
         'category-update' => Category_Update($_GET['id']),
         'category-delete' => Category_Delete($_GET['id']),
-
+//product
+        'products' => productListtAll(),
+        'products-detail' => productShowOne($_GET['id']),
+        'products-create' => productCreate(),
+        'products-update' => productUpdate($_GET['id']),
+        'products-delete' => productDelete($_GET['id']),
         // CRUD user_addresses
         'user_addresses' => user_addresses_ListtAll(),
         'user_address-detail' => user_address_ShowOne($_GET['id']),
@@ -53,6 +53,13 @@
          // Setting
         'setting-form' => settingShowForm(),
         'setting-save' => settingSave(),
+
+        //tag
+        'tags' => tagListtAll(),
+        'tags-detail' => tagShowOne($_GET['id']),
+        'tags-create' => tagCreate(),
+        'tags-update' => tagUpdate($_GET['id']),
+        'tags-delete' => tagDelete($_GET['id']),
     };
 
 

@@ -39,7 +39,6 @@ if (!function_exists('insert')) {
             $virtualParams = get_virtual_params($data);
 
             $sql = "INSERT INTO $tableName($strKeys) VALUES($virtualParams)";
-
             $stmt = $GLOBALS['conn']->prepare($sql);
 
             foreach ($data as $fieldName => &$value) {
