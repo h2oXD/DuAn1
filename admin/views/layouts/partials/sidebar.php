@@ -74,7 +74,7 @@
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true"
             aria-controls="collapseFive">
-            <i class="fas fa-fw fa-cog"></i>
+            <i class="fas fa-code-branch"></i>
             <span>Thuộc tính sản phẩm</span>
         </a>
         <div id="collapseFive" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
@@ -89,7 +89,7 @@
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true"
             aria-controls="collapseSix">
-            <i class="fas fa-wrench"></i>
+            <i class="fas fa-medal"></i>
             <span>Thương hiệu</span>
         </a>
         <div id="collapseSix" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
