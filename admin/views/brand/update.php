@@ -31,18 +31,23 @@
                     <div class="col-md-4">
                         <div class="mb-3 mt-3">
                             <label for="name" class="form-label">Name:</label>
-                            <input value="<?= $color['name'] ?>" type="text" class="form-control" id="name" placeholder="Enter name" name="name">
+                            <input value="<?= $brand['name'] ?>" type="text" class="form-control" id="name" placeholder="Enter name" name="name">
                         </div>
                     </div>
+
+                </div>
+                <!-- <div class="row">
                     <div class="col-md-4">
                         <div class="mb-3 mt-3">
-                            <label for="is_active" class="form-label">Is_active:</label>
-                            <input value="<?= $color['is_active'] ?>" type="text" class="form-control" id="is_active" placeholder="Enter active" name="is_active">
+                            <label for="product_id" class="form-label">Product ID:</label>
+                            <input value="<?= $brand['product_id'] ?>" type="text" class="form-control" id="product_id" placeholder="Enter product id" name="product_id">
                         </div>
                     </div>
-                </div>
+                </div> -->
+
+
                 <button type="submit" class="btn btn-primary">Submit</button>
-                <a class="btn btn-danger" href="<?= BASE_URL_ADMIN ?>?act=colors">Danh sách</a> 
+                <a class="btn btn-danger" href="<?= BASE_URL_ADMIN ?>?act=brands">Danh sách</a> 
             </form>
         </div>
     </div>

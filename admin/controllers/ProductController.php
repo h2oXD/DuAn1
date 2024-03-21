@@ -6,15 +6,18 @@ function productListtAll()
     $script = 'datatable';
     $script2 = 'products/script';
     $style = 'datatable';
-    $products = listAll('products');
-    $categories = listAll('product_categories');
+    $products = listAllJoinProduct('products');
     require_once PATH_VIEW_ADMIN . "layouts/master.php";
 }
 function productCreate()
 {
     $view = 'products/create';
     $title = 'Thêm mới';
+
+    $script2 = 'products/script';
     $categories = listAll('product_categories');
+    $tags = listAll('product_tags');
+    $colors = listAll('product_colors');
     if (!empty ($_POST)) {
         $data = [
             "title" => $_POST['title'] ?? null,
@@ -72,7 +75,7 @@ if (!function_exists('validateProductCreate')) {
         if (empty ($data['tags'])) {
             $errors[] = "Tags không được để trống";
         }
-        if (empty ($data['thumbnail']['name'])) {
+        if ($data['thumbnail']['size'] <= 0){
             $errors[] = "Thumbnail không được để trống";
         }
         // Check file size
@@ -108,14 +111,14 @@ function productUpdate($id)
     }
     if (!empty ($_POST)) {
         $data = [
-            "title" => $_POST['title'] ?? null,
-            "price" => $_POST['price'] ?? null,
-            "sale" => $_POST['sale'] ?? null,
-            "tags" => $_POST['tags'] ?? null,
+            "title" => $_POST['title'] ?? $product['title'],
+            "price" => $_POST['price'] ?? $product['price'],
+            "sale" => $_POST['sale'] ?? $product['sale'],
+            "tags" => $_POST['tags'] ?? $product['tags'],
             "thumbnail" => $_FILES['thumbnail'] ?? null,
-            "description" => $_POST['description'] ?? null,
+            "description" => $_POST['description'] ?? $product['description'],
             "updated_at" => date('Y-m-d H:i:s'),
-            "product_category_id" => $_POST['product_category_id'] ?? null,
+            "product_category_id" => $_POST['product_category_id'] ?? $product['product_category_id'],
         ];
 
         $errors = validateProductCreate($data);
@@ -140,6 +143,8 @@ function productUpdate($id)
 
     }
     $view = 'products/update';
+    $script2 = 'products/script';
+
     $title = 'Cập nhật';
     require_once PATH_VIEW_ADMIN . "layouts/master.php";
 }

@@ -59,13 +59,27 @@
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true"
             aria-controls="collapseFour">
-            <i class="fas fa-fw fa-cog"></i>
+            <i class="fas fa-glasses"></i>
             <span>Sản phẩm</span>
         </a>
         <div id="collapseFour" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=products' ?>">Danh sách</a>
                 <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=products-create' ?>">Thêm mới</a>
+            </div>
+        </div>
+    </li>
+    <!-- Sản phẩm -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse6" aria-expanded="true"
+            aria-controls="collapse6">
+            <i class="fas fa-fw fa-cog"></i>
+            <span>Tags</span>
+        </a>
+        <div id="collapse6" class="collapse" aria-labelledby="heading6" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=tags' ?>">Danh sách</a>
+                <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=tags-create' ?>">Thêm mới</a>
             </div>
         </div>
     </li>
@@ -80,7 +94,6 @@
         <div id="collapseFive" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=colors' ?>">Màu sắc</a>
-                <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=products' ?>">Thương hiệu</a>
                 <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=products' ?>">Kho ảnh</a>
             </div>
         </div>
@@ -97,16 +110,27 @@
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=orders' ?>">Danh sách</a>
                 <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=order-create' ?>">Thêm mới</a>
+    <!-- brand -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true"
+            aria-controls="collapseSix">
+            <i class="fas fa-wrench"></i>
+            <span>Thương hiệu</span>
+        </a>
+        <div id="collapseSix" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=brands' ?>">Danh sách</a>
+                <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=brands-create' ?>">Thêm mới</a>
             </div>
         </div>
     </li>
 
     <hr class="sidebar-divider">
 
-    <!-- Nav Item - Setting -->
+    <!--  Setting -->
     <li class="nav-item">
         <a class="nav-link" href="<?= BASE_URL_ADMIN . '?act=setting-form' ?>">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
+        <i class="fas fa-wrench"></i>
             <span>Setting</span></a>
     </li>
 

@@ -2,7 +2,7 @@
     <!-- Page Heading -->
     <h1 class="h3 mb-2 text-gray-800">
         <?= $title ?? null ?>
-        <a class="btn btn-primary" href="<?= BASE_URL_ADMIN ?>?act=colors-create">Thêm mới</a> 
+        <a class="btn btn-primary" href="<?= BASE_URL_ADMIN ?>?act=brands-create">Thêm mới</a> 
     </h1>
     <p class="mb-4">
         
@@ -31,22 +31,22 @@
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Color name</th>
+                            <th>Brand name</th>
                             <th>Active</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach($color as $color): ?>
+                        <?php foreach($brand as $brand): ?>
                         
                         
                         <tr>
-                            <td><?= $color['id']?></td>
-                            <td><?= $color['name']?></td>
-                            <td><?= $color['is_active']?></td>
+                            <td><?= $brand['id']?></td>
+                            <td><?= $brand['name']?></td>
+                            <td><?= $brand['is_active']?></td>
                             <td> 
-                                <a class="btn btn-primary" href="<?= BASE_URL_ADMIN ?>?act=colors-update&id=<?= $color['id']?>">Sửa</a> 
-                                <a class="btn btn-danger" onclick="return confirm('Bạn có chắc chắn xóa không')" href="<?= BASE_URL_ADMIN ?>?act=colors-delete&id=<?= $color['id']?>">Xóa</a> 
+                                <a class="btn btn-primary" href="<?= BASE_URL_ADMIN ?>?act=brands-update&id=<?= $brand['id']?>">Sửa</a> 
+                                <a class="btn btn-danger" onclick="return confirm('Bạn có chắc chắn xóa không')" href="<?= BASE_URL_ADMIN ?>?act=brands-delete&id=<?= $brand['id']?>">Xóa</a> 
                                 
                             </td>
                         </tr>

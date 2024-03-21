@@ -26,18 +26,20 @@
         <?php endif; ?>
         <div class="card-body">
             <form action="" method="post" enctype="multipart/form-data">
+
                 <div class="row">
                     <div class="col-md-6">
-                    <div class="mb-3 mt-3">
-                            <label for="name" class="form-label">Color</label>
-                            <input type="text" class="form-control" id="name" placeholder="Enter Color" name="name">
+                        <div class="mb-3 mt-3">
+                        <label for="name" class="form-label">Brand</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter Brand" name="name">
                         </div>
                     </div>
                 </div>
+                
 
 
                 <button type="submit" class="btn btn-primary">Submit</button>
-                <a class="btn btn-danger" href="<?= BASE_URL_ADMIN ?>?act=colors">Danh sách</a> 
+                <a class="btn btn-danger" href="<?= BASE_URL_ADMIN ?>?act=brands">Danh sách</a> 
             </form>
         </div>
     </div>

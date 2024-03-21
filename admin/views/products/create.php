@@ -59,13 +59,29 @@
                         <input type="file" class="form-control" id="name" placeholder="Enter Thumbnail"
                             name="thumbnail">
                     </div>
-                    <div class="mb-3 mt-3 col-md-6">
+                    <div class="mb-3 mt-3 col-md-3">
                         <label for="tags" class="form-label">Tags:</label>
-                        <input value="<?= isset($_SESSION['data']) ? $_SESSION['data']['tags'] : null ?>" type="text" class="form-control" id="name" placeholder="Enter tags" name="tags">
+                        <Select class="form-control" class="form-control" name="tags[]" multiple>
+                            <?php foreach ($tags as $tag): ?>
+                                <option value="<?= $tag['id'] ?>">
+                                    <?= $tag['name'] ?>
+                                </option>
+                            <?php endforeach ?>
+                        </Select>
                     </div>
-                    <div class="mb-3 mt-3 col-md-6">
+                    <div class="mb-3 mt-3 col-md-3">
+                        <label for="colors" class="form-label">Colors:</label>
+                        <Select class="form-control" class="form-control" name="colors[]" multiple>
+                            <?php foreach ($colors as $color): ?>
+                                <option value="<?= $color['id'] ?>">
+                                    <?= $color['name'] ?>
+                                </option>
+                            <?php endforeach ?>
+                        </Select>
+                    </div>
+                    <div class="mb-3 mt-3 col">
                         <label for="description" class="form-label">Description:</label>
-                        <textarea value="<?= isset($_SESSION['data']) ? $_SESSION['data']['description'] : null ?>" name="description" class="form-control" id="" cols="30" rows="10"></textarea>
+                        <textarea value="<?= isset($_SESSION['data']) ? $_SESSION['data']['description'] : null ?>" name="description" class="form-control" id="abc" cols="30" rows="10"></textarea>
                     </div>
                 </div>
 
