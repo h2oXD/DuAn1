@@ -60,6 +60,12 @@
         'tags-create' => tagCreate(),
         'tags-update' => tagUpdate($_GET['id']),
         'tags-delete' => tagDelete($_GET['id']),
+        //brand
+        'brands' => brand_ListtAll(),
+        'brands-detail' => brand_ShowOne($_GET['id']),
+        'brands-create' => brand_Create(),
+        'brands-update' => brand_Update($_GET['id']),
+        'brands-delete' => brand_Delete($_GET['id']),
     };
 
 

@@ -59,7 +59,7 @@
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true"
             aria-controls="collapseFour">
-            <i class="fas fa-fw fa-cog"></i>
+            <i class="fas fa-glasses"></i>
             <span>Sản phẩm</span>
         </a>
         <div id="collapseFour" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
@@ -94,18 +94,32 @@
         <div id="collapseFive" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=colors' ?>">Màu sắc</a>
-                <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=products' ?>">Thương hiệu</a>
                 <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=products' ?>">Kho ảnh</a>
+            </div>
+        </div>
+    </li>
+
+    <!-- brand -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true"
+            aria-controls="collapseSix">
+            <i class="fas fa-wrench"></i>
+            <span>Thương hiệu</span>
+        </a>
+        <div id="collapseSix" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=brands' ?>">Danh sách</a>
+                <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=brands-create' ?>">Thêm mới</a>
             </div>
         </div>
     </li>
 
     <hr class="sidebar-divider">
 
-    <!-- Nav Item - Setting -->
+    <!--  Setting -->
     <li class="nav-item">
         <a class="nav-link" href="<?= BASE_URL_ADMIN . '?act=setting-form' ?>">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
+        <i class="fas fa-wrench"></i>
             <span>Setting</span></a>
     </li>
 
