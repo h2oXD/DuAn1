@@ -39,7 +39,7 @@ if (!function_exists('insert')) {
             $virtualParams = get_virtual_params($data);
 
             $sql = "INSERT INTO $tableName($strKeys) VALUES($virtualParams)";
-            
+            debug($sql);
             $stmt = $GLOBALS['conn']->prepare($sql);
 
             foreach ($data as $fieldName => &$value) {
@@ -178,3 +178,4 @@ if (!function_exists('checkUniqueNameForUpdate')) {
         }
     }
 }
+
