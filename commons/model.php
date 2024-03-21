@@ -39,7 +39,7 @@ if (!function_exists('insert')) {
             $virtualParams = get_virtual_params($data);
 
             $sql = "INSERT INTO $tableName($strKeys) VALUES($virtualParams)";
-            debug($sql);
+
             $stmt = $GLOBALS['conn']->prepare($sql);
 
             foreach ($data as $fieldName => &$value) {
@@ -98,13 +98,13 @@ if (!function_exists('update')) {
     {
         try {
             $setParams = get_set_params($data);
-            
+
             $sql = "
                 UPDATE $tableName
                 SET $setParams
                 WHERE id = :id
             ";
-            
+
             $stmt = $GLOBALS['conn']->prepare($sql);
 
             foreach ($data as $fieldName => &$value) {
@@ -114,7 +114,7 @@ if (!function_exists('update')) {
 
 
             $stmt->execute();
-
+            
         } catch (\Exception $e) {
             debug($e);
         }
@@ -139,7 +139,8 @@ if (!function_exists('delete')) {
     }
 }
 if (!function_exists('checkUniqueName')) {
-    function checkUniqueName($tableName, $name) {
+    function checkUniqueName($tableName, $name)
+    {
         try {
             $sql = "SELECT * FROM $tableName WHERE name = :name LIMIT 1";
 
@@ -151,7 +152,7 @@ if (!function_exists('checkUniqueName')) {
 
             $data = $stmt->fetch();
 
-            return empty($data) ? true : false;
+            return empty ($data) ? true : false;
         } catch (\Exception $e) {
             debug($e);
         }
@@ -159,7 +160,8 @@ if (!function_exists('checkUniqueName')) {
 }
 
 if (!function_exists('checkUniqueNameForUpdate')) {
-    function checkUniqueNameForUpdate($tableName, $id, $name) {
+    function checkUniqueNameForUpdate($tableName, $id, $name)
+    {
         try {
             $sql = "SELECT * FROM $tableName WHERE name = :name AND id <> :id LIMIT 1";
 
@@ -172,7 +174,7 @@ if (!function_exists('checkUniqueNameForUpdate')) {
 
             $data = $stmt->fetch();
 
-            return empty($data) ? true : false;
+            return empty ($data) ? true : false;
         } catch (\Exception $e) {
             debug($e);
         }

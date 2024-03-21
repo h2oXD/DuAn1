@@ -22,3 +22,15 @@ if(!function_exists('e404')){
         die;
     }
 }
+if(!function_exists('upload_file')){
+    function upload_file($file,$pathFileUpload){
+
+            $imagePath = $pathFileUpload. time().'-' . basename($file['name']);
+            if(move_uploaded_file($file['tmp_name'],PATH_UPLOAD.$imagePath)){
+                return $imagePath;
+            }
+            return null;
+            
+        
+    }
+}
