@@ -42,6 +42,7 @@
         'user_address-create' => user_address_Create(),
         'user_address-update' => user_address_Update($_GET['id']),
         'user_address-delete' => user_address_Delete($_GET['id']),
+        
         //color
         'colors' => color_ListtAll(),
         'colors-detail' => color_ShowOne($_GET['id']),
