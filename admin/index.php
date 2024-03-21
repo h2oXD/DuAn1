@@ -53,6 +53,13 @@
          // Setting
         'setting-form' => settingShowForm(),
         'setting-save' => settingSave(),
+
+        // CRUD orders
+        'orders' => orders_ListtAll(),
+        'order-detail' => order_ShowOne($_GET['id']),
+        'order-create' => order_Create(),
+        'order-update' => order_Update($_GET['id']),
+        'order-delete' => order_Delete($_GET['id']),
     };
 
 
