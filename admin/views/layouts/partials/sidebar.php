@@ -69,6 +69,20 @@
             </div>
         </div>
     </li>
+    <!-- Sản phẩm -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse6" aria-expanded="true"
+            aria-controls="collapse6">
+            <i class="fas fa-fw fa-cog"></i>
+            <span>Tags</span>
+        </a>
+        <div id="collapse6" class="collapse" aria-labelledby="heading6" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=tags' ?>">Danh sách</a>
+                <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=tags-create' ?>">Thêm mới</a>
+            </div>
+        </div>
+    </li>
 
     <!-- Attributes -->
     <li class="nav-item">

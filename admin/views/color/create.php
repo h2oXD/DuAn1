@@ -29,12 +29,8 @@
                 <div class="row">
                     <div class="col-md-6">
                     <div class="mb-3 mt-3">
-                            <label for="color_name" class="form-label">Color</label>
-                            <input type="text" class="form-control" id="color_name" placeholder="Enter Color" name="color_name">
-                        </div>
-                        <div class="mb-3 mt-3">
-                            <label for="product_id" class="form-label">Product ID</label>
-                            <input type="text" class="form-control" id="product_id" placeholder="Enter product id" name="product_id">
+                            <label for="name" class="form-label">Color</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter Color" name="name">
                         </div>
                     </div>
                 </div>
