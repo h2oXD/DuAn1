@@ -42,6 +42,16 @@
         'user_address-create' => user_address_Create(),
         'user_address-update' => user_address_Update($_GET['id']),
         'user_address-delete' => user_address_Delete($_GET['id']),
+        //color
+        'colors' => color_ListtAll(),
+        'colors-detail' => color_ShowOne($_GET['id']),
+        'colors-create' => color_Create(),
+        'colors-update' => color_Update($_GET['id']),
+        'colors-delete' => color_Delete($_GET['id']),
+
+         // Setting
+        'setting-form' => settingShowForm(),
+        'setting-save' => settingSave(),
     };
 
 

@@ -23,7 +23,7 @@
                         <tr>
                             <th>ID</th>
                             <th>Title</th>
-                            <th>Product_category_id</th>
+                            <th>Category</th>
                             <th>Price</th>
                             <th>Sale</th>
                             <th>Thumbnail</th>
@@ -38,10 +38,10 @@
                         <tr>
                             <td><?= $product['id']?></td>
                             <td><?= $product['title']?></td>
-                            <td><?= $product['product_category_id']?></td>
+                            <td><?= $product['product_category_id'] ?></td>
                             <td><?= $product['price']?></td>
                             <td><?= $product['sale']?></td>
-                            <td><?= $product['thumbnail']?></td>
+                            <td><img src="<?= BASE_URL.$product['thumbnail']?>" width="80px" alt=""></td>
                             <td><?= $product['tags']?></td>
                             <td>
                                 <a class="btn btn-info" href="<?= BASE_URL_ADMIN ?>?act=products-detail&id=<?= $product['id']?>">Chi tiết</a> 
