@@ -112,12 +112,12 @@
                 <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=order-create' ?>">Thêm mới</a>
     <!-- brand -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true"
-            aria-controls="collapseSix">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true"
+            aria-controls="collapseSeven">
             <i class="fas fa-wrench"></i>
             <span>Thương hiệu</span>
         </a>
-        <div id="collapseSix" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div id="collapseSeven" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=brands' ?>">Danh sách</a>
                 <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=brands-create' ?>">Thêm mới</a>
