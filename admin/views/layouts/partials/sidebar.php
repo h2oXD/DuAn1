@@ -37,6 +37,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=users' ?>">Danh sách</a>
                         <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=users-create' ?>">Thêm mới</a>
+                        <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=user_addresses' ?>">Danh sách địa chỉ</a>
                     </div>
                 </div>
             </li>

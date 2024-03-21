@@ -15,6 +15,16 @@
                 Create
             </h6>
         </div>
+        <?php if(isset($_SESSION['errors'])) : ?>
+                <div class="alert alert-danger">
+                    <ul>
+                        <?php foreach($_SESSION['errors'] as $error) : ?>
+                            <li><?= $error ?></li>
+                        <?php endforeach; ?>
+                    </ul>
+                </div>
+                <?php unset($_SESSION['errors']); ?>
+            <?php endif; ?>
         <div class="card-body">
             <form action="" method="post">
                 <div class="row">

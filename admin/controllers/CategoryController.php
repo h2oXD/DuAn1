@@ -50,8 +50,17 @@ function Category_Update($id){
             "name" => $_POST['name'] ?? null,
             "is_active" => $_POST['is_active'],
         ];
-        update('product_categories',$id,$data);
-        header("Location: ".BASE_URL_ADMIN."?act=categories");
+        $errors = Category_validateUpdate($id,$data);
+        if(!empty($errors)){
+            $_SESSION['errors'] = $errors;
+            $_SESSION['data'] = $data;
+        }else{
+        
+            update('product_categories',$id,$data);
+            $_SESSION['success'] = "Thao tác thành công";
+            header("Location: " . BASE_URL_ADMIN . "?act=categories");
+        }
+        
     }
     $view = 'categories/update';
     $title = 'Cập nhật';
