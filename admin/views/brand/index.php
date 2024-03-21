@@ -32,7 +32,6 @@
                         <tr>
                             <th>ID</th>
                             <th>Brand name</th>
-                            <th>Product ID</th>
                             <th>Active</th>
                             <th>Action</th>
                         </tr>
@@ -43,8 +42,7 @@
                         
                         <tr>
                             <td><?= $brand['id']?></td>
-                            <td><?= $brand['brand_name']?></td>
-                            <td><?= $brand['product_id']?></td>
+                            <td><?= $brand['name']?></td>
                             <td><?= $brand['is_active']?></td>
                             <td> 
                                 <a class="btn btn-primary" href="<?= BASE_URL_ADMIN ?>?act=brands-update&id=<?= $brand['id']?>">Sửa</a> 

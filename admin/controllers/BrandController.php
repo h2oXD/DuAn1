@@ -15,9 +15,11 @@ function brand_Create(){
     $title = 'Thêm mới brands';
     if(!empty($_POST)){
         $data = [
-            "brand_name" => $_POST['brand_name'],
+            "name" => $_POST['name'],
         ];
+        
         $errors = brand_validateCreate($data);
+           
         if(!empty($errors)){
             $_SESSION['errors'] = $errors;
             $_SESSION['data'] = $data;
@@ -47,8 +49,7 @@ function brand_Update($id){
     }
     if(!empty($_POST)){
         $data = [
-            "brand_name" => $_POST['brand_name'] ?? null,
-            "is_active" => $_POST['is_active'],
+            "name" => $_POST['name'] ?? null,
         ];
         $errors = brand_validateUpdate($id,$data);
         if(!empty($errors)){
@@ -77,9 +78,9 @@ function brand_validateCreate($data){
 
     $errors = [];
 
-    if(empty($data['brand_name'])){
+    if(empty($data['name'])){
         $errors[] = "Trường brand là bắt buộc";
-    }elseif(strlen($data['brand_name']) > 50){
+    }elseif(strlen($data['name']) > 50){
         $errors[] = "Trường brand độ dài tối đa 50 kí tự";
     }
     return $errors;
@@ -91,9 +92,9 @@ function brand_validateUpdate($id, $data){
 
     $errors = [];
 
-    if(empty($data['brand_name'])){
+    if(empty($data['name'])){
         $errors[] = "Trường brand là bắt buộc";
-    }elseif(strlen($data['brand_name']) > 50){
+    }elseif(strlen($data['name']) > 50){
         $errors[] = "Trường brand độ dài tối đa 50 kí tự";
     }
     return $errors;

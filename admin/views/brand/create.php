@@ -30,26 +30,16 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="mb-3 mt-3">
-                        <label for="brand_name" class="form-label">Brand</label>
-                            <input type="text" class="form-control" id="brand_name" placeholder="Enter Brand" name="brand_name">
+                        <label for="name" class="form-label">Brand</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter Brand" name="name">
                         </div>
-                        <!-- <div class="mb-3 mt-3">
-                        <label for="product_id" class="form-label">Product ID</label>
-                            <input type="text" class="form-control" id="product_id" placeholder="Enter product id" name="product_id">
-                        </div> -->
                     </div>
-                    <!-- <div class="col-md-6">
-                        <div class="mb-3 mt-3">
-                        <label for="is_active" class="form-label">Is active</label>
-                            <input type="text" class="form-control" id="is_active" placeholder="Enter is active" name="is_active">
-                        </div>
-                    </div> -->
                 </div>
                 
 
 
                 <button type="submit" class="btn btn-primary">Submit</button>
-                <a class="btn btn-danger" href="<?= BASE_URL_ADMIN ?>?act=colors">Danh sách</a> 
+                <a class="btn btn-danger" href="<?= BASE_URL_ADMIN ?>?act=brands">Danh sách</a> 
             </form>
         </div>
     </div>

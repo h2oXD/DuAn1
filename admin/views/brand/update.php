@@ -30,16 +30,11 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="mb-3 mt-3">
-                            <label for="brand_name" class="form-label">Name:</label>
-                            <input value="<?= $brand['brand_name'] ?>" type="text" class="form-control" id="brand_name" placeholder="Enter name" name="brand_name">
+                            <label for="name" class="form-label">Name:</label>
+                            <input value="<?= $brand['name'] ?>" type="text" class="form-control" id="name" placeholder="Enter name" name="name">
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="mb-3 mt-3">
-                            <label for="is_active" class="form-label">Is_active:</label>
-                            <input value="<?= $brand['is_active'] ?>" type="text" class="form-control" id="is_active" placeholder="Enter active" name="is_active">
-                        </div>
-                    </div>
+
                 </div>
                 <!-- <div class="row">
                     <div class="col-md-4">
