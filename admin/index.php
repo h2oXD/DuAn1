@@ -36,6 +36,13 @@
         'category-update' => Category_Update($_GET['id']),
         'category-delete' => Category_Delete($_GET['id']),
 
+        // CRUD user_addresses
+        'user_addresses' => user_addresses_ListtAll(),
+        'user_address-detail' => user_address_ShowOne($_GET['id']),
+        'user_address-create' => user_address_Create(),
+        'user_address-update' => user_address_Update($_GET['id']),
+        'user_address-delete' => user_address_Delete($_GET['id']),
+        
         //color
         'colors' => color_ListtAll(),
         'colors-detail' => color_ShowOne($_GET['id']),
