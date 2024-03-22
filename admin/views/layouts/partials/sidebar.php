@@ -48,7 +48,7 @@
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true"
             aria-controls="collapseThree">
             <i class="fas fa-box"></i>
-            <span>Quản lí loại hàng</span>
+            <span>Quản lí loại sản phẩm</span>
         </a>
         <div id="collapseThree" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
@@ -69,12 +69,12 @@
             </div>
         </div>
     </li>
-    <!-- Sản phẩm -->
+    <!-- Tag -->
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse6" aria-expanded="true"
             aria-controls="collapse6">
-            <i class="fas fa-fw fa-cog"></i>
-            <span>Tags</span>
+            <i class="fas fa-tags"></i>
+            <span>Tags sản phẩm</span>
         </a>
         <div id="collapse6" class="collapse" aria-labelledby="heading6" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
@@ -88,13 +88,13 @@
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true"
             aria-controls="collapseFive">
-            <i class="fas fa-code-branch"></i>
+            <i class="fas fa-fw fa-cog"></i>
             <span>Thuộc tính sản phẩm</span>
         </a>
         <div id="collapseFive" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=colors' ?>">Màu sắc</a>
-                <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=products' ?>">Kho ảnh</a>
+                <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=colors' ?>">Danh sách</a>
+                <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=colors-create' ?>">Thêm</a>
             </div>
         </div>
     </li>
@@ -110,17 +110,36 @@
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=orders' ?>">Danh sách</a>
                 <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=order-create' ?>">Thêm mới</a>
+                <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=order_details' ?>">Thông tin đơn hàng</a>
+            </div>
+        </div>
+    </li>
+
     <!-- brand -->
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true"
             aria-controls="collapseSix">
-            <i class="fas fa-medal"></i>
+            <i class="fas fa-wrench"></i>
             <span>Thương hiệu</span>
         </a>
-        <div id="collapseSix" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div id="collapseSeven" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=brands' ?>">Danh sách</a>
                 <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=brands-create' ?>">Thêm mới</a>
+            </div>
+        </div>
+    </li>
+    <!-- Gallery -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse7" aria-expanded="true"
+            aria-controls="collapse7">
+            <i class="fas fa-wrench"></i>
+            <span>Thư viện ảnh sản phẩm</span>
+        </a>
+        <div id="collapse7" class="collapse" aria-labelledby="heading7" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=galleries' ?>">Danh sách</a>
+                <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=galleries-create' ?>">Thêm mới</a>
             </div>
         </div>
     </li>

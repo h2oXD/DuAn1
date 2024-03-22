@@ -62,11 +62,12 @@
         'order-delete' => order_Delete($_GET['id']),
 
         // CRUD order_details
-        'orders_details' => orders_details_ListtAll(),
-        'orders_detail-detail' => orders_detail_ShowOne($_GET['id']),
-        'orders_detail-create' => orders_detail_Create(),
-        'orders_detail-update' => orders_detail_Update($_GET['id']),
-        'orders_detail-delete' => orders_detail_Delete($_GET['id']),
+        'order_details' => order_details_ListtAll(),
+        'order_detail-detail' => order_detail_ShowOne($_GET['id']),
+        'order_detail-create' => order_detail_Create(),
+        'order_detail-update' => order_detail_Update($_GET['id']),
+        'order_detail-delete' => order_detail_Delete($_GET['id']),
+
         //tag
         'tags' => tagListtAll(),
         'tags-detail' => tagShowOne($_GET['id']),
@@ -79,6 +80,12 @@
         'brands-create' => brand_Create(),
         'brands-update' => brand_Update($_GET['id']),
         'brands-delete' => brand_Delete($_GET['id']),
+        //gallery
+        'galleries' => galleryListtAll(),
+        'galleries-detail' => galleryShowOne($_GET['id']),
+        'galleries-create' => gallery_Create(),
+        'galleries-update' => galleryUpdate($_GET['id']),
+        'galleries-delete' => galleryDelete($_GET['id']),
     };
 
 
