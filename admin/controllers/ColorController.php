@@ -15,7 +15,7 @@ function color_Create(){
     $title = 'Thêm mới Colors';
     if(!empty($_POST)){
         $data = [
-            "color_name" => $_POST['color_name'],
+            "name" => $_POST['name'],
         ];
         $errors = Color_validateCreate($data);
         if(!empty($errors)){
@@ -47,10 +47,10 @@ function color_Update($id){
     }
     if(!empty($_POST)){
         $data = [
-            "color_name" => $_POST['color_name'] ?? null,
+            "name" => $_POST['name'] ?? $color['name'],
             "is_active" => $_POST['is_active'],
         ];
-        $errors = Color_validateUpdate($id,$data);
+        $errors = color_validateUpdate($id,$data);
         if(!empty($errors)){
             $_SESSION['errors'] = $errors;
             $_SESSION['data'] = $data;
@@ -77,11 +77,11 @@ function color_validateCreate($data){
 
     $errors = [];
 
-    if(empty($data['color_name'])){
+    if(empty($data['name'])){
         $errors[] = "Trường name là bắt buộc";
-    }elseif(strlen($data['color_name']) > 50){
+    }elseif(strlen($data['name']) > 50){
         $errors[] = "Trường name độ dài tối đa 50 kí tự";
-    }elseif(checkUniqueColorName('product_colors', $data['color_name'])){
+    }elseif(!checkUniqueName('product_colors', $data['name'])){
         $errors[] = "Name đã được sử dụng";
     }
 
@@ -94,11 +94,11 @@ function color_validateUpdate($id, $data){
 
     $errors = [];
 
-    if(empty($data['color_name'])){
+    if(empty($data['name'])){
         $errors[] = "Trường name là bắt buộc";
-    }elseif(strlen($data['color_name']) > 50){
+    }elseif(strlen($data['name']) > 50){
         $errors[] = "Trường name độ dài tối đa 50 kí tự";
-    }elseif(!checkUniqueColorNameForUpdate('product_colors', $id, $data['color_name'])){
+    }elseif(!checkUniqueNameForUpdate('product_colors', $id, $data['name'])){
         $errors[] = "Name đã được sử dụng";
     }
 
