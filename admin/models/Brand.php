@@ -42,3 +42,20 @@ if (!function_exists('checkUniqueBrandNameForUpdate')) {
 
     }
 }
+if (!function_exists('deleteBrand')) {
+    function deleteBrand($productID) {
+        try {
+            $sql = "DELETE FROM products WHERE product_brand_id = :product_brand_id;";
+            
+            $stmt = $GLOBALS['conn']->prepare($sql);
+
+            $stmt->bindParam(':product_brand_id', $productID);
+
+            $stmt->execute();
+
+            return $stmt->fetchAll();
+        } catch (\Exception $e) {
+            debug($e);
+        }
+    }
+}
