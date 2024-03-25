@@ -32,7 +32,7 @@ function productCreate()
             "product_category_id" => $_POST['product_category_id'] ?? null,
             "product_brand_id" => $_POST['product_brand_id'] ?? null,
         ];
-        // $errors = validateProductCreate($data);
+        $errors = validateProductCreate($data);
         $thumbnail = $_FILES['thumbnail'] ?? null;
 
         if (!empty ($errors)) {
@@ -250,6 +250,34 @@ function productUpdate($id)
 
 function productDelete($id)
 {
-    delete2('products', $id);
-    header("Location: " . BASE_URL_ADMIN . "?act=products");
+    $product = showOne('products', $id);
+    if (empty($product)) {
+        e404();
+    }
+    try {
+        $GLOBALS['conn']->beginTransaction();
+
+        deleteTagsByProductID($id);
+
+        delete2('products', $id);
+
+        $GLOBALS['conn']->commit();
+    } catch (Exception $e) {
+        $GLOBALS['conn']->rollBack();
+
+        debug($e);
+    }
+    
+    
+    if (
+        !empty($product['thumbnail'])
+        && file_exists(PATH_UPLOAD . $product['thumbnail'])
+    ) {
+        unlink(PATH_UPLOAD . $product['thumbnail']);
+    }
+
+    $_SESSION['success'] = 'Thao tác thành công!';
+
+    header('Location: ' . BASE_URL_ADMIN . '?act=products');
+    exit();
 }
