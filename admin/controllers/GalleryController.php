@@ -100,6 +100,7 @@ function validateGalleryUpdate($id, $data)
 }
 function galleryDelete($id)
 {
+    deleteByGallery($id);
     delete2('product_galleries', $id);
     header("Location: " . BASE_URL_ADMIN . "?act=galleries");
 }

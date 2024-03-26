@@ -90,18 +90,9 @@
                             <?php endforeach ?>
                         </Select>
                     </div>
-                    <div class="mb-3 mt-3 col-md-4">
-                        <label for="galleries" class="form-label">Galleries:</label>
-                        <Select class="form-control" class="form-control" name="galleries[]" multiple>
-                            <?php foreach ($galleries as $gallery): ?>    
-                                <option value="<?= $gallery['id'] ?>">
-                                    <?= BASE_URL. $gallery['thumbnail'] ?> 
-                                </option>
-                            <?php endforeach ?>
-                        </Select>
-                    </div>
+                    
                    
-                    <div class="mb-3 mt-3 col">
+                    <div class="mb-3 mt-3 col-md-12">
                         <label for="description" class="form-label">Description:</label>
                         <textarea value="<?= isset($_SESSION['data']) ? $_SESSION['data']['description'] : null ?>" name="description" class="form-control" id="abc" cols="30" rows="10"></textarea>
                     </div>
