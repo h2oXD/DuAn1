@@ -189,7 +189,8 @@
   <!-- End Header Type 4 full width -->
 
   <!-- Main -->
-  <?php require PATH_VIEW.$view.".php" ?>
+  <?php require PATH_VIEW . $view . ".php" ?>
+ 
   <!-- Main -->
 
   <!-- Footer Type 3 -->

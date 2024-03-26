@@ -14,7 +14,10 @@
     $act = $_GET['act'] ?? '/';
     match($act){
         '/' => homeIndex(),
-        'list' => ListProduct(),
+        'chitiet' => Chitiet(),
+        'view-cart' => viewcart(),
+        'list-product' => listproduct(),
+
     };
 
     require_once "commons/disconnect-db.php";

@@ -43,7 +43,7 @@
             <div class="swiper-slide product-card product-card_style10">
               <div class="position-relative pb-3">
                 <div class="pc__img-wrapper pc__img-wrapper_wide3">
-                  <a href="product1_simple.html"><img loading="lazy" src="<?= BASE_URL ?>/assets/images/products/product-43.png" width="256" height="201" alt="Cropped Faux leather Jacket" class="pc__img"></a>
+                  <a href="?act=chitiet"><img loading="lazy" src="<?= BASE_URL ?>/assets/images/products/product-43.png" width="256" height="201" alt="Cropped Faux leather Jacket" class="pc__img"></a>
                   <button class="pc__btn-wl position-absolute rounded-circle border-0 text-secondary js-add-wishlist bg-transparent" title="Add To Wishlist">
                     <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><use href="#icon_heart"></use></svg>
                   </button>
@@ -51,7 +51,7 @@
               </div>
 
               <div class="pc__info position-relative d-flex flex-column align-items-center mb-3 mb-md-4 mb-xxl-5">
-                <h6 class="pc__title text-uppercase fw-semi-bold"><a href="product1_simple.html">Aviator Classic</a></h6>
+                <h6 class="pc__title text-uppercase fw-semi-bold"><a href="?act=chitiet">Aviator Classic</a></h6>
                 <div class="product-card__price d-flex text-secondary mb-2">
                   <span class="money price">$429</span>
                 </div>
@@ -65,7 +65,7 @@
             <div class="swiper-slide product-card product-card_style10">
               <div class="position-relative pb-3">
                 <div class="pc__img-wrapper pc__img-wrapper_wide3">
-                  <a href="product1_simple.html"><img loading="lazy" src="<?= BASE_URL ?>/assets/images/products/product-44.png" width="256" height="201" alt="Cropped Faux leather Jacket" class="pc__img"></a>
+                  <a href="?act=chitiet"><img loading="lazy" src="<?= BASE_URL ?>/assets/images/products/product-44.png" width="256" height="201" alt="Cropped Faux leather Jacket" class="pc__img"></a>
                   <button class="pc__btn-wl position-absolute rounded-circle border-0 text-secondary js-add-wishlist bg-transparent" title="Add To Wishlist">
                     <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><use href="#icon_heart"></use></svg>
                   </button>
@@ -73,7 +73,7 @@
               </div>
 
               <div class="pc__info position-relative d-flex flex-column align-items-center mb-3 mb-md-4 mb-xxl-5">
-                <h6 class="pc__title text-uppercase fw-semi-bold"><a href="product1_simple.html">New Wayfarer Classic</a></h6>
+                <h6 class="pc__title text-uppercase fw-semi-bold"><a href="?act=chitiet">New Wayfarer Classic</a></h6>
                 <div class="product-card__price d-flex text-secondary mb-2">
                   <span class="money price">$429</span>
                 </div>
@@ -87,7 +87,7 @@
             <div class="swiper-slide product-card product-card_style10">
               <div class="position-relative pb-3">
                 <div class="pc__img-wrapper pc__img-wrapper_wide3">
-                  <a href="product1_simple.html"><img loading="lazy" src="<?= BASE_URL ?>/assets/images/products/product-45.png" width="256" height="201" alt="Cropped Faux leather Jacket" class="pc__img"></a>
+                  <a href="?act=chitiet"><img loading="lazy" src="<?= BASE_URL ?>/assets/images/products/product-45.png" width="256" height="201" alt="Cropped Faux leather Jacket" class="pc__img"></a>
                   <button class="pc__btn-wl position-absolute rounded-circle border-0 text-secondary js-add-wishlist bg-transparent" title="Add To Wishlist">
                     <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><use href="#icon_heart"></use></svg>
                   </button>
@@ -95,7 +95,7 @@
               </div>
 
               <div class="pc__info position-relative d-flex flex-column align-items-center mb-3 mb-md-4 mb-xxl-5">
-                <h6 class="pc__title text-uppercase fw-semi-bold"><a href="product1_simple.html">New Wayfarer Classic</a></h6>
+                <h6 class="pc__title text-uppercase fw-semi-bold"><a href="?act=chitiet">New Wayfarer Classic</a></h6>
                 <div class="product-card__price d-flex text-secondary mb-2">
                   <span class="money price">$429</span>
                 </div>
@@ -109,7 +109,7 @@
             <div class="swiper-slide product-card product-card_style10">
               <div class="position-relative pb-3">
                 <div class="pc__img-wrapper pc__img-wrapper_wide3">
-                  <a href="product1_simple.html"><img loading="lazy" src="<?= BASE_URL ?>/assets/images/products/product-46.png" width="256" height="201" alt="Cropped Faux leather Jacket" class="pc__img"></a>
+                  <a href="?act=chitiet"><img loading="lazy" src="<?= BASE_URL ?>/assets/images/products/product-46.png" width="256" height="201" alt="Cropped Faux leather Jacket" class="pc__img"></a>
                   <button class="pc__btn-wl position-absolute rounded-circle border-0 text-secondary js-add-wishlist bg-transparent" title="Add To Wishlist">
                     <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><use href="#icon_heart"></use></svg>
                   </button>
@@ -117,7 +117,7 @@
               </div>
 
               <div class="pc__info position-relative d-flex flex-column align-items-center mb-3 mb-md-4 mb-xxl-5">
-                <h6 class="pc__title text-uppercase fw-semi-bold"><a href="product1_simple.html">New Wayfarer Classic</a></h6>
+                <h6 class="pc__title text-uppercase fw-semi-bold"><a href="?act=chitiet">New Wayfarer Classic</a></h6>
                 <div class="product-card__price d-flex text-secondary mb-2">
                   <span class="money price">$429</span>
                 </div>
@@ -132,6 +132,6 @@
         </div><!-- /.swiper-container js-swiper-slider -->
       </div><!-- /.position-relative -->
       <div class="text-center mt-2">
-        <a class="btn-link btn-link_lg default-underline text-uppercase fw-medium" href="shop1.html">See All Products</a>
+        <a class="btn-link btn-link_lg default-underline text-uppercase fw-medium" href="?act=list-product">See All Products</a>
       </div>
     </section>

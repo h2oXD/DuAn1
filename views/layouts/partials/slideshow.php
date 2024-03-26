@@ -27,7 +27,7 @@
               <h2 class="fs-45 fw-semi-bold mb-2 mb-lg-3 animate animate_fade animate_btt animate_delay-5 lh-1 text-white">UP TO $60 OFF POLARISED</h2>
               <h2 class="fs-45 fw-semi-bold mb-2 mb-lg-4 animate animate_fade animate_btt animate_delay-5 lh-1 text-white">SUNGLASSES</h2>
               <div class="animate animate_fade animate_btt animate_delay-7">
-                <a href="shop1.html" class="btn btn-outline-primary border-0 fs-base text-uppercase fw-medium btn-50">
+                <a href="?act=chitiet" class="btn btn-outline-primary border-0 fs-base text-uppercase fw-medium btn-50">
                   <span>SHOP NOW</span>
                 </a>
               </div>
