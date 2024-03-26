@@ -43,7 +43,7 @@
             <div class="swiper-slide product-card product-card_style10">
               <div class="position-relative pb-3">
                 <div class="pc__img-wrapper pc__img-wrapper_wide3">
-                  <a href="product1_simple.html"><img loading="lazy" src="<?= BASE_URL ?>/assets/images/products/product-43.png" width="256" height="201" alt="Cropped Faux leather Jacket" class="pc__img"></a>
+                  <a href="<?= BASE_URL ?>."><img loading="lazy" src="<?= BASE_URL ?>/assets/images/products/product-43.png" width="256" height="201" alt="Cropped Faux leather Jacket" class="pc__img"></a>
                   <button class="pc__btn-wl position-absolute rounded-circle border-0 text-secondary js-add-wishlist bg-transparent" title="Add To Wishlist">
                     <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><use href="#icon_heart"></use></svg>
                   </button>

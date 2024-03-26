@@ -14,7 +14,8 @@
     $act = $_GET['act'] ?? '/';
     match($act){
         '/' => homeIndex(),
-        
+        'chitiet' => Chitiet(),
+        'view-cart' => viewcart(),
         
 
     };
