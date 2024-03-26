@@ -23,12 +23,12 @@
               <img loading="lazy" src="<?= BASE_URL ?>/assets/images/home/demo13/slider1.jpg" width="1920" height="760" alt="Pattern" class="slideshow-bg__img object-fit-cover">
             </div>
             <div class="slideshow-text container position-absolute start-50 top-50 translate-middle">
-              <h6 class="text_dash text-uppercase fs-base fw-medium animate animate_fade animate_btt animate_delay-3 text-white mb-3 mb-md-4">EYEWEAR</h6>
-              <h2 class="fs-45 fw-semi-bold mb-2 mb-lg-3 animate animate_fade animate_btt animate_delay-5 lh-1 text-white">UP TO $60 OFF POLARISED</h2>
-              <h2 class="fs-45 fw-semi-bold mb-2 mb-lg-4 animate animate_fade animate_btt animate_delay-5 lh-1 text-white">SUNGLASSES</h2>
+              <h6 class="text_dash text-uppercase fs-base fw-medium animate animate_fade animate_btt animate_delay-3 text-white mb-3 mb-md-4">KÍNH MẮT</h6>
+              <h2 class="fs-45 fw-semi-bold mb-2 mb-lg-3 animate animate_fade animate_btt animate_delay-5 lh-1 text-white">GIẢM GIÁ LÊN ĐẾN 50%</h2>
+              <h2 class="fs-45 fw-semi-bold mb-2 mb-lg-4 animate animate_fade animate_btt animate_delay-5 lh-1 text-white">CHO CÁC LOẠI KÍNH</h2>
               <div class="animate animate_fade animate_btt animate_delay-7">
-                <a href="?act=chitiet" class="btn btn-outline-primary border-0 fs-base text-uppercase fw-medium btn-50">
-                  <span>SHOP NOW</span>
+                <a href="?act=list_sp" class="btn btn-outline-primary border-0 fs-base text-uppercase fw-medium btn-50">
+                  <span>MUA NGAY</span>
                 </a>
               </div>
             </div>
@@ -40,12 +40,12 @@
               <img loading="lazy" src="<?= BASE_URL ?>/assets/images/home/demo13/slider1.jpg" width="1920" height="760" alt="Pattern" class="slideshow-bg__img object-fit-cover">
             </div>
             <div class="slideshow-text container position-absolute start-50 top-50 translate-middle">
-              <h6 class="text_dash text-uppercase fs-base fw-medium animate animate_fade animate_btt animate_delay-3 text-white mb-3 mb-md-4">EYEWEAR</h6>
-              <h2 class="fs-45 fw-semi-bold mb-2 mb-lg-3 animate animate_fade animate_btt animate_delay-5 lh-1 text-white">UP TO $60 OFF POLARISED</h2>
-              <h2 class="fs-45 fw-semi-bold mb-2 mb-lg-4 animate animate_fade animate_btt animate_delay-5 lh-1 text-white">SUNGLASSES</h2>
+              <h6 class="text_dash text-uppercase fs-base fw-medium animate animate_fade animate_btt animate_delay-3 text-white mb-3 mb-md-4">KÍNH MẮT</h6>
+              <h2 class="fs-45 fw-semi-bold mb-2 mb-lg-3 animate animate_fade animate_btt animate_delay-5 lh-1 text-white">TỰ DO THỂ HIỆN PHONG CÁCH</h2>
+              <h2 class="fs-45 fw-semi-bold mb-2 mb-lg-4 animate animate_fade animate_btt animate_delay-5 lh-1 text-white">KÍNH MẮT THỜI TRANG</h2>
               <div class="animate animate_fade animate_btt animate_delay-7">
-                <a href="shop1.html" class="btn btn-outline-primary border-0 fs-base text-uppercase fw-medium btn-50">
-                  <span>SHOP NOW</span>
+                <a href="?act=list_sp" class="btn btn-outline-primary border-0 fs-base text-uppercase fw-medium btn-50">
+                  <span>MUA NGAY</span>
                 </a>
               </div>
             </div>

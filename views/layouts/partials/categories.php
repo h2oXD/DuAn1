@@ -42,37 +42,37 @@
             <div class="swiper-slide">
               <img loading="lazy" class="w-100 h-auto mb-3" src="<?= BASE_URL ?>assets/images/home/demo13/category-1.jpg" width="270" height="182" alt="">
               <div class="text-center border-top py-4">
-                <a href="shop1.html" class="menu-link menu-link_us-s text-uppercase fw-semi-bold">SQUARE</a>
+                <a href="?act=chitiet" class="menu-link menu-link_us-s text-uppercase fw-semi-bold">SQUARE</a>
               </div>
             </div>
             <div class="swiper-slide">
               <img loading="lazy" class="w-100 h-auto mb-3" src="<?= BASE_URL ?>assets/images/home/demo13/category-2.jpg" width="270" height="182" alt="">
               <div class="text-center border-top py-4">
-                <a href="shop1.html" class="menu-link menu-link_us-s text-uppercase fw-semi-bold">AVIATOR</a>
+                <a href="?act=chitiet" class="menu-link menu-link_us-s text-uppercase fw-semi-bold">AVIATOR</a>
               </div>
             </div>
             <div class="swiper-slide">
               <img loading="lazy" class="w-100 h-auto mb-3" src="<?= BASE_URL ?>assets/images/home/demo13/category-3.jpg" width="270" height="182" alt="">
               <div class="text-center border-top py-4">
-                <a href="shop1.html" class="menu-link menu-link_us-s text-uppercase fw-semi-bold">RECTANGULAR</a>
+                <a href="?act=chitiet" class="menu-link menu-link_us-s text-uppercase fw-semi-bold">RECTANGULAR</a>
               </div>
             </div>
             <div class="swiper-slide">
               <img loading="lazy" class="w-100 h-auto mb-3" src="<?= BASE_URL ?>assets/images/home/demo13/category-4.jpg" width="270" height="182" alt="">
               <div class="text-center border-top py-4">
-                <a href="shop1.html" class="menu-link menu-link_us-s text-uppercase fw-semi-bold">ROUND</a>
+                <a href="?act=chitiet" class="menu-link menu-link_us-s text-uppercase fw-semi-bold">ROUND</a>
               </div>
             </div>
             <div class="swiper-slide">
               <img loading="lazy" class="w-100 h-auto mb-3" src="<?= BASE_URL ?>assets/images/home/demo13/category-5.jpg" width="270" height="182" alt="">
               <div class="text-center border-top py-4">
-                <a href="shop1.html" class="menu-link menu-link_us-s text-uppercase fw-semi-bold">OVAL</a>
+                <a href="?act=chitiet" class="menu-link menu-link_us-s text-uppercase fw-semi-bold">OVAL</a>
               </div>
             </div>
             <div class="swiper-slide">
               <img loading="lazy" class="w-100 h-auto mb-3" src="<?= BASE_URL ?>assets/images/home/demo13/category-6.jpg" width="270" height="182" alt="">
               <div class="text-center border-top py-4">
-                <a href="shop1.html" class="menu-link menu-link_us-s text-uppercase fw-semi-bold">GEOMETRIC</a>
+                <a href="?act=chitiet" class="menu-link menu-link_us-s text-uppercase fw-semi-bold">GEOMETRIC</a>
               </div>
             </div>
           </div><!-- /.swiper-wrapper -->

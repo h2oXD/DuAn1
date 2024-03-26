@@ -8,7 +8,7 @@
             <a href="<?= BASE_URL ?>" class="navigation__link">Home</a>
           </li>
           <li class="navigation__item">
-            <a href="#" class="navigation__link">Shop</a>
+            <a href="?act=list_sp" class="navigation__link">Shop</a>
             <div class="mega-menu">
               <div class="container d-flex">
                 <div class="col pe-4">
