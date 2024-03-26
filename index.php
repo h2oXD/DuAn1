@@ -14,9 +14,7 @@
     $act = $_GET['act'] ?? '/';
     match($act){
         '/' => homeIndex(),
-        
-        
-
+        'list' => ListProduct(),
     };
 
     require_once "commons/disconnect-db.php";
