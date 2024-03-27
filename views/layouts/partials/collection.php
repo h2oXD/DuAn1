@@ -6,7 +6,7 @@
             <div class="content_abs content_bottom content_left content_bottom-lg content_left-lg">
               <h6 class="text-uppercase text-white fs-base fw-medium mb-2">Collection</h6>
               <h3 class="text-uppercase text-white fs-20 mb-3">Sunglasses Men’s</h3>
-              <a href="shop1.html" class="btn-link default-underline text-uppercase text-white fw-medium">Shop Now</a>
+              <a href="?act=list_sp" class="btn-link default-underline text-uppercase text-white fw-medium">Shop Now</a>
             </div><!-- /.content_abs content_bottom content_left content_bottom-md content_left-md -->
           </div>
         </div><!-- /.col-md-6 -->
@@ -17,7 +17,7 @@
             <div class="content_abs content_bottom content_left content_bottom-lg content_left-lg">
               <h6 class="text-uppercase text-white fs-base fw-medium mb-2">Collection</h6>
               <h3 class="text-uppercase text-white fs-20 mb-3">Sunglasses Women’s</h3>
-              <a href="shop1.html" class="btn-link default-underline text-uppercase text-white fw-medium">Shop Now</a>
+              <a href="?act=list_sp" class="btn-link default-underline text-uppercase text-white fw-medium">Shop Now</a>
             </div><!-- /.content_abs content_bottom content_left content_bottom-md content_left-md -->
           </div>
         </div><!-- /.col-md-6 -->

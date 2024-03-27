@@ -23,7 +23,6 @@
 
         // Giỏ hàng
         'view-cart' => viewcart(),
-        
 
     };
 
