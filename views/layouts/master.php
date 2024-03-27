@@ -202,7 +202,7 @@
 
 
   <!-- Customer Login Form -->
-  <?php require PATH_VIEW . "layouts/partials/customer-login-form.php"; ?>
+  <?php  require PATH_VIEW . "layouts/partials/customer-login-form.php"; ?>
   <!-- /.aside aside_right -->
 
 

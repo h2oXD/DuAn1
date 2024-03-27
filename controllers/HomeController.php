@@ -1,6 +1,10 @@
 <?php
     function homeIndex(){
         $view = "home";
+        debug($_POST);
+        if(isset($_POST['login'])){
+
+        }
         require PATH_VIEW.'layouts/master.php';
     }
 

@@ -136,7 +136,7 @@
         </div><!-- /.header-tools__item hover-container -->
 
         <div class="header-tools__item hover-container">
-          <a class="header-tools__item js-open-aside" href="#" data-aside="customerForms">
+          <a class="header-tools__item js-open-aside" href="?act=login" data-aside="customerForms">
             <svg class="d-block" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><use href="#icon_user" /></svg>
           </a>
         </div>
