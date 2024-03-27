@@ -68,7 +68,7 @@
                     <div class="mega-menu__media-content content_abs content_left content_bottom">
                       <h3>NEW</h3>
                       <h3 class="mb-0">HORIZONS</h3>
-                      <a href="shop1.html" class="btn-link default-underline fw-medium">SHOP NOW</a>
+                      <a href="?act=list_sp" class="btn-link default-underline fw-medium">SHOP NOW</a>
                     </div>
                   </div>
                 </div>
@@ -76,23 +76,15 @@
             </div>
           </li>
           <li class="navigation__item">
-            <a href="#" class="navigation__link">Pages</a>
+            <a href="?act=account_dashboard" class="navigation__link">Pages</a>
             <ul class="default-menu list-unstyled">
-              <li class="sub-menu__item"><a href="account_dashboard.html" class="menu-link menu-link_us-s">My Account</a></li>
-              <li class="sub-menu__item"><a href="login_register.html" class="menu-link menu-link_us-s">Login / Register</a></li>
-              <li class="sub-menu__item"><a href="store_location.html" class="menu-link menu-link_us-s">Store Locator</a></li>
-              <li class="sub-menu__item"><a href="lookbook.html" class="menu-link menu-link_us-s">Lookbook</a></li>
-              <li class="sub-menu__item"><a href="faq.html" class="menu-link menu-link_us-s">Faq</a></li>
-              <li class="sub-menu__item"><a href="terms.html" class="menu-link menu-link_us-s">Terms</a></li>
-              <li class="sub-menu__item"><a href="404.html" class="menu-link menu-link_us-s">404 Error</a></li>
-              <li class="sub-menu__item"><a href="coming_soon.html" class="menu-link menu-link_us-s">Coming Soon</a></li>
+              <li class="sub-menu__item"><a href="?act=account_dashboard" class="menu-link menu-link_us-s">My Account</a></li>
+              <li class="sub-menu__item"><a href="?act=login_register" class="menu-link menu-link_us-s">Login / Register</a></li>
+              <li class="sub-menu__item"><a href="?act=show_term" class="menu-link menu-link_us-s">Terms</a></li>
             </ul><!-- /.box-menu -->
           </li>
           <li class="navigation__item">
-            <a href="about.html" class="navigation__link">About</a>
-          </li>
-          <li class="navigation__item">
-            <a href="contact.html" class="navigation__link">Contact</a>
+            <a href="?act=show_about" class="navigation__link">About</a>
           </li>
         </ul><!-- /.navigation__list -->
       </nav><!-- /.navigation -->
