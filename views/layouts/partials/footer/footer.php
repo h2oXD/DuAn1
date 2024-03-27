@@ -1,7 +1,7 @@
 <footer class="footer footer_type_3 full-width_padding">
     <div class="footer-middle d-lg-flex align-items-center justify-content-between">
       <ul class="sub-menu__list list-unstyled d-sm-flex my-2">
-        <li class="sub-menu__item px-3"><a href="index.html" class="menu-link menu-link_us-s text-uppercase fw-semi-bold">Home</a></li>
+        <li class="sub-menu__item px-3"><a href="<?= BASE_URL ?>" class="menu-link menu-link_us-s text-uppercase fw-semi-bold">Home</a></li>
         <li class="sub-menu__item px-3"><a href="?act=list_sp" class="menu-link menu-link_us-s text-uppercase fw-semi-bold">Shop</a></li>
         <li class="sub-menu__item px-3"><a href="blog_list1.html" class="menu-link menu-link_us-s text-uppercase fw-semi-bold">Blog</a></li>
         <li class="sub-menu__item px-3"><a href="account_dashboard.html" class="menu-link menu-link_us-s text-uppercase fw-semi-bold">Pages</a></li>

@@ -18,3 +18,14 @@
         $view = "danhsach_sanpham/list_sp";
         require PATH_VIEW.'layouts/master.php';
     }
+
+    function ship(){
+        $view = "ship/ship-checkout";
+        require PATH_VIEW.'layouts/master.php';
+    }
+
+    
+    function confirm(){
+        $view = "confirmation/confirm";
+        require PATH_VIEW.'layouts/master.php';
+    }
