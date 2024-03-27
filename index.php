@@ -24,6 +24,11 @@
         // Giỏ hàng
         'view-cart' => viewcart(),
 
+        // Shipping
+        'ship-checkout' => ship(),
+
+        // Confirm
+        'confirm' => confirm(),
     };
 
     require_once "commons/disconnect-db.php";
