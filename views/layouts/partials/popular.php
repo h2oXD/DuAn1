@@ -132,6 +132,6 @@
         </div><!-- /.swiper-container js-swiper-slider -->
       </div><!-- /.position-relative -->
       <div class="text-center mt-2">
-        <a class="btn-link btn-link_lg default-underline text-uppercase fw-medium" href="?act=list-product">See All Products</a>
+        <a class="btn-link btn-link_lg default-underline text-uppercase fw-medium" href="?act=list_sp">See All Products</a>
       </div>
     </section>

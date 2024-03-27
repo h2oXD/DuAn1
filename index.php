@@ -14,9 +14,15 @@
     $act = $_GET['act'] ?? '/';
     match($act){
         '/' => homeIndex(),
+
+        // Danh sách sản phẩm
+        'list_sp' => List_sp(),
+
+        // Chi tiết sản phẩm
         'chitiet' => Chitiet(),
+
+        // Giỏ hàng
         'view-cart' => viewcart(),
-        'list-product' => listproduct(),
 
     };
 
