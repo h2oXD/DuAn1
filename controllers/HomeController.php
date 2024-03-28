@@ -1,7 +1,7 @@
 <?php
     function homeIndex(){
         $view = "home";
-        debug($_POST);
+        // debug($_POST);
         if(isset($_POST['login'])){
 
         }
