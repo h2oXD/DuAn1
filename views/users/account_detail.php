@@ -20,18 +20,21 @@
                     <div class="form-floating my-3">
                       <input name="name" value="<?= $_SESSION['user']['name'] ?>" type="text" class="form-control" id="account_last_name" placeholder="Name" required>
                       <label for="account_name">Họ và tên</label>
-                      <div class=".was-validated"><?= $_SESSION['errorName'] ?? null ?></div>
+                      <div style="color:rgba(231,74,59,.9)" class=".was-validated "><?= $_SESSION['errorName'] ?? null ?></div>
+                      <?php unset($_SESSION['errorName']); ?>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-floating my-3">
                       <input name="phone_number" value="<?= $_SESSION['user']['phone_number'] ?>" type="text" class="form-control" id="account_last_name" placeholder="Name" required>
                       <label for="account_name">Số điện thoại</label>
+                      <div style="color:rgba(231,74,59,.9)" class=".was-validated"><?= $_SESSION['errorSDT'] ?? null ?></div>
+                      <?php unset($_SESSION['errorSDT']); ?>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-floating my-3">
-                      <input name="email" value="<?= $_SESSION['user']['email'] ?>" type="email" class="form-control" id="account_email" placeholder="Email Address" required>
+                      <input disabled name="email" value="<?= $_SESSION['user']['email'] ?>" type="email" class="form-control" id="account_email" placeholder="Email Address" required>
                       <label for="account_email">Địa chỉ Email</label>
                     </div>
                   </div>
@@ -43,6 +46,13 @@
                   </div>
                   <div class="col-md-12">
                     <div class="my-3">
+                      <button name="account_edit_form" type="submit" class="btn btn-primary">Lưu thay đổi</button>
+                    </div>
+                  </div>
+              </form>  
+              <form action="" method="post"></form>
+                  <div class="col-md-12">
+                    <div class="my-3">
                       <h5 class="text-uppercase mb-0">Thay đổi mật khẩu</h5>
                     </div>
                   </div>
@@ -50,12 +60,16 @@
                     <div class="form-floating my-3">
                       <input name="password" type="password" class="form-control" id="account_current_password" placeholder="Mật khẩu hiện tại" required>
                       <label for="account_current_password">Mật khẩu hiện tại</label>
+                      <div style="color:rgba(231,74,59,.9)" class=".was-validated"><?= $_SESSION['errorPass'] ?? null ?></div>
+                      <?php unset($_SESSION['errorPass']); ?>
                     </div>
                   </div>
                   <div class="col-md-12">
                     <div class="form-floating my-3">
                       <input name="new_password" type="password" class="form-control" id="account_new_password" placeholder="Mật khẩu mới" required>
                       <label for="account_new_password">Mật khẩu mới</label>
+                      <div style="color:rgba(231,74,59,.9)" class=".was-validated"><?= $_SESSION['errorNewPass'] ?? null ?></div>
+                      <?php unset($_SESSION['errorNewPass']); ?>
                     </div>
                   </div>
                   <div class="col-md-12">
@@ -63,11 +77,15 @@
                       <input name="confirm_new_password" type="password" class="form-control" data-cf-pwd="#account_new_password" id="account_confirm_password" placeholder="Xác nhận mật khẩu mới" required>
                       <label for="account_confirm_password">Xác nhận mật khẩu mới</label>
                       <div class="invalid-feedback">Mật khẩu không đúng!</div>
+                      <div style="color:rgba(231,74,59,.9)" class=".was-validated"><?= $_SESSION['confirmPass'] ?? null ?></div>
+                      <?php unset($_SESSION['confirmPass']); ?>
                     </div>
                   </div>
+                  <div style="color:#22bb33" class=".was-validated"><?= $_SESSION['successResetPass'] ?? null ?></div>
+                      <?php unset($_SESSION['successResetPass']); ?>
                   <div class="col-md-12">
                     <div class="my-3">
-                      <button name="account_edit_form" type="submit" class="btn btn-primary">Lưu thay đổi</button>
+                      <button name="reset_pass" type="submit" class="btn btn-primary">Đổi mật khẩu</button>
                     </div>
                   </div>
                 </div>

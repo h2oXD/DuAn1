@@ -20,6 +20,8 @@
                             <input name="login_email" type="email" class="form-control form-control_gray"
                                 id="customerNameEmailInput1" placeholder="Email address *" required>
                             <label for="customerNameEmailInput1">Email *</label>
+                            <div style="color:rgba(231,74,59,.9)" class=".was-validated"><?= $_SESSION['errorEmail'] ?? null ?></div>
+                      <?php unset($_SESSION['errorEmail']); ?>
                         </div>
 
                         <div class="pb-3"></div>
@@ -59,6 +61,8 @@
                             <input name="register_email" type="email" class="form-control form-control_gray"
                                 id="customerEmailRegisterInput" placeholder="Email address *" required>
                             <label for="customerEmailRegisterInput">Email *</label>
+                            <div style="color:rgba(231,74,59,.9)" class=".was-validated"><?= $_SESSION['errorEmail'] ?? null ?></div>
+                      <?php unset($_SESSION['errorEmail']); ?>
                         </div>
 
                         <div class="pb-3"></div>
