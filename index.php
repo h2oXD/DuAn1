@@ -29,6 +29,18 @@
 
         // Confirm
         'confirm' => confirm(),
+
+        // Quản lí tài khoản
+        'account_dashboard' => Account_Dashboard(),
+        'login_register' => Login_Register(),
+        'account_order' => Account_Order(),
+        'account_edit' => Account_Edit(),
+
+        // Trang điều khoản và dịch vụ
+        'show_term' => Show_Term(),
+
+        // Giới thiệu
+        'show_about' => Show_About(),
     };
 
     require_once "commons/disconnect-db.php";
