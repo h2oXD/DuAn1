@@ -1,5 +1,6 @@
 <?php
     //Require các file trong commons
+    session_start();
     require_once "commons/env.php";
     require_once "commons/helper.php";
     require_once "commons/connect-db.php";
@@ -14,6 +15,11 @@
     $act = $_GET['act'] ?? '/';
     match($act){
         '/' => homeIndex(),
+
+        'login' => userLoginRegister(),
+        'logout' => userLogout(),
+        'forget-password' => userForgetPassword(),
+        'account_edit' => accountDetail(),
 
         // Danh sách sản phẩm
         'list_sp' => List_sp(),
@@ -34,7 +40,7 @@
         'account_dashboard' => Account_Dashboard(),
         'login_register' => Login_Register(),
         'account_order' => Account_Order(),
-        'account_edit' => Account_Edit(),
+
 
         // Trang điều khoản và dịch vụ
         'show_term' => Show_Term(),

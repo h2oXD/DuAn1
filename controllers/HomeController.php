@@ -1,10 +1,6 @@
 <?php
     function homeIndex(){
         $view = "home";
-        // debug($_POST);
-        if(isset($_POST['login'])){
-
-        }
         require PATH_VIEW.'layouts/master.php';
     }
 
@@ -43,10 +39,7 @@
         $view = "users/account_order";
         require PATH_VIEW.'layouts/master.php';
     }
-    function Account_Edit(){
-        $view = "users/account_detail";
-        require PATH_VIEW.'layouts/master.php';
-    }
+
 
     function Login_Register(){
         $view = "users/login_register";

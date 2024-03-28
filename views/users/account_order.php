@@ -1,14 +1,14 @@
 <main>
     <div class="mb-4 pb-4"></div>
     <section class="my-account container">
-      <h2 class="page-title">Orders</h2>
+      <h2 class="page-title">Đơn mua</h2>
       <div class="row">
         <div class="col-lg-3">
           <ul class="account-nav">
             <li><a href="?act=account_dashboard" class="menu-link menu-link_us-s">Dashboard</a></li>
-            <li><a href="?act=account_order" class="menu-link menu-link_us-s menu-link_active">Orders</a></li>
-            <li><a href="?act=account_edit" class="menu-link menu-link_us-s">Account Details</a></li>
-            <li><a href="?act=login_register" class="menu-link menu-link_us-s">Logout</a></li>
+            <li><a href="?act=account_order" class="menu-link menu-link_us-s menu-link_active">Đơn mua</a></li>
+            <li><a href="?act=account_detail" class="menu-link menu-link_us-s">Thông tin cá nhân</a></li>
+            <li><a href="?act=logout" class="menu-link menu-link_us-s">Đăng xuất</a></li>
           </ul>
         </div>
         <div class="col-lg-9">
