@@ -19,7 +19,7 @@
         'login' => userLoginRegister(),
         'logout' => userLogout(),
         'forget-password' => userForgetPassword(),
-        'account_edit' => accountDetail(),
+        'account_detail' => accountDetail(),
 
         // Danh sách sản phẩm
         'list_sp' => List_sp(),
