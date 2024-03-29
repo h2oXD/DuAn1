@@ -23,23 +23,14 @@
         'account_order' => accountOrder(),
         'account_dashboard' => accountDashboard(),
 
-        // Danh sách sản phẩm
-        'list_sp' => List_sp(),
-
-        // Chi tiết sản phẩm
-        'chitiet' => Chitiet(),
-
         // Giỏ hàng
         'view-cart' => viewcart(),
-
-        // Shipping
         'ship-checkout' => ship(),
-
-        // Confirm
         'confirm' => confirm(),
 
-        // Quản lí tài khoản
-
+        // Danh sách sản phẩm
+        'list_sp' => List_sp(),
+        'chitiet' => Chitiet(),
 
         // Trang điều khoản và dịch vụ
         'show_term' => Show_Term(),

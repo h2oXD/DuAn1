@@ -10,6 +10,7 @@
     }
 
     function viewcart(){
+        if(!isset($_SESSION['user'])){header("Location:" . BASE_URL ."?act=login"); exit();}
         $view = "cart/view-cart";
         require PATH_VIEW.'layouts/master.php';
     }
@@ -20,12 +21,14 @@
     }
 
     function ship(){
+        if(!isset($_SESSION['user'])){header("Location:" . BASE_URL ."?act=login"); exit();}
         $view = "ship/ship-checkout";
         require PATH_VIEW.'layouts/master.php';
     }
 
     
     function confirm(){
+        if(!isset($_SESSION['user'])){header("Location:" . BASE_URL ."?act=login"); exit();}
         $view = "confirmation/confirm";
         require PATH_VIEW.'layouts/master.php';
     }

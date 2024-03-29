@@ -69,21 +69,19 @@
                                 id="customerEmailRegisterInput" placeholder="Email address *" required>
                             <label for="customerEmailRegisterInput">Email *</label>
                             <div style="color:rgba(231,74,59,.9)" class=".was-validated">
-                                <?= $_SESSION['errorEmail'] ?? null ?>
+                                <?= $_SESSION['errorRegisterEmail'] ?? null ?>
                             </div>
-                            <?php unset($_SESSION['errorEmail']); ?>
+                            <?php unset($_SESSION['errorRegisterEmail']); ?>
                         </div>
-
-
-                            <div class="form-floating my-3">
-                                <input name="name" type="text" class="form-control" id="account_last_name"
-                                    placeholder="Name" required>
-                                <label for="account_name">Họ và tên *</label>
-                                <div style="color:rgba(231,74,59,.9)" class=".was-validated ">
-                                    <?= $_SESSION['errorName'] ?? null ?>
-                                </div>
-                                <?php unset($_SESSION['errorName']); ?>
+                        <div class="form-floating my-3">
+                            <input name="name" type="text" class="form-control" id="account_last_name"
+                                placeholder="Name" required>
+                            <label for="account_name">Họ và tên *</label>
+                            <div style="color:rgba(231,74,59,.9)" class=".was-validated ">
+                                <?= $_SESSION['errorRegisterName'] ?? null ?>
                             </div>
+                            <?php unset($_SESSION['errorRegisterName']); ?>
+                        </div>
                         <div class="pb-3"></div>
 
                         <div class="form-floating mb-3">
@@ -91,34 +89,32 @@
                                 id="customerPasswodRegisterInput" placeholder="Password *" required>
                             <label for="customerPasswodRegisterInput">Mật khẩu *</label>
                             <div style="color:rgba(231,74,59,.9)" class=".was-validated ">
-                                    <?= $_SESSION['errorPass'] ?? null ?>
-                                </div>
-                                <?php unset($_SESSION['errorPass']); ?>
+                                <?= $_SESSION['errorRegisterPass'] ?? null ?>
+                            </div>
+                            <?php unset($_SESSION['errorRegisterPass']); ?>
                         </div>
                         <div class="form-floating mb-3">
                             <input name="confirm_password" type="password" class="form-control form-control_gray"
-                                id="customerPasswodRegisterInput" placeholder="Password *" required>
+                                 placeholder="Password *" required>
                             <label for="customerPasswodRegisterInput">Xác nhận mật khẩu *</label>
                             <div style="color:rgba(231,74,59,.9)" class=".was-validated ">
-                                    <?= $_SESSION['errorCfPass'] ?? null ?>
-                                </div>
-                                <?php unset($_SESSION['errorCfPass']); ?>
+                                <?= $_SESSION['errorCfPass'] ?? null ?>
+                            </div>
+                            <?php unset($_SESSION['errorCfPass']); ?>
                         </div>
-
                         <div class="d-flex align-items-center mb-3 pb-2">
                             <p class="m-0">Dữ liệu cá nhân của bạn sẽ được sử dụng để hỗ trợ trải nghiệm của bạn trên
                                 toàn bộ trang web này, để quản lý quyền truy cập vào tài khoản của bạn và cho các mục
                                 đích khác được mô tả trong chính sách bảo mật của chúng tôi.</p>
                         </div>
-                        
+
                         <div style="color:rgba(231,74,59,.9)" class=".was-validated ">
-                                    <?= $_SESSION['registerSuccess'] ?? null ?>
-                                </div>
-                                <?php unset($_SESSION['registerSuccess']); ?>
+                            <?= $_SESSION['registerSuccess'] ?? null ?>
+                        </div>
+                        <?php unset($_SESSION['registerSuccess']); ?>
 
                         <button class="btn btn-primary w-100 text-uppercase" name="register" type="submit">Đăng
                             ký</button>
-                            
                     </form>
                 </div>
             </div>
