@@ -1,5 +1,6 @@
 <?php
     session_start();
+
     //Require các file trong commons
     require_once "../commons/env.php";
     require_once "../commons/helper.php";
@@ -10,8 +11,9 @@
     //Require các file trong controllers, models, views
     require_file(PATH_CONTROLLER_ADMIN);
     require_file(PATH_MODEL_ADMIN);
-
+    
     //Điều hướng
+    if(!isset($_SESSION['user']) && $_SESSION['user']['role'] != 1){header("Location: ".BASE_URL);}
     $act = $_GET['act'] ?? '/';
     match($act){
         '/' => dashboard(),

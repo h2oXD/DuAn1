@@ -30,21 +30,6 @@
         require PATH_VIEW.'layouts/master.php';
     }
 
-    // Users
-    function Account_Dashboard(){
-        $view = "users/account_dashboard";
-        require PATH_VIEW.'layouts/master.php';
-    }
-    function Account_Order(){
-        $view = "users/account_order";
-        require PATH_VIEW.'layouts/master.php';
-    }
-
-
-    function Login_Register(){
-        $view = "users/login_register";
-        require PATH_VIEW.'layouts/master.php';
-    }
     
 
 

@@ -1,27 +1,27 @@
 <main>
     <div class="mb-4 pb-4"></div>
     <section class="shop-checkout container">
-      <h2 class="page-title">Cart</h2>
+      <h2 class="page-title">Giỏ hàng</h2>
       <div class="checkout-steps">
         <a href="?act=view-cart" class="checkout-steps__item active">
           <span class="checkout-steps__item-number">01</span>
           <span class="checkout-steps__item-title">
-            <span>Shopping Bag</span>
-            <em>Manage Your Items List</em>
+            <span>Giỏ hàng của bạn</span>
+            <em>Quản lý giỏ hàng</em>
           </span>
         </a>
         <a href="?act=ship-checkout" class="checkout-steps__item">
           <span class="checkout-steps__item-number">02</span>
           <span class="checkout-steps__item-title">
-            <span>Shipping and Checkout</span>
-            <em>Checkout Your Items List</em>
+            <span>Thanh toán</span>
+            <em>Thanh toán cho sản phẩm</em>
           </span>
         </a>
         <a href="?act=confirm" class="checkout-steps__item">
           <span class="checkout-steps__item-number">03</span>
           <span class="checkout-steps__item-title">
-            <span>Confirmation</span>
-            <em>Review And Submit Your Order</em>
+            <span>Xác nhận thanh toán</span>
+            <!-- <em>Review And Submit Your Order</em> -->
           </span>
         </a>
       </div>
@@ -30,11 +30,11 @@
           <table class="cart-table">
             <thead>
               <tr>
-                <th>Product</th>
+                <th>Sản phẩm</th>
                 <th></th>
-                <th>Price</th>
-                <th>Quantity</th>
-                <th>Subtotal</th>
+                <th>Giá</th>
+                <th>Số lượng</th>
+                <th>Tổng giá</th>
                 <th></th>
               </tr>
             </thead>
@@ -159,50 +159,33 @@
             </tbody>
           </table>
           <div class="cart-table-footer">
-            <form action="https://uomo-html.flexkitux.com/Demo13/" class="position-relative bg-body">
+            <form action="" class="position-relative bg-body">
               <input class="form-control" type="text" name="coupon_code" placeholder="Coupon Code">
               <input class="btn-link fw-medium position-absolute top-0 end-0 h-100 px-4" type="submit" value="APPLY COUPON">
             </form>
-            <button class="btn btn-light">UPDATE CART</button>
+            <button class="btn btn-light">Cập nhật giỏ hàng</button>
           </div>
         </div>
         <div class="shopping-cart__totals-wrapper">
           <div class="sticky-content">
             <div class="shopping-cart__totals">
-              <h3>Cart Totals</h3>
+              <h3>Đơn hàng của bạn</h3>
               <table class="cart-totals">
                 <tbody>
                   <tr>
-                    <th>Subtotal</th>
-                    <td>$1300</td>
+                    <th>Sản phẩm</th>
+                    <th>Số lượng</th>
                   </tr>
                   <tr>
-                    <th>Shipping</th>
-                    <td>
-                      <div class="form-check">
-                        <input class="form-check-input form-check-input_fill" type="checkbox" value="" id="free_shipping">
-                        <label class="form-check-label" for="free_shipping">Free shipping</label>
-                      </div>
-                      <div class="form-check">
-                        <input class="form-check-input form-check-input_fill" type="checkbox" value="" id="flat_rate">
-                        <label class="form-check-label" for="flat_rate">Flat rate: $49</label>
-                      </div>
-                      <div class="form-check">
-                        <input class="form-check-input form-check-input_fill" type="checkbox" value="" id="local_pickup">
-                        <label class="form-check-label" for="local_pickup">Local pickup: $8</label>
-                      </div>
-                      <div>Shipping to AL.</div>
-                      <div>
-                        <a href="#" class="menu-link menu-link_us-s">CHANGE ADDRESS</a>
-                      </div>
-                    </td>
+                    <td>Sản phẩm 1</td>
+                    <td>x2</td>
                   </tr>
                   <tr>
-                    <th>VAT</th>
-                    <td>$19</td>
+                    <td>Sản phẩm 1</td>
+                    <td>x2</td>
                   </tr>
                   <tr>
-                    <th>Total</th>
+                    <th>Tổng</th>
                     <td>$1319</td>
                   </tr>
                 </tbody>
@@ -210,7 +193,7 @@
             </div>
             <div class="mobile_fixed-btn_wrapper">
               <div class="button-wrapper container">
-                <button class="btn btn-primary btn-checkout">PROCEED TO CHECKOUT</button>
+                <button class="btn btn-primary btn-checkout">Thanh toán</button>
               </div>
             </div>
           </div>

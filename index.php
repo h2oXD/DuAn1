@@ -20,6 +20,8 @@
         'logout' => userLogout(),
         'forget-password' => userForgetPassword(),
         'account_detail' => accountDetail(),
+        'account_order' => accountOrder(),
+        'account_dashboard' => accountDashboard(),
 
         // Danh sách sản phẩm
         'list_sp' => List_sp(),
@@ -37,9 +39,6 @@
         'confirm' => confirm(),
 
         // Quản lí tài khoản
-        'account_dashboard' => Account_Dashboard(),
-        'login_register' => Login_Register(),
-        'account_order' => Account_Order(),
 
 
         // Trang điều khoản và dịch vụ

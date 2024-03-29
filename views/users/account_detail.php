@@ -56,7 +56,7 @@
                   <?= $_SESSION['successUpdateUser'] ?? null ?>
                 </div>
                 <?php unset($_SESSION['successUpdateUser']); ?>
-                <div style="color:#22bb33" class=".was-validated ">
+                <div style="color:#ffc107" class=".was-validated ">
                   <?= $_SESSION['nothing'] ?? null ?>
                 </div>
                 <?php unset($_SESSION['nothing']); ?>

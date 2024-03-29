@@ -8,24 +8,51 @@ function userLoginRegister()
             'password' => $_POST['login_password'] ?? null,
             'remember' => $_POST['remember'] ?? null
         ];
-        // validateUserUpdateDetail($data);
-        if (userLogin($data['email'], $data['password'])) {
+        
+        if (validateLoginRegister($data) && userLogin($data['email'], $data['password'])) {
             $_SESSION['user'] = userLogin($data['email'], $data['password']);
             header("Location: " . BASE_URL);
         } else {
-            $_SESSION['faillogin'] = "Đăng nhập không thành công";
+            if(!isset($_SESSION['errorEmail']) && !isset($_SESSION['errorPass'])){
+            $_SESSION['faillogin'] = "Tài khoản hoặc mật khẩu không chính xác";
+        }
         }
 
     }
     if (isset($_POST['register'])) {
+        $confirm_password = $_POST['confirm_password'];
         $data = [
             'email' => $_POST['register_email'] ?? null,
-            'password' => $_POST['register_password'] ?? null,
-            'confirm_password' => $_POST['confirm_password'] ?? null,
+            'name' => $_POST['name'] ?? null,
+            'password' => $_POST['register_password'] ?? null
         ];
-        // validateUserUpdateDetail($data);
+        if(validateLoginRegister($data, $confirm_password)){
+            insert('users',$data);
+            $_SESSION['registerSuccess'] = "Đăng ký thành công";
+        }
     }
     require PATH_VIEW . 'layouts/master.php';
+}
+function validateLoginRegister($data , $confirm_password = null){
+    $check = true;
+    if(empty($data['email']) && filter_var($data['email'],FILTER_VALIDATE_EMAIL)){
+        $_SESSION['errorEmail'] = 'Email không đúng định dạng';
+        $check = false;
+    }
+    if(empty($data['password']) ||  strlen($data['password']) < 8 || strlen($data['password']) > 20){
+        $_SESSION['errorPass'] = 'Mật khẩu phải từ 8->20 ký tự';
+        $check = false;
+    }
+    if(isset($_POST['register'])){
+        if (empty($data['name']) || strlen($data['name']) >= 50 || strlen($data['name']) <= 3) {
+            $_SESSION['errorName'] = "Tên phải có từ 3->50 ký tự";
+            $check = false;
+        }
+        if ($data['password'] != $confirm_password ) {
+            $_SESSION['errorCfPass'] = "Mật khẩu không trùng khớp";
+            $check = false;}
+    }
+    return $check;
 }
 function userForgetPassword()
 {
@@ -35,6 +62,7 @@ function userForgetPassword()
 }
 function accountDetail()
 {
+    if(!isset($_SESSION['user'])){header("Location:" . BASE_URL ."?act=login");}
     $view = "users/account_detail";
     if (isset($_POST['account_edit_form'])) {
         $data = [
@@ -130,10 +158,23 @@ function checkUserPassword($pass, $inputPass, $newPass = null, $confirmPass = nu
 
     return $check;
 }
+
+function accountOrder()
+{
+    $view = "users/account_order";
+
+    require PATH_VIEW . 'layouts/master.php';
+    
+}
+function accountDashboard()
+{
+    $view = "users/account_dashboard";
+
+    require PATH_VIEW . 'layouts/master.php';
+    
+}
 function userLogout()
 {
     unset($_SESSION['user']);
-    $view = "home";
-
-    require PATH_VIEW . 'layouts/master.php';
+    header("Location: " . BASE_URL);
 }
