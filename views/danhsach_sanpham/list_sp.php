@@ -1,4 +1,4 @@
-  <main>
+  <main style="margin-bottom: 50px;">
     <section class="shop-main container d-flex pt-4 pt-xl-5">
       <div class="shop-sidebar side-sticky bg-body" id="shopFilter">
         <div class="aside-header d-flex d-lg-none align-items-center">
@@ -12,7 +12,7 @@
           <div class="accordion-item mb-4 pb-3">
             <h5 class="accordion-header" id="accordion-heading-11">
               <button class="accordion-button p-0 border-0 fs-5 text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-filter-1" aria-expanded="true" aria-controls="accordion-filter-1">
-                Product Categories
+               Loại kính
                 <svg class="accordion-button__icon type2" viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg">
                   <g aria-hidden="true" stroke="none" fill-rule="evenodd">
                     <path d="M5.35668 0.159286C5.16235 -0.053094 4.83769 -0.0530941 4.64287 0.159286L0.147611 5.05963C-0.0492049 5.27473 -0.049205 5.62357 0.147611 5.83813C0.344427 6.05323 0.664108 6.05323 0.860924 5.83813L5 1.32706L9.13858 5.83867C9.33589 6.05378 9.65507 6.05378 9.85239 5.83867C10.0492 5.62357 10.0492 5.27473 9.85239 5.06018L5.35668 0.159286Z"/>
@@ -64,7 +64,7 @@
           <div class="accordion-item mb-4 pb-3">
             <h5 class="accordion-header" id="accordion-heading-1">
               <button class="accordion-button p-0 border-0 fs-5 text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-filter-2" aria-expanded="true" aria-controls="accordion-filter-2">
-                Color
+                Màu sắc
                 <svg class="accordion-button__icon type2" viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg">
                   <g aria-hidden="true" stroke="none" fill-rule="evenodd">
                     <path d="M5.35668 0.159286C5.16235 -0.053094 4.83769 -0.0530941 4.64287 0.159286L0.147611 5.05963C-0.0492049 5.27473 -0.049205 5.62357 0.147611 5.83813C0.344427 6.05323 0.664108 6.05323 0.860924 5.83813L5 1.32706L9.13858 5.83867C9.33589 6.05378 9.65507 6.05378 9.85239 5.83867C10.0492 5.62357 10.0492 5.27473 9.85239 5.06018L5.35668 0.159286Z"/>
@@ -91,40 +91,11 @@
           </div><!-- /.accordion-item -->
         </div><!-- /.accordion -->
 
-
-        <div class="accordion" id="size-filters">
-          <div class="accordion-item mb-4 pb-3">
-            <h5 class="accordion-header" id="accordion-heading-size">
-              <button class="accordion-button p-0 border-0 fs-5 text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-filter-size" aria-expanded="true" aria-controls="accordion-filter-size">
-                Sizes
-                <svg class="accordion-button__icon type2" viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg">
-                  <g aria-hidden="true" stroke="none" fill-rule="evenodd">
-                    <path d="M5.35668 0.159286C5.16235 -0.053094 4.83769 -0.0530941 4.64287 0.159286L0.147611 5.05963C-0.0492049 5.27473 -0.049205 5.62357 0.147611 5.83813C0.344427 6.05323 0.664108 6.05323 0.860924 5.83813L5 1.32706L9.13858 5.83867C9.33589 6.05378 9.65507 6.05378 9.85239 5.83867C10.0492 5.62357 10.0492 5.27473 9.85239 5.06018L5.35668 0.159286Z"/>
-                  </g>
-                </svg>
-              </button>
-            </h5>
-            <div id="accordion-filter-size" class="accordion-collapse collapse show border-0" aria-labelledby="accordion-heading-size" data-bs-parent="#size-filters">
-              <div class="accordion-body px-0 pb-0">
-                <div class="d-flex flex-wrap">
-                  <a href="#" class="swatch-size btn btn-sm btn-outline-light mb-3 me-3 js-filter">XS</a>
-                  <a href="#" class="swatch-size btn btn-sm btn-outline-light mb-3 me-3 js-filter">S</a>
-                  <a href="#" class="swatch-size btn btn-sm btn-outline-light mb-3 me-3 js-filter">M</a>
-                  <a href="#" class="swatch-size btn btn-sm btn-outline-light mb-3 me-3 js-filter">L</a>
-                  <a href="#" class="swatch-size btn btn-sm btn-outline-light mb-3 me-3 js-filter">XL</a>
-                  <a href="#" class="swatch-size btn btn-sm btn-outline-light mb-3 me-3 js-filter">XXL</a>
-                </div>
-              </div>
-            </div>
-          </div><!-- /.accordion-item -->
-        </div><!-- /.accordion -->
-
-
         <div class="accordion" id="brand-filters">
           <div class="accordion-item mb-4 pb-3">
             <h5 class="accordion-header" id="accordion-heading-brand">
               <button class="accordion-button p-0 border-0 fs-5 text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-filter-brand" aria-expanded="true" aria-controls="accordion-filter-brand">
-                Brands
+                Thương hiệu
                 <svg class="accordion-button__icon type2" viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg">
                   <g aria-hidden="true" stroke="none" fill-rule="evenodd">
                     <path d="M5.35668 0.159286C5.16235 -0.053094 4.83769 -0.0530941 4.64287 0.159286L0.147611 5.05963C-0.0492049 5.27473 -0.049205 5.62357 0.147611 5.83813C0.344427 6.05323 0.664108 6.05323 0.860924 5.83813L5 1.32706L9.13858 5.83867C9.33589 6.05378 9.65507 6.05378 9.85239 5.83867C10.0492 5.62357 10.0492 5.27473 9.85239 5.06018L5.35668 0.159286Z"/>
@@ -186,7 +157,7 @@
           <div class="accordion-item mb-4">
             <h5 class="accordion-header mb-2" id="accordion-heading-price">
               <button class="accordion-button p-0 border-0 fs-5 text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-filter-price" aria-expanded="true" aria-controls="accordion-filter-price">
-                Price
+                Giá
                 <svg class="accordion-button__icon type2" viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg">
                   <g aria-hidden="true" stroke="none" fill-rule="evenodd">
                     <path d="M5.35668 0.159286C5.16235 -0.053094 4.83769 -0.0530941 4.64287 0.159286L0.147611 5.05963C-0.0492049 5.27473 -0.049205 5.62357 0.147611 5.83813C0.344427 6.05323 0.664108 6.05323 0.860924 5.83813L5 1.32706L9.13858 5.83867C9.33589 6.05378 9.65507 6.05378 9.85239 5.83867C10.0492 5.62357 10.0492 5.27473 9.85239 5.06018L5.35668 0.159286Z"/>
@@ -195,15 +166,15 @@
               </button>
             </h5>
             <div id="accordion-filter-price" class="accordion-collapse collapse show border-0" aria-labelledby="accordion-heading-price" data-bs-parent="#price-filters">
-              <input class="price-range-slider" type="text" name="price_range" value="" data-slider-min="10" data-slider-max="1000" data-slider-step="5" data-slider-value="[250,450]" data-currency="$">
+              <input class="price-range-slider" type="text" name="price_range" value="" data-slider-min="10" data-slider-max="1000" data-slider-step="5" data-slider-value="[0,1000]" data-currency="$">
               <div class="price-range__info d-flex align-items-center mt-2">
                 <div class="me-auto">
                   <span class="text-secondary">Min Price: </span>
-                  <span class="price-range__min">$250</span>
+                  <span class="price-range__min">$0</span>
                 </div>
                 <div>
                   <span class="text-secondary">Max Price: </span>
-                  <span class="price-range__max">$450</span>
+                  <span class="price-range__max">$1000</span>
                 </div>
               </div>
             </div>
@@ -212,59 +183,6 @@
       </div><!-- /.shop-sidebar -->
 
       <div class="shop-list flex-grow-1">
-        <div class="swiper-container js-swiper-slider slideshow slideshow_small"
-          data-settings='{
-            "autoplay": {
-              "delay": 5000
-            },
-            "slidesPerView": 1,
-            "effect": "fade",
-            "loop": true,
-            "pagination": {
-              "el": ".slideshow-pagination",
-              "type": "bullets",
-              "clickable": true
-            }
-          }'>
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="overflow-hidden position-relative h-100" style="background-color: #eee;">
-                <div class="slideshow-character position-absolute bottom-0 pos_right-center">
-                  <img loading="lazy" src="../images/slideshow-character1.png" width="246" height="450" alt="Woman Fashion 1" class="slideshow-character__img animate animate_fade animate_btt animate_delay-9 w-auto h-auto">
-                  <div class="character_markup">
-                    <p class="font-special text-uppercase animate animate_fade animate_rtl animate_delay-10">Summer</p>
-                  </div>
-                </div>
-                <div class="slideshow-text container position-absolute start-50 top-50 translate-middle p-3 p-xl-5">
-                  <h6 class="text_dash text-uppercase text-red fs-base fw-medium animate animate_fade animate_btt animate_delay-3">New Trend</h6>
-                  <h2 class="text-uppercase page-title fw-normal mb-0 animate animate_fade animate_btt animate_delay-5">Summer Sale Stylish</h2>
-                  <h2 class="text-uppercase page-title fw-bold animate animate_fade animate_btt animate_delay-5">Womens</h2>
-                  <a href="#" class="btn-link btn-link_lg text-uppercase fw-medium animate animate_fade animate_btt animate_delay-7">Discover More</a>
-                </div>
-              </div>
-            </div><!-- /.slideshow-item -->
-
-            <div class="swiper-slide">
-              <div class="overflow-hidden position-relative h-100" style="background-color: #eee;">
-                <div class="slideshow-character position-absolute bottom-0 pos_right-center">
-                  <img loading="lazy" src="../images/slideshow-character2.png" width="261" height="450" alt="Woman Fashion 2" class="slideshow-character__img animate animate_fade animate_btt animate_delay-9 w-auto h-auto">
-                </div>
-                <div class="slideshow-text container position-absolute start-50 top-50 translate-middle p-3 p-xl-5">
-                  <h6 class="text_dash text-uppercase text-red fs-base fw-medium animate animate_fade animate_btt animate_delay-3">Summer 2024</h6>
-                  <h2 class="text-uppercase page-title fw-bold animate animate_fade animate_btt animate_delay-3">Hello New Season</h2>
-                  <h6 class="text-uppercase mb-3 animate animate_fade animate_btt animate_delay-3">Limited Time Offer - Up to 60% off & Free Shipping</h6>
-                  <a href="#" class="btn-link btn-link_lg text-uppercase fw-medium animate animate_fade animate_btt animate_delay-3">Discover More</a>
-                </div>
-              </div>
-            </div><!-- /.slideshow-item -->
-          </div><!-- /.slideshow-wrapper js-swiper-slider -->
-
-          <div class="p-3 p-xl-5">
-            <div class="slideshow-pagination d-flex align-items-center position-absolute bottom-0 mb-4"></div>
-            <!-- /.products-pagination -->
-          </div><!-- /.container -->
-        </div><!-- /.slideshow -->
-
         <div class="mb-3 pb-2 pb-xl-3"></div>
 
         <div class="d-flex justify-content-between mb-4 pb-md-2">
@@ -289,12 +207,6 @@
 
             <div class="shop-asc__seprator mx-3 bg-light d-none d-md-block order-md-0"></div>
 
-            <div class="col-size align-items-center order-1 d-none d-lg-flex">
-              <span class="text-uppercase fw-medium me-2">View</span>
-              <button class="btn-link fw-medium me-2 js-cols-size" data-target="products-grid" data-cols="2">2</button>
-              <button class="btn-link fw-medium me-2 js-cols-size" data-target="products-grid" data-cols="3">3</button>
-              <button class="btn-link fw-medium js-cols-size" data-target="products-grid"  data-cols="4">4</button>
-            </div><!-- /.col-size -->
 
             <div class="shop-filter d-flex align-items-center order-0 order-md-3 d-lg-none">
               <button class="btn-link btn-link_f d-flex align-items-center ps-0 js-open-aside" data-aside="shopFilter">
@@ -305,17 +217,17 @@
           </div><!-- /.shop-acs -->
         </div><!-- /.d-flex justify-content-between -->
 
-        <div class="products-grid row row-cols-2 row-cols-md-3" id="products-grid" >
+        <div class="products-grid row row-cols-2 row-cols-md-3 row-cols-xl-4 row-cols-lg-4" id="products-grid" >
           <div class="product-card-wrapper">
             <div class="product-card mb-3 mb-md-4 mb-xxl-5">
               <div class="pc__img-wrapper">
                 <div class="swiper-container background-img js-swiper-slider" data-settings='{"resizeObserver": true}'>
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                      <a href="product1_simple.html"><img loading="lazy" src="../images/products/product_1.jpg" width="330" height="400" alt="Cropped Faux leather Jacket" class="pc__img"></a>
+                      <a href="product1_simple.html"><img loading="lazy" src="<?= BASE_URL ?>/assets/images/products/product_1.jpg" width="330" height="400" alt="Cropped Faux leather Jacket" class="pc__img"></a>
                     </div><!-- /.pc__img-wrapper -->
                     <div class="swiper-slide">
-                      <a href="product1_simple.html"><img loading="lazy" src="../images/products/product_1-1.jpg" width="330" height="400" alt="Cropped Faux leather Jacket" class="pc__img"></a>
+                      <a href="product1_simple.html"><img loading="lazy" src="<?= BASE_URL ?>/assets/images/products/product_1-1.jpg" width="330" height="400" alt="Cropped Faux leather Jacket" class="pc__img"></a>
                     </div><!-- /.pc__img-wrapper -->
                   </div>
                   <span class="pc__img-prev"><svg width="7" height="11" viewBox="0 0 7 11" xmlns="http://www.w3.org/2000/svg"><use href="#icon_prev_sm" /></svg></span>
@@ -354,10 +266,10 @@
                 <div class="swiper-container background-img js-swiper-slider" data-settings='{"resizeObserver": true}'>
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                      <a href="product1_simple.html"><img loading="lazy" src="../images/products/product_2.jpg" width="330" height="400" alt="Cropped Faux leather Jacket" class="pc__img"></a>
+                      <a href="product1_simple.html"><img loading="lazy" src="<?= BASE_URL ?>/assets/images/products/product_2.jpg" width="330" height="400" alt="Cropped Faux leather Jacket" class="pc__img"></a>
                     </div><!-- /.pc__img-wrapper -->
                     <div class="swiper-slide">
-                      <a href="product1_simple.html"><img loading="lazy" src="../images/products/product_2-1.jpg" width="330" height="400" alt="Cropped Faux leather Jacket" class="pc__img"></a>
+                      <a href="product1_simple.html"><img loading="lazy" src="<?= BASE_URL ?>/assets/images/products/product_2-1.jpg" width="330" height="400" alt="Cropped Faux leather Jacket" class="pc__img"></a>
                     </div><!-- /.pc__img-wrapper -->
                   </div>
                   <span class="pc__img-prev"><svg width="7" height="11" viewBox="0 0 7 11" xmlns="http://www.w3.org/2000/svg"><use href="#icon_prev_sm" /></svg></span>
@@ -398,10 +310,10 @@
                 <div class="swiper-container background-img js-swiper-slider" data-settings='{"resizeObserver": true}'>
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                      <a href="product1_simple.html"><img loading="lazy" src="../images/products/product_3.jpg" width="330" height="400" alt="Cropped Faux leather Jacket" class="pc__img"></a>
+                      <a href="product1_simple.html"><img loading="lazy" src="<?= BASE_URL ?>/assets/images/products/product_3.jpg" width="330" height="400" alt="Cropped Faux leather Jacket" class="pc__img"></a>
                     </div><!-- /.pc__img-wrapper -->
                     <div class="swiper-slide">
-                      <a href="product1_simple.html"><img loading="lazy" src="../images/products/product_3-1.jpg" width="330" height="400" alt="Cropped Faux leather Jacket" class="pc__img"></a>
+                      <a href="product1_simple.html"><img loading="lazy" src="<?= BASE_URL ?>/assets/images/products/product_3-1.jpg" width="330" height="400" alt="Cropped Faux leather Jacket" class="pc__img"></a>
                     </div><!-- /.pc__img-wrapper -->
                   </div>
                   <span class="pc__img-prev"><svg width="7" height="11" viewBox="0 0 7 11" xmlns="http://www.w3.org/2000/svg"><use href="#icon_prev_sm" /></svg></span>
@@ -430,10 +342,10 @@
                 <div class="swiper-container background-img js-swiper-slider" data-settings='{"resizeObserver": true}'>
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                      <a href="product1_simple.html"><img loading="lazy" src="../images/products/product_4.jpg" width="330" height="400" alt="Cropped Faux leather Jacket" class="pc__img"></a>
+                      <a href="product1_simple.html"><img loading="lazy" src="<?= BASE_URL ?>/assets/images/products/product_4.jpg" width="330" height="400" alt="Cropped Faux leather Jacket" class="pc__img"></a>
                     </div><!-- /.pc__img-wrapper -->
                     <div class="swiper-slide">
-                      <a href="product1_simple.html"><img loading="lazy" src="../images/products/product_4-1.jpg" width="330" height="400" alt="Cropped Faux leather Jacket" class="pc__img"></a>
+                      <a href="product1_simple.html"><img loading="lazy" src="<?= BASE_URL ?>/assets/images/products/product_4-1.jpg" width="330" height="400" alt="Cropped Faux leather Jacket" class="pc__img"></a>
                     </div><!-- /.pc__img-wrapper -->
                   </div>
                   <span class="pc__img-prev"><svg width="7" height="11" viewBox="0 0 7 11" xmlns="http://www.w3.org/2000/svg"><use href="#icon_prev_sm" /></svg></span>
@@ -469,10 +381,10 @@
                 <div class="swiper-container background-img js-swiper-slider" data-settings='{"resizeObserver": true}'>
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                      <a href="product1_simple.html"><img loading="lazy" src="../images/products/product_5.jpg" width="330" height="400" alt="Cropped Faux leather Jacket" class="pc__img"></a>
+                      <a href="product1_simple.html"><img loading="lazy" src="<?= BASE_URL ?>/assets/images/products/product_5.jpg" width="330" height="400" alt="Cropped Faux leather Jacket" class="pc__img"></a>
                     </div><!-- /.pc__img-wrapper -->
                     <div class="swiper-slide">
-                      <a href="product1_simple.html"><img loading="lazy" src="../images/products/product_5-1.jpg" width="330" height="400" alt="Cropped Faux leather Jacket" class="pc__img"></a>
+                      <a href="product1_simple.html"><img loading="lazy" src="<?= BASE_URL ?>/assets/images/products/product_5-1.jpg" width="330" height="400" alt="Cropped Faux leather Jacket" class="pc__img"></a>
                     </div><!-- /.pc__img-wrapper -->
                   </div>
                   <span class="pc__img-prev"><svg width="7" height="11" viewBox="0 0 7 11" xmlns="http://www.w3.org/2000/svg"><use href="#icon_prev_sm" /></svg></span>
@@ -501,10 +413,10 @@
                 <div class="swiper-container background-img js-swiper-slider" data-settings='{"resizeObserver": true}'>
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                      <a href="product1_simple.html"><img loading="lazy" src="../images/products/product_6.jpg" width="330" height="400" alt="Cropped Faux leather Jacket" class="pc__img"></a>
+                      <a href="product1_simple.html"><img loading="lazy" src="<?= BASE_URL ?>/assets/images/products/product_6.jpg" width="330" height="400" alt="Cropped Faux leather Jacket" class="pc__img"></a>
                     </div><!-- /.pc__img-wrapper -->
                     <div class="swiper-slide">
-                      <a href="product1_simple.html"><img loading="lazy" src="../images/products/product_6-1.jpg" width="330" height="400" alt="Cropped Faux leather Jacket" class="pc__img"></a>
+                      <a href="product1_simple.html"><img loading="lazy" src="<?= BASE_URL ?>/assets/images/products/product_6-1.jpg" width="330" height="400" alt="Cropped Faux leather Jacket" class="pc__img"></a>
                     </div><!-- /.pc__img-wrapper -->
                   </div>
                   <span class="pc__img-prev"><svg width="7" height="11" viewBox="0 0 7 11" xmlns="http://www.w3.org/2000/svg"><use href="#icon_prev_sm" /></svg></span>
@@ -533,10 +445,10 @@
                 <div class="swiper-container background-img js-swiper-slider" data-settings='{"resizeObserver": true}'>
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                      <a href="product1_simple.html"><img loading="lazy" src="../images/products/product_7.jpg" width="330" height="400" alt="Cropped Faux leather Jacket" class="pc__img"></a>
+                      <a href="product1_simple.html"><img loading="lazy" src="<?= BASE_URL ?>/assets/images/products/product_7.jpg" width="330" height="400" alt="Cropped Faux leather Jacket" class="pc__img"></a>
                     </div><!-- /.pc__img-wrapper -->
                     <div class="swiper-slide">
-                      <a href="product1_simple.html"><img loading="lazy" src="../images/products/product_7-1.jpg" width="330" height="400" alt="Cropped Faux leather Jacket" class="pc__img"></a>
+                      <a href="product1_simple.html"><img loading="lazy" src="<?= BASE_URL ?>/assets/images/products/product_7-1.jpg" width="330" height="400" alt="Cropped Faux leather Jacket" class="pc__img"></a>
                     </div><!-- /.pc__img-wrapper -->
                   </div>
                   <span class="pc__img-prev"><svg width="7" height="11" viewBox="0 0 7 11" xmlns="http://www.w3.org/2000/svg"><use href="#icon_prev_sm" /></svg></span>
@@ -565,10 +477,10 @@
                 <div class="swiper-container background-img js-swiper-slider" data-settings='{"resizeObserver": true}'>
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                      <a href="product1_simple.html"><img loading="lazy" src="../images/products/product_8.jpg" width="330" height="400" alt="Cropped Faux leather Jacket" class="pc__img"></a>
+                      <a href="product1_simple.html"><img loading="lazy" src="<?= BASE_URL ?>/assets/images/products/product_8.jpg" width="330" height="400" alt="Cropped Faux leather Jacket" class="pc__img"></a>
                     </div><!-- /.pc__img-wrapper -->
                     <div class="swiper-slide">
-                      <a href="product1_simple.html"><img loading="lazy" src="../images/products/product_8-1.jpg" width="330" height="400" alt="Cropped Faux leather Jacket" class="pc__img"></a>
+                      <a href="product1_simple.html"><img loading="lazy" src="<?= BASE_URL ?>/assets/images/products/product_8-1.jpg" width="330" height="400" alt="Cropped Faux leather Jacket" class="pc__img"></a>
                     </div><!-- /.pc__img-wrapper -->
                   </div>
                   <span class="pc__img-prev"><svg width="7" height="11" viewBox="0 0 7 11" xmlns="http://www.w3.org/2000/svg"><use href="#icon_prev_sm" /></svg></span>
@@ -598,10 +510,10 @@
                 <div class="swiper-container background-img js-swiper-slider" data-settings='{"resizeObserver": true}'>
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                      <a href="product1_simple.html"><img loading="lazy" src="../images/products/product_9.jpg" width="330" height="400" alt="Cropped Faux leather Jacket" class="pc__img"></a>
+                      <a href="product1_simple.html"><img loading="lazy" src="<?= BASE_URL ?>/assets/images/products/product_9.jpg" width="330" height="400" alt="Cropped Faux leather Jacket" class="pc__img"></a>
                     </div><!-- /.pc__img-wrapper -->
                     <div class="swiper-slide">
-                      <a href="product1_simple.html"><img loading="lazy" src="../images/products/product_9-1.jpg" width="330" height="400" alt="Cropped Faux leather Jacket" class="pc__img"></a>
+                      <a href="product1_simple.html"><img loading="lazy" src="<?= BASE_URL ?>/assets/images/products/product_9-1.jpg" width="330" height="400" alt="Cropped Faux leather Jacket" class="pc__img"></a>
                     </div><!-- /.pc__img-wrapper -->
                   </div>
                   <span class="pc__img-prev"><svg width="7" height="11" viewBox="0 0 7 11" xmlns="http://www.w3.org/2000/svg"><use href="#icon_prev_sm" /></svg></span>

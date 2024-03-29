@@ -32,9 +32,6 @@
         'list_sp' => List_sp(),
         'chitiet' => Chitiet(),
 
-        // Trang điều khoản và dịch vụ
-        'show_term' => Show_Term(),
-
         // Giới thiệu
         'show_about' => Show_About(),
     };
