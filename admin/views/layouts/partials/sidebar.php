@@ -1,168 +1,160 @@
-<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+<div class="sidebar-wrapper sidebar-theme">
 
-    <!-- Sidebar - Brand -->
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
-        <div class="sidebar-brand-icon rotate-n-15">
-            <i class="fas fa-laugh-wink"></i>
-        </div>
-        <div class="sidebar-brand-text mx-3">Admin <sup></sup></div>
-    </a>
+    <nav id="sidebar">
 
-    <!-- Divider -->
-    <hr class="sidebar-divider my-0">
-
-    <!-- Nav Item - Dashboard -->
-    <li class="nav-item active">
-        <a class="nav-link" href="<?= BASE_URL_ADMIN ?>">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Dashboard</span></a>
-    </li>
-
-    <!-- Divider -->
-    <hr class="sidebar-divider">
-
-    <!-- Heading -->
-    <div class="sidebar-heading">
-        Quản lý
-    </div>
-
-    <!-- Nav Item - Pages Collapse Menu -->
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                aria-expanded="true" aria-controls="collapseTwo">
-                <i class="fas fa-user"></i>
-                <span>Quản lý người dùng</span>
-            </a>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-                    <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=users' ?>">Danh sách</a>
-                    <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=users-create' ?>">Thêm mới</a>
-                    <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=user_addresses' ?>">Danh sách địa chỉ</a>
+        <div class="navbar-nav theme-brand flex-row  text-center">
+            <div class="nav-logo">
+                <div class="nav-item theme-text">
+                    <a href="<?= BASE_URL_ADMIN ?>" class="nav-link"> ADMIN </a>
                 </div>
             </div>
-        </li>
-
-
-    <!-- Loại hàng -->
-    <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true"
-            aria-controls="collapseThree">
-            <i class="fas fa-box"></i>
-            <span>Quản lí loại sản phẩm</span>
-        </a>
-        <div id="collapseThree" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=categories' ?>">Danh sách</a>
-                <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=category-create' ?>">Thêm mới</a>
-
-    <!-- Sản phẩm -->
-    <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true"
-            aria-controls="collapseFour">
-            <i class="fas fa-glasses"></i>
-            <span>Sản phẩm</span>
-        </a>
-        <div id="collapseFour" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=products' ?>">Danh sách</a>
-                <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=products-create' ?>">Thêm mới</a>
+            <div class="nav-item sidebar-toggle">
+                <div class="btn-toggle sidebarCollapse">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-chevrons-left">
+                        <polyline points="11 17 6 12 11 7"></polyline>
+                        <polyline points="18 17 13 12 18 7"></polyline>
+                    </svg>
+                </div>
             </div>
         </div>
-    </li>
-    <!-- Tag -->
-    <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse6" aria-expanded="true"
-            aria-controls="collapse6">
-            <i class="fas fa-tags"></i>
-            <span>Tags sản phẩm</span>
-        </a>
-        <div id="collapse6" class="collapse" aria-labelledby="heading6" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=tags' ?>">Danh sách</a>
-                <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=tags-create' ?>">Thêm mới</a>
+        <div class="profile-info">
+            <div class="user-info">
+                <div class="profile-img">
+                    <!-- <img src="" alt="avatar"> -->
+                </div>
+                <div class="profile-content">
+                    <h6 class=""><?= $_SESSION['user']['name'] ?? null ?></h6>
+                    <p class="">Quản trị viên</p>
+                </div>
             </div>
         </div>
-    </li>
 
-    <!-- Attributes -->
-    <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true"
-            aria-controls="collapseFive">
-            <i class="fas fa-palette"></i>
-            <span>Màu sắc sản phẩm</span>
-        </a>
-        <div id="collapseFive" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=colors' ?>">Danh sách</a>
-                <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=colors-create' ?>">Thêm mới</a>
-            </div>
-        </div>
-    </li>
+        <div class="shadow-bottom"></div>
+        <ul class="list-unstyled menu-categories" id="accordionExample">
+            <li class="menu active">
+                <a target="_blank" href="<?= BASE_URL_ADMIN ?>" data-bs-toggle="collapse" aria-expanded="true"
+                    class="dropdown-toggle">
+                    <div class="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-home">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        </svg>
+                        <span>Dashboard</span>
+                    </div>
 
-    <!-- Orders -->
-    <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true"
-            aria-controls="collapseSix">
-            <i class="fas fa-truck"></i>
-            <span>Quản lí đơn hàng</span>
-        </a>
-        <div id="collapseSix" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=orders' ?>">Danh sách</a>
-                <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=order-create' ?>">Thêm mới</a>
-                <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=order_details' ?>">Thông tin đơn hàng</a>
-            </div>
-        </div>
-    </li>
+                </a>
+            </li>
+            <li class="menu menu-heading">
+                <div class="heading"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="feather feather-minus">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg><span>Quản lý</span></div>
+            </li>
+            <li class="menu">
+                <a href="?act=orders" aria-expanded="false" class="dropdown-toggle">
+                    <div class="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-message-square">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                        <span>Quản lý đơn hàng</span>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="menu">
+                <a href="#users" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <div class="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-users">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                        <span>Quản lý người dùng</span>
+                    </div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-chevron-right">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </div>
+                </a>
+                <ul class="collapse submenu list-unstyled" id="users" data-bs-parent="#accordionExample">
+                    <li>
+                        <a href="?act=users"> Danh sách người dùng </a>
+                    </li>
+                    <li>
+                        <a href="?act=users-create"> Thêm mới người dùng </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu">
+                <a href="#ecommerce" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <div class="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-shopping-cart">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                        <span>Quản lý sản phẩm</span>
+                    </div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-chevron-right">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </div>
+                </a>
+                <ul class="collapse submenu list-unstyled" id="ecommerce" data-bs-parent="#accordionExample">
+                    <li>
+                        <a href="?act=products"> Danh sách sản phẩm </a>
+                    </li>
+                    <li>
+                        <a href="?act=categories"> Quản lý danh mục </a>
+                    </li>
+                    <li>
+                        <a href="?act=tags"> Quản lý tags </a>
+                    </li>
+                    <li>
+                        <a href="?act=brands"> Quản lý thương hiệu </a>
+                    </li>
+                    <li>
+                        <a href="?act=colors"> Quản lý màu sắc </a>
+                    </li>
+                    <li>
+                </ul>
+            </li>
+            <li class="menu">
+                <a href="?act=setting-form" aria-expanded="false" class="dropdown-toggle">
+                    <div class="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-settings">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path
+                                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                            </path>
+                        </svg>
+                        <span>Setting</span>
+                    </div>
+                </a>
+            </li>
 
-    <!-- brand -->
-    <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true"
-            aria-controls="collapseSeven">
-            <i class="fas fa-sticky-note"></i>
-            <span>Thương hiệu</span>
-        </a>
-        <div id="collapseSeven" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=brands' ?>">Danh sách</a>
-                <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=brands-create' ?>">Thêm mới</a>
-            </div>
-        </div>
-    </li>
-    <!-- Gallery -->
-    <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseEight" aria-expanded="true"
-            aria-controls="collapseEight">
-            <i class="fas fa-images"></i>
-            <span>Thư viện ảnh sản phẩm</span>
-        </a>
-        <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=galleries' ?>">Danh sách</a>
-                <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=galleries-create' ?>">Thêm mới</a>
-            </div>
-        </div>
-    </li>
+        </ul>
 
-    <hr class="sidebar-divider">
+    </nav>
 
-    <!--  Setting -->
-    <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseNine" aria-expanded="true"
-            aria-controls="collapseNine">
-            <i class="fas fa-wrench"></i>
-            <span>Setting</span>
-        </a>
-        <div id="collapseNine" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=setting-form' ?>">Logo</a>
-                <a class="collapse-item" href="<?= BASE_URL_ADMIN . '?act=brands-create' ?>">Banner</a>
-            </div>
-        </div>
-    </li>
-
-    <!-- Divider -->
-    <hr class="sidebar-divider">
-
-
-</ul>
+</div>

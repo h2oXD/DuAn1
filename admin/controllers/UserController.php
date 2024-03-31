@@ -2,8 +2,8 @@
 function userListtAll()
 {
     $view = 'users/index';
-    $title = 'Danh sách';
-    $script = 'datatable';
+    $title = 'Danh sách người dùng';
+    // $script = 'datatable';
     $script2 = 'users/script';
     $style = 'datatable';
     $users = listAll('users');

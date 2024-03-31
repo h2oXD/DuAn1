@@ -1,96 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<!-- Mirrored from designreset.com/cork/html/modern-dark-menu/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 29 Mar 2024 07:06:00 GMT -->
 
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <title>Admin - <?= $title ?? null ?> </title>
+    <link rel="icon" type="image/x-icon" href="https://designreset.com/cork/html/src/assets/img/favicon.ico" />
+    <link href="<?= BASE_URL ?>assets/admin/layouts/modern-dark-menu/css/light/loader.css" rel="stylesheet"
+        type="text/css" />
+    <link href="<?= BASE_URL ?>assets/admin/layouts/modern-dark-menu/css/dark/loader.css" rel="stylesheet"
+        type="text/css" />
+    <script src="<?= BASE_URL ?>assets/admin/layouts/modern-dark-menu/loader.js"></script>
 
-    <title>
-        <?= $title ?? 'Dashboard' ?>- Admin
-    </title>
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+    <link href="<?= BASE_URL ?>assets/admin/src/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="<?= BASE_URL ?>assets/admin/layouts/modern-dark-menu/css/light/plugins.css" rel="stylesheet"
+        type="text/css" />
+    <link href="<?= BASE_URL ?>assets/admin/layouts/modern-dark-menu/css/dark/plugins.css" rel="stylesheet"
+        type="text/css" />
+    <!-- END GLOBAL MANDATORY STYLES -->
 
-    <!-- Custom fonts for this template-->
-    <link href="<?= BASE_URL ?>assets/admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
-
-    <!-- Custom styles for this template-->
-    <link href="<?= BASE_URL ?>assets/admin/css/sb-admin-2.min.css" rel="stylesheet">
+    <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM STYLES -->
     <?php
-    if (isset ($style) && $style) {
-        require_once PATH_VIEW_ADMIN .'styles/'. $style . '.php';
+    if (isset($style) && $style) {
+        require_once PATH_VIEW_ADMIN . 'styles/' . $style . '.php';
     }
-    if (isset ($style2) && $style2) {
+    if (isset($style2) && $style2) {
         require_once PATH_VIEW_ADMIN . $style2 . '.php';
     }
     ?>
+    <!-- END PAGE LEVEL PLUGINS/CUSTOM STYLES -->
+
 </head>
 
-<body id="page-top">
-
-    <!-- Page Wrapper -->
-    <div id="wrapper">
-
-        <!-- Sidebar -->
-        <?php require_once PATH_VIEW_ADMIN . 'layouts/partials/sidebar.php'; ?>
-        <!-- End of Sidebar -->
-
-        <!-- Content Wrapper -->
-        <div id="content-wrapper" class="d-flex flex-column">
-
-            <!-- Main Content -->
-            <div id="content">
-
-                <!-- Topbar -->
-                <?php require_once PATH_VIEW_ADMIN . 'layouts/partials/topbar.php'; ?>
-                <!-- End of Topbar -->
-
-                <!-- Begin Page Content -->
-                <?php require_once PATH_VIEW_ADMIN . $view . '.php'; ?>
-                <!-- /.container-fluid -->
-
+<body class="layout-boxed">
+    <!-- BEGIN LOADER -->
+    <div id="load_screen">
+        <div class="loader">
+            <div class="loader-content">
+                <div class="spinner-grow align-self-center"></div>
             </div>
-            <!-- End of Main Content -->
-
-            <!-- Footer -->
-            <?php require_once PATH_VIEW_ADMIN . 'layouts/partials/footer.php'; ?>
-            <!-- End of Footer -->
-
         </div>
-        <!-- End of Content Wrapper -->
+    </div>
+    <!--  END LOADER -->
+
+    <!--  BEGIN NAVBAR  -->
+    <?php require_once PATH_VIEW_ADMIN . 'layouts/partials/navbar.php' ?>
+    <!--  END NAVBAR  -->
+
+    <!--  BEGIN MAIN CONTAINER  -->
+    <div class="main-container" id="container">
+
+        <div class="overlay"></div>
+        <div class="search-overlay"></div>
+
+        <!--  BEGIN SIDEBAR  -->
+        <?php require_once PATH_VIEW_ADMIN . 'layouts/partials/sidebar.php' ?>
+        <!--  END SIDEBAR  -->
+
+        <!--  BEGIN CONTENT AREA  -->
+        <?php require_once PATH_VIEW_ADMIN . $view . '.php' ?>
+        <!--  END CONTENT AREA  -->
 
     </div>
-    <!-- End of Page Wrapper -->
+    <!-- END MAIN CONTAINER -->
 
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
+    <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
+    <script src="<?= BASE_URL ?>assets/admin/src/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= BASE_URL ?>assets/admin/src/plugins/src/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="<?= BASE_URL ?>assets/admin/src/plugins/src/mousetrap/mousetrap.min.js"></script>
+    <script src="<?= BASE_URL ?>assets/admin/src/plugins/src/waves/waves.min.js"></script>
+    <script src="<?= BASE_URL ?>assets/admin/layouts/modern-dark-menu/app.js"></script>
+    <!-- END GLOBAL MANDATORY SCRIPTS -->
 
-    <!-- Logout Modal-->
-    <?php require_once PATH_VIEW_ADMIN . 'compoments/logout-modal.php'; ?>
-
-    <!-- Bootstrap core JavaScript-->
-    <script src="<?= BASE_URL ?>assets/admin/vendor/jquery/jquery.min.js"></script>
-    <script src="<?= BASE_URL ?>assets/admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Core plugin JavaScript-->
-    <script src="<?= BASE_URL ?>assets/admin/vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom scripts for all pages-->
-    <script src="<?= BASE_URL ?>assets/admin/js/sb-admin-2.min.js"></script>
-
+    <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
     <?php
-    if (isset ($script) && $script) {
-        require_once PATH_VIEW_ADMIN .'scripts/'. $script . '.php';
+    if (isset($script) && $script) {
+        require_once PATH_VIEW_ADMIN . 'scripts/' . $script . '.php';
     }
-    if (isset ($script2) && $script2) {
+    if (isset($script2) && $script2) {
         require_once PATH_VIEW_ADMIN . $script2 . '.php';
     }
     ?>
+
+    <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
+
 </body>
+
+<!-- Mirrored from designreset.com/cork/html/modern-dark-menu/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 29 Mar 2024 07:06:34 GMT -->
 
 </html>
