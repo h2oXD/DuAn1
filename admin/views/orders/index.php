@@ -8,7 +8,7 @@
                 <h4>
                     <?= $title ?? null ?>
                 </h4>
-                <a href="?act=order-create"><button class="btn btn-success  mb-2 me-4 btn-lg">Thêm mới</button></a>
+                <!-- <a href="?act=order-create"><button class="btn btn-success  mb-2 me-4 btn-lg">Thêm mới</button></a> -->
             </div>
             <!-- /BREADCRUMB -->
             <div class="seperator-header">
@@ -16,9 +16,9 @@
             </div>
 
             <div class="row layout-spacing">
-                <div class="col-lg-12">
-                    <div class="statbox widget box box-shadow">
-                        <div class="widget-content widget-content-area">
+                <!-- <div class="col-lg-12"> -->
+                    <!-- <div class="statbox widget box box-shadow"> -->
+                        <!-- <div class="widget-content widget-content-area"> -->
                             <?php if (isset($_SESSION['success'])): ?>
                                 <div class="alert alert-success">
                                     <ul>
@@ -31,7 +31,7 @@
                                 </div>
                                 <?php unset($_SESSION['success']); ?>
                             <?php endif; ?>
-                            <table id="style-3" class="table style-3 dt-table-hover">
+                            <!-- <table id="style-3" class="table style-3 dt-table-hover">
                                 <thead>
                                     <tr>
                                         <th>ID</th>
@@ -86,11 +86,11 @@
                                         </tr>
                                     <?php endforeach; ?>
                                 </tbody>
-                            </table>
+                            </table> -->
 
-                        </div>
-                    </div>
-                </div>
+                        <!-- </div> -->
+                    <!-- </div> -->
+                <!-- </div> -->
                 <div class="simple-pill">
 
                     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
@@ -165,15 +165,15 @@
                                             </td>
 
                                             <td>
-                                                <a class="btn btn-info"
+                                                <a class="btn btn-info "
                                                     href="<?= BASE_URL_ADMIN ?>?act=order-detail&id=<?= $order['id'] ?>">Chi
                                                     tiết</a><br>
                                                 <a class="btn btn-primary"
                                                     href="<?= BASE_URL_ADMIN ?>?act=order-update&id=<?= $order['id'] ?>">Xác
-                                                    nhận đơn hàng</a>
+                                                    nhận đơn hàng</a><br>
                                                 <a class="btn btn-danger"
                                                     onclick="return confirm('Bạn có chắc chắn xóa không')"
-                                                    href="<?= BASE_URL_ADMIN ?>?act=order-delete&id=<?= $order['id'] ?>">Xóa</a>
+                                                    href="<?= BASE_URL_ADMIN ?>?act=order-delete&id=<?= $order['id'] ?>">Hủy đơn hàng</a>
 
                                             </td>
                                         </tr>
@@ -198,8 +198,6 @@
                                 </thead>
                                 <tbody>
                                     <?php foreach ($orders as $order): ?>
-
-
                                         <tr>
                                             <td>
                                                 <?= $order['id'] ?>

@@ -37,7 +37,7 @@
 
 </head>
 
-<body class="layout-boxed">
+<body class="layout-boxed"  >
     <!-- BEGIN LOADER -->
     <div id="load_screen">
         <div class="loader">
