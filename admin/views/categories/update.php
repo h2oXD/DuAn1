@@ -32,7 +32,7 @@
                                 <?php unset($_SESSION['errors']); ?>
                             <?php endif; ?>
                             <div class="card-body">
-                                <form action="" method="post">
+                                <form action="" method="post" enctype="multipart/form-data">
                                     <div class="row">
                                         <div class="col-md-4">
                                             <div class="mb-3 mt-3">
@@ -40,13 +40,23 @@
                                                 <input value="<?= $category['name'] ?>" type="name" class="form-control"
                                                     id="name" placeholder="Enter name" name="name">
                                             </div>
-                                        </div>
-                                        <div class="col-md-4">
                                             <div class="mb-3 mt-3">
                                                 <label for="name" class="form-label">Is_active:</label>
                                                 <input value="<?= $category['is_active'] ?>" type="text"
                                                     class="form-control" id="is_active" placeholder="Enter active"
                                                     name="is_active">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <div class="mb-3 mt-3">
+                                                <label for="image" class="form-label">Image:</label>
+                                                <input value="" type="file" class="form-control" id="thumbnail" name="thumbnail">
+                                            </div>
+
+                                            <div class="mb-3 mt-3">
+                                                <label for="image" class="form-label">Old image:</label>
+                                                <img src="<?= BASE_URL ?><?= $category['thumbnail'] ?>" alt="" width="100px">
                                             </div>
                                         </div>
                                     </div>

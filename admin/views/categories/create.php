@@ -33,13 +33,18 @@
                                 <?php unset($_SESSION['errors']); ?>
                             <?php endif; ?>
 
-                            <form action="" method="post">
+                            <form action="" method="post" enctype="multipart/form-data">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="mb-3 mt-3">
                                             <label for="name" class="form-label">Name:</label>
-                                            <input type="name" class="form-control" id="name" placeholder="Enter name"
-                                                name="name">
+                                            <input type="name" class="form-control" id="name" placeholder="Enter name" name="name">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="mb-3 mt-3">
+                                            <label for="thumbnail" class="form-label">Image:</label>
+                                            <input type="file" class="form-control" id="thumbnail" name="thumbnail">
                                         </div>
                                     </div>
                                 </div>
