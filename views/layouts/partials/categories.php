@@ -1,9 +1,5 @@
 <section class="category-carousel full-width_padding">
-<<<<<<< HEAD
-      <h2 class="section-title text-uppercase text-center mb-1 mb-md-3 pb-xl-2 mb-xl-4">Loại <strong>Kính</strong></h2>
-=======
       <h2 class="section-title text-uppercase text-center mb-1 mb-md-3 pb-xl-2 mb-xl-4">CÁC LOẠI KÍNH THEO <strong>KIỂU DÁNG</strong></h2>
->>>>>>> d46d6c4a31747d6bf2fd5cdfa7bba15a07261690
 
       <div class="position-relative">
         <div class="swiper-container js-swiper-slider"

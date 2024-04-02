@@ -1,12 +1,7 @@
 <?php
     function homeIndex(){
         $view = "home";
-<<<<<<< HEAD
-        $categories = getAllCate();
-        // debug($categories);
-=======
         $categories = Show_All_Categories();
->>>>>>> d46d6c4a31747d6bf2fd5cdfa7bba15a07261690
         require PATH_VIEW.'layouts/master.php';
     }
     function viewcart(){
