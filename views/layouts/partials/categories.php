@@ -39,31 +39,6 @@
             }
           }'>
           <div class="swiper-wrapper">
-<<<<<<< HEAD
-          <?php foreach($categories as $category): ?>
-            <div class="swiper-slide">
-              <img loading="lazy" class="w-100 h-auto mb-3" src="<?= $category['thumbnail'] ?>" width="270" height="182" alt="">
-              <div class="text-center border-top py-4">
-                <a href="?act=list_sp&id=<?= $category['id'] ?>" class="menu-link menu-link_us-s text-uppercase fw-semi-bold"><?= $category['name'] ?></a>
-              </div>
-            </div>
-            <?php endforeach; ?>
-
-
-
-            <!-- <div class="swiper-slide">
-              <img loading="lazy" class="w-100 h-auto mb-3" src="<?= BASE_URL ?>assets/images/home/demo13/category-5.jpg" width="270" height="182" alt="">
-              <div class="text-center border-top py-4">
-                <a href="?act=list_sp" class="menu-link menu-link_us-s text-uppercase fw-semi-bold">OVAL</a>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <img loading="lazy" class="w-100 h-auto mb-3" src="<?= BASE_URL ?>assets/images/home/demo13/category-6.jpg" width="270" height="182" alt="">
-              <div class="text-center border-top py-4">
-                <a href="?act=list_sp" class="menu-link menu-link_us-s text-uppercase fw-semi-bold">GEOMETRIC</a>
-              </div>
-            </div> -->
-=======
 
           <?php foreach($categories as $category) : ?>
             <div class="swiper-slide">
@@ -83,7 +58,6 @@
             </div>
           <?php endforeach; ?>
 
->>>>>>> d46d6c4a31747d6bf2fd5cdfa7bba15a07261690
           </div><!-- /.swiper-wrapper -->
         </div><!-- /.swiper-container js-swiper-slider -->
       </div><!-- /.position-relative -->
