@@ -62,6 +62,8 @@
                                             </td>
                                             <td class="text-center">
                                                 <ul class="table-controls">
+                                                    <a href="?act=users-address-detail&id=<?= $user['id'] ?>"><button
+                                                            class="btn btn-dark   mb-2 me-1">Địa chỉ nhận hàng</button></a>
                                                     <a href="?act=users-detail&id=<?= $user['id'] ?>"><button
                                                             class="btn btn-info mb-2 me-1">Chi tiết</button></a>
                                                     <a href="?act=users-update&id=<?= $user['id'] ?>"><button

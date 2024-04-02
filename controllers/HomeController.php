@@ -1,6 +1,8 @@
 <?php
     function homeIndex(){
         $view = "home";
+        $categories = getAllCate();
+        // debug($categories);
         require PATH_VIEW.'layouts/master.php';
     }
     function viewcart(){
@@ -11,11 +13,7 @@
 
 
 
-    function ship(){
-        if(!isset($_SESSION['user'])){header("Location:" . BASE_URL ."?act=login"); exit();}
-        $view = "ship/ship-checkout";
-        require PATH_VIEW.'layouts/master.php';
-    }
+
 
     
     function confirm(){

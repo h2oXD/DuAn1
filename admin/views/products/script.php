@@ -1,23 +1,13 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/7.0.0/tinymce.min.js" ></script>
-<script>
-    $(document).ready(function() {
-        $('#dataTable').DataTable({
-            "order":false
-        });
-    });
-    tinymce.init({
-  selector: 'textarea#abc',
-  height: 500,
-  menubar: false,
-  plugins: [
-    'advlist autolink lists link image charmap print preview anchor',
-    'searchreplace visualblocks code fullscreen',
-    'insertdatetime media table paste code help wordcount'
-  ],
-  toolbar: 'undo redo | formatselect | ' +
-  'bold italic backcolor | alignleft aligncenter ' +
-  'alignright alignjustify | bullist numlist outdent indent | ' +
-  'removeformat | help',
-  content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
-});
-</script>
+<script src="<?= BASE_URL ?>assets/admin/src/plugins/src/editors/quill/quill.js"></script>
+    <script src="<?= BASE_URL ?>assets/admin/src/plugins/src/filepond/filepond.min.js"></script>
+    <script src="<?= BASE_URL ?>assets/admin/src/plugins/src/filepond/FilePondPluginFileValidateType.min.js"></script>
+    <script src="<?= BASE_URL ?>assets/admin/src/plugins/src/filepond/FilePondPluginImageExifOrientation.min.js"></script>
+    <script src="<?= BASE_URL ?>assets/admin/src/plugins/src/filepond/FilePondPluginImagePreview.min.js"></script>
+    <script src="<?= BASE_URL ?>assets/admin/src/plugins/src/filepond/FilePondPluginImageCrop.min.js"></script>
+    <script src="<?= BASE_URL ?>assets/admin/src/plugins/src/filepond/FilePondPluginImageResize.min.js"></script>
+    <script src="<?= BASE_URL ?>assets/admin/src/plugins/src/filepond/FilePondPluginImageTransform.min.js"></script>
+    <script src="<?= BASE_URL ?>assets/admin/src/plugins/src/filepond/filepondPluginFileValidateSize.min.js"></script>
+
+    <script src="<?= BASE_URL ?>assets/admin/src/plugins/src/tagify/tagify.min.js"></script>
+
+    <script src="<?= BASE_URL ?>assets/admin/src/assets/js/apps/ecommerce-create.js"></script>

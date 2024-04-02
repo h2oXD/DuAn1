@@ -209,6 +209,21 @@ function accountDashboard()
     require PATH_VIEW . 'layouts/master.php';
 
 }
+function accountAddress()
+{
+    if (!isset($_SESSION['user'])) {
+        header("Location:" . BASE_URL . "?act=login");
+        exit();
+    }
+    $user_address = getAddressUser($_SESSION['user']['id']);
+    // debug($user_address);
+
+    $view = "users/account_address";
+
+
+    require PATH_VIEW . 'layouts/master.php';
+
+}
 function userLogout()
 {
     unset($_SESSION['user']);

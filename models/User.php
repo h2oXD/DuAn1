@@ -48,3 +48,18 @@ function getUserByID($id) {
         debug($e);
     }
 }
+function getAddressUser($id) {
+    try {
+        $sql = 'SELECT * FROM user_addresses WHERE user_id = :id';
+
+        $stmt = $GLOBALS['conn']->prepare($sql);
+
+        $stmt->bindParam(':id', $id);
+
+        $stmt->execute();
+
+        return $stmt->fetch();
+    } catch (\Exception $e) {
+        debug($e);
+    }
+}

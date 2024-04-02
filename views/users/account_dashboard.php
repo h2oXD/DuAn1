@@ -7,7 +7,8 @@
                 <ul class="account-nav">
                     <li><a href="?act=account_dashboard" class="menu-link menu-link_us-s menu-link_active">Dashboard</a></li>
                     <li><a href="?act=account_order" class="menu-link menu-link_us-s">Đơn mua</a></li>
-                    <li><a href="?act=account_detail" class="menu-link menu-link_us-s">Thông tin cá nhân</a></li>
+                    <li><a href="?act=account_detail" class="menu-link menu-link_aus-s">Thông tin cá nhân</a></li>
+                    <li><a href="?act=account_address" class="menu-link menu-link_aus-s">Địa chỉ nhận hàng</a></li>
                     <li><a href="?act=logout" class="menu-link menu-link_us-s">Đăng xuất</a></li>
                 </ul>
             </div>
