@@ -13,14 +13,14 @@ function productCreate()
 {
     $view = 'products/create';
     $title = 'Thêm mới';
-
+    $style2 = 'products/style';
     $script2 = 'products/script';
     $categories = listAll('product_categories');
     $tags = listAll('product_tags');
     $colors = listAll('product_colors');
     $brands = listAll('product_brands');
     $galleries = listAll('product_galleries');
-    if (!empty ($_POST)) {
+    if (!empty($_POST)) {
         $data = [
             "title" => $_POST['title'] ?? null,
             "price" => $_POST['price'] ?? null,
@@ -32,6 +32,31 @@ function productCreate()
             "product_category_id" => $_POST['product_category_id'] ?? null,
             "product_brand_id" => $_POST['product_brand_id'] ?? null,
         ];
+        // foreach($_FILES['files']['name'] as $a){
+        //     $name[] = $a;
+        // }
+        // foreach($_FILES['files']['tmp_name'] as $a){
+        //     $tmp[] = $a;    
+        // }
+        // debug($_FILES['files']['name']);
+        foreach($_FILES['files']['name'] as $n){
+            // debug($n);
+        }
+        
+            foreach($_FILES['files']['name'] as $n){
+                foreach($_FILES['files']['tmp_name'] as $t){         
+                        move_uploaded_file($t,PATH_UPLOAD.'uploads/gallery/'.$n);  
+                        // move_uploaded_file($t,PATH_UPLOAD.'uploads/gallery/'.$n);  
+                        // debug($n);                  
+                }
+            }
+            
+        
+        
+
+            
+        
+        
         $errors = validateProductCreate($data);
         $thumbnail = $_FILES['thumbnail'] ?? null;
 
@@ -60,6 +85,7 @@ function productCreate()
 
                     }
                 }
+
 
                 $GLOBALS['conn']->commit();
             } catch (\Throwable $th) {

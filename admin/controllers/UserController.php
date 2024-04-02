@@ -134,6 +134,19 @@ function userUpdate($id)
     $title = 'Cập nhật';
     require_once PATH_VIEW_ADMIN . "layouts/master.php";
 }
+function userAddressDetail($id)
+{
+    $user = showOne('users', $id);
+    $user_address = showOneAddress($id);
+    // debug($user_address);
+    if (empty ($user)) {
+        e404();
+    }
+
+    $view = 'users/address';
+    $title = 'Cập nhật';
+    require_once PATH_VIEW_ADMIN . "layouts/master.php";
+}
 function userDelete($id)
 {
     delete2('users', $id);

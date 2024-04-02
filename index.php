@@ -19,6 +19,7 @@
         'login' => userLoginRegister(),
         'logout' => userLogout(),
         'forget-password' => userForgetPassword(),
+        'account_address' => accountAddress(),
         'account_detail' => accountDetail(),
         'account_order' => accountOrder(),
         'account_dashboard' => accountDashboard(),

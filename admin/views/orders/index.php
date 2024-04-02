@@ -124,44 +124,61 @@
                     <div class="tab-content" id="pills-tabContent">
                         <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
                             aria-labelledby="pills-home-tab" tabindex="0">
+                            
                             <table id="style-3" class="table style-3 dt-table-hover">
                                 <thead>
                                     <tr>
                                         <th>ID</th>
-                                        <th>User_ID</th>
-                                        <th>Phone_number</th>
-                                        <th>Address</th>
+                                        <th>Người mua</th>
+                                        <th>Tên người nhận</th>
+                                        <th>Địa chỉ nhận</th>
+                                        <th>Số điện thoại</th>
                                         <th>Email</th>
-                                        <th>Order date</th>
-                                        <th>Status</th>
+                                        <th>Sản phẩm</th>
+                                        <th>Giá</th>
+                                        <th>Số lượng</th>
+                                        <th>Tổng tiền</th>
+                                        <th>Trạng thái</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php foreach ($orders as $order): ?>
 
-
+                                        <?php if($order['status']==0): ?>
                                         <tr>
                                             <td>
                                                 <?= $order['id'] ?>
                                             </td>
                                             <td>
-                                                <?= $order['user_id'] ?>
+                                                <?= $order['u_nguoimua'] ?>
                                             </td>
                                             <td>
-                                                <?= $order['phone_number'] ?>
+                                                <?= $order['ud_nguoinhan'] ?>
                                             </td>
                                             <td>
-                                                <?= $order['address'] ?>
+                                                <?= $order['ud_diachinhan'] ?>
                                             </td>
                                             <td>
-                                                <?= $order['email'] ?>
+                                                <?= $order['ud_sodienthoainhan'] ?>
                                             </td>
                                             <td>
-                                                <?= $order['order_date'] ?>
+                                                <?= $order['ud_emailnhan'] ?>
                                             </td>
                                             <td>
-                                                <?= $order['status'] ?>
+                                                <?= $order['p_tensanpham'] ?>
+                                            </td>
+                                            <td>
+                                                <?= $order['p_giasanpham'] ?>
+                                            </td>
+                                            <td>
+                                                <?= $order['p_soluong'] ?>
+                                            </td>
+                                            <td>
+                                                <?= $order['o_tongtien'] ?>
+                                            </td>
+                                            <td>
+                                                <?= $order['o_trangthai'] ?>
                                             </td>
 
                                             <td>
@@ -172,11 +189,12 @@
                                                     href="<?= BASE_URL_ADMIN ?>?act=order-update&id=<?= $order['id'] ?>">Xác
                                                     nhận đơn hàng</a><br>
                                                 <a class="btn btn-danger"
-                                                    onclick="return confirm('Bạn có chắc chắn xóa không')"
+                                                    onclick="return confirm('Bạn có chắc chắn muốn hủy không')"
                                                     href="<?= BASE_URL_ADMIN ?>?act=order-delete&id=<?= $order['id'] ?>">Hủy đơn hàng</a>
 
                                             </td>
                                         </tr>
+                                    <?php endif; ?>
                                     <?php endforeach; ?>
                                 </tbody>
                             </table>

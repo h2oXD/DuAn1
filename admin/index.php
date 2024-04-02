@@ -23,7 +23,7 @@
         'users-create' => userCreate(),
         'users-update' => userUpdate($_GET['id']),
         'users-delete' => userDelete($_GET['id']),
-
+        'users-address-detail' => userAddressDetail($_GET['id']),
         
         
         // CRUD loại hàng
@@ -82,12 +82,6 @@
         'brands-create' => brand_Create(),
         'brands-update' => brand_Update($_GET['id']),
         'brands-delete' => brand_Delete($_GET['id']),
-        //gallery
-        'galleries' => galleryListtAll(),
-        'galleries-detail' => galleryShowOne($_GET['id']),
-        'galleries-create' => gallery_Create(),
-        'galleries-update' => galleryUpdate($_GET['id']),
-        'galleries-delete' => galleryDelete($_GET['id']),
     };
 
 

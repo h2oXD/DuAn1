@@ -58,7 +58,7 @@
                                     </div>
                                     <div class="mb-3 mt-3 col-md-4">
                                         <label for="category" class="form-label">Category:</label>
-                                        <Select class="form-control" class="form-control" name="product_category_id">
+                                        <Select class="form-select" name="product_category_id">
                                             <option value="">--Chọn-category--</option>
                                             <?php foreach ($categories as $category): ?>
                                                 <option <?= isset($_SESSION['data']) && $_SESSION['data']['product_category_id'] == $category['id'] ? 'selected' : null ?> value="<?= $category['id'] ?>">
@@ -69,7 +69,7 @@
                                     </div>
                                     <div class="mb-3 mt-3 col-md-4">
                                         <label for="brand" class="form-label">Brand:</label>
-                                        <Select class="form-control" class="form-control" name="product_brand_id">
+                                        <Select class="form-select" name="product_brand_id">
                                             <option value="">--Chọn-brand--</option>
                                             <?php foreach ($brands as $brand): ?>
                                                 <option <?= isset($_SESSION['data']) && $_SESSION['data']['product_brand_id'] == $brand['id'] ? 'selected' : null ?> value="<?= $brand['id'] ?>">
@@ -80,12 +80,12 @@
                                     </div>
                                     <div class="mb-3 mt-3 col-md-4">
                                         <label for="Thumbnail" class="form-label">Thumbnail:</label>
-                                        <input type="file" class="form-control" id="name" placeholder="Enter Thumbnail"
+                                        <input type="file" class="form-control file-upload-input" id="name" placeholder="Enter Thumbnail"
                                             name="thumbnail">
                                     </div>
                                     <div class="mb-3 mt-3 col-md-4">
                                         <label for="tags" class="form-label">Tags:</label>
-                                        <Select class="form-control" class="form-control" name="tags[]" multiple>
+                                        <Select class="form-control" name="tags[]" multiple>
                                             <?php foreach ($tags as $tag): ?>
                                                 <option value="<?= $tag['id'] ?>">
                                                     <?= $tag['name'] ?>
@@ -94,14 +94,34 @@
                                         </Select>
                                     </div>
                                     <div class="mb-3 mt-3 col-md-4">
-                                        <label for="colors" class="form-label">Colors:</label>
-                                        <Select class="form-control" class="form-control" name="colors[]" multiple>
+                                        <label for="colors" class="form-label">Colors:</label>                                      
+                                        <Select class="form-select" class="form-control" name="colors">
+                                        <option value="">--Chọn-Màu-Sắc--</option>
                                             <?php foreach ($colors as $color): ?>
                                                 <option value="<?= $color['id'] ?>">
                                                     <?= $color['name'] ?>
                                                 </option>
                                             <?php endforeach ?>
                                         </Select>
+                                    </div>
+                                    <div class="col-md-4 mt-2">
+                                        <label for="product-images">Galleries</label>
+                                        <div class="multiple-file-upload">
+                                            <!-- <input type="file" name="files[]"
+                                                class="filepond file-upload-multiple"
+                                                id="product-images" 
+                                                multiple 
+                                                data-allow-reorder="true"
+                                                data-max-file-size="3MB"
+                                                data-max-files="5"> -->
+                                            <input type="file" name="files[]"
+                                                
+                                                id="product-images" 
+                                                multiple 
+                                                data-allow-reorder="true"
+                                                data-max-file-size="3MB"
+                                                data-max-files="5">
+                                        </div>
                                     </div>
 
 

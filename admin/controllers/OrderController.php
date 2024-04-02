@@ -6,7 +6,7 @@ function orders_ListtAll(){
     $script = 'datatable';
     $script2 = 'orders/script';
     $style = 'datatable';
-    $orders = listAll('orders');
+    $orders = OrderJoin();
 
     require_once PATH_VIEW_ADMIN . "layouts/master.php";
 }
@@ -50,34 +50,13 @@ function order_ShowOne($id){
     require_once PATH_VIEW_ADMIN . "layouts/master.php";
 }
 function order_Update($id){
-    $order = showOne('orders',$id);
-    if(empty($order)){
-        e404();
-    }
-    if(!empty($_POST)){
-        $data = [
-            "frist_name" => $_POST['frist_name'],
-            "last_name" => $_POST['last_name'],
-            "phone_number" => $_POST['phone_number'],
-            "address" => $_POST['address'],
-            "email" => $_POST['email'],
-            "note" => $_POST['note'],
-            "order_date" => $_POST['order_date'],
-            "status" => $_POST['status'],
-        ];
-        $errors = order_validateUpdate($id, $data);
-        if(!empty($errors)){
-            $_SESSION['errors'] = $errors;
-            $_SESSION['data'] = $data;
-        }else{
-        
+        $data = [];
+        $data['status'] +=1;
             update('orders',$id,$data);
             $_SESSION['success'] = "Thao tác thành công";
             header("Location: " . BASE_URL_ADMIN . "?act=orders");
-        }
         
-    }
-    $view = 'orders/update';
+    $view = 'orders/index';
     $title = 'Cập nhật';
     require_once PATH_VIEW_ADMIN . "layouts/master.php";
 }
