@@ -1,5 +1,9 @@
 <section class="category-carousel full-width_padding">
+<<<<<<< HEAD
       <h2 class="section-title text-uppercase text-center mb-1 mb-md-3 pb-xl-2 mb-xl-4">Loại <strong>Kính</strong></h2>
+=======
+      <h2 class="section-title text-uppercase text-center mb-1 mb-md-3 pb-xl-2 mb-xl-4">CÁC LOẠI KÍNH THEO <strong>KIỂU DÁNG</strong></h2>
+>>>>>>> d46d6c4a31747d6bf2fd5cdfa7bba15a07261690
 
       <div class="position-relative">
         <div class="swiper-container js-swiper-slider"
@@ -39,6 +43,7 @@
             }
           }'>
           <div class="swiper-wrapper">
+<<<<<<< HEAD
           <?php foreach($categories as $category): ?>
             <div class="swiper-slide">
               <img loading="lazy" class="w-100 h-auto mb-3" src="<?= $category['thumbnail'] ?>" width="270" height="182" alt="">
@@ -62,6 +67,27 @@
                 <a href="?act=list_sp" class="menu-link menu-link_us-s text-uppercase fw-semi-bold">GEOMETRIC</a>
               </div>
             </div> -->
+=======
+
+          <?php foreach($categories as $category) : ?>
+            <div class="swiper-slide">
+              <img loading="lazy" class="w-100 h-auto mb-3" src="<?= $category['thumbnail'] ?>" width="270" height="182" alt="">
+              <div class="text-center border-top py-4">
+                <a href="?act=chitiet" class="menu-link menu-link_us-s text-uppercase fw-semi-bold"><?= $category['name'] ?></a>
+              </div>
+            </div>
+          <?php endforeach; ?>
+
+          <?php foreach($categories as $category) : ?>
+            <div class="swiper-slide">
+              <img loading="lazy" class="w-100 h-auto mb-3" src="<?= $category['thumbnail'] ?>" width="270" height="182" alt="">
+              <div class="text-center border-top py-4">
+                <a href="?act=chitiet" class="menu-link menu-link_us-s text-uppercase fw-semi-bold"><?= $category['name'] ?></a>
+              </div>
+            </div>
+          <?php endforeach; ?>
+
+>>>>>>> d46d6c4a31747d6bf2fd5cdfa7bba15a07261690
           </div><!-- /.swiper-wrapper -->
         </div><!-- /.swiper-container js-swiper-slider -->
       </div><!-- /.position-relative -->

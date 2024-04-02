@@ -37,6 +37,7 @@
                                     <tr>
                                         <th>ID</th>
                                         <th>Name</th>
+                                        <th>Thumbnail</th>
                                         <th>Active</th>
                                         <th>Action</th>
                                     </tr>
@@ -51,6 +52,9 @@
                                             </td>
                                             <td>
                                                 <?= $category['name'] ?>
+                                            </td>
+                                            <td>
+                                                <img src="<?= BASE_URL ?><?= $category['thumbnail'] ?>" alt="" width="100px">
                                             </td>
                                             <td>
                                                 <?= $category['is_active']
