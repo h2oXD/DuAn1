@@ -59,16 +59,17 @@ function Category_Update($id){
         ];
 
         $thumbnail = $data['thumbnail'];
+        $old_thumbnail = $_POST['old_thumbnail'];
         $errors = Category_validateUpdate($id,$data);
         if(!empty($errors)){
             $_SESSION['errors'] = $errors;
             $_SESSION['data'] = $data;
         }else{
-            if (!empty($thumbnail)) {
+            if ($thumbnail['size'] > 0) {
                 $data['thumbnail'] = upload_file($thumbnail, 'uploads/product/');
                 update('product_categories',$id,$data);
             }else{
-                update_category_by_old_image($id,$data['name'],$data['is_active']);
+                update_category_by_old_image($id,$data['name'],$old_thumbnail,$data['is_active']);
             }
         
             $_SESSION['success'] = "Thao tác thành công";

@@ -46,10 +46,10 @@ if (!function_exists('checkUniqueNameForUpdate')) {
 
 // hàm sửa loại hàng
 // nếu k upload ảnh mới thì sẽ sử dụng lại ảnh cũ
-function update_category_by_old_image($id,$name,$active)
+function update_category_by_old_image($id,$name,$old_thumbnail,$active)
     {
         try {
-            $sql = "UPDATE product_categories SET `name` = $name, `thumbnail` = $active WHERE id = $id";
+            $sql = "UPDATE product_categories SET `name` = '$name', thumbnail = '$old_thumbnail', is_active = '$active' WHERE id = $id";
 
             $stmt = $GLOBALS['conn']->prepare($sql);
 

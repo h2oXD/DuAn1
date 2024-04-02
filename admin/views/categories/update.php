@@ -57,6 +57,7 @@
                                             <div class="mb-3 mt-3">
                                                 <label for="image" class="form-label">Old image:</label>
                                                 <img src="<?= BASE_URL ?><?= $category['thumbnail'] ?>" alt="" width="100px">
+                                                <input type="hidden" value="<?= $category['thumbnail'] ?>" name="old_thumbnail">
                                             </div>
                                         </div>
                                     </div>
