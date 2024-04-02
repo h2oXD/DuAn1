@@ -1,5 +1,5 @@
 <section class="category-carousel full-width_padding">
-      <h2 class="section-title text-uppercase text-center mb-1 mb-md-3 pb-xl-2 mb-xl-4">SHOP BY <strong>SHAPE</strong></h2>
+      <h2 class="section-title text-uppercase text-center mb-1 mb-md-3 pb-xl-2 mb-xl-4">CÁC LOẠI KÍNH THEO <strong>KIỂU DÁNG</strong></h2>
 
       <div class="position-relative">
         <div class="swiper-container js-swiper-slider"
@@ -39,42 +39,25 @@
             }
           }'>
           <div class="swiper-wrapper">
+
+          <?php foreach($categories as $category) : ?>
             <div class="swiper-slide">
-              <img loading="lazy" class="w-100 h-auto mb-3" src="<?= BASE_URL ?>assets/images/home/demo13/category-1.jpg" width="270" height="182" alt="">
+              <img loading="lazy" class="w-100 h-auto mb-3" src="<?= $category['thumbnail'] ?>" width="270" height="182" alt="">
               <div class="text-center border-top py-4">
-                <a href="?act=chitiet" class="menu-link menu-link_us-s text-uppercase fw-semi-bold">SQUARE</a>
+                <a href="?act=chitiet" class="menu-link menu-link_us-s text-uppercase fw-semi-bold"><?= $category['name'] ?></a>
               </div>
             </div>
+          <?php endforeach; ?>
+
+          <?php foreach($categories as $category) : ?>
             <div class="swiper-slide">
-              <img loading="lazy" class="w-100 h-auto mb-3" src="<?= BASE_URL ?>assets/images/home/demo13/category-2.jpg" width="270" height="182" alt="">
+              <img loading="lazy" class="w-100 h-auto mb-3" src="<?= $category['thumbnail'] ?>" width="270" height="182" alt="">
               <div class="text-center border-top py-4">
-                <a href="?act=chitiet" class="menu-link menu-link_us-s text-uppercase fw-semi-bold">AVIATOR</a>
+                <a href="?act=chitiet" class="menu-link menu-link_us-s text-uppercase fw-semi-bold"><?= $category['name'] ?></a>
               </div>
             </div>
-            <div class="swiper-slide">
-              <img loading="lazy" class="w-100 h-auto mb-3" src="<?= BASE_URL ?>assets/images/home/demo13/category-3.jpg" width="270" height="182" alt="">
-              <div class="text-center border-top py-4">
-                <a href="?act=chitiet" class="menu-link menu-link_us-s text-uppercase fw-semi-bold">RECTANGULAR</a>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <img loading="lazy" class="w-100 h-auto mb-3" src="<?= BASE_URL ?>assets/images/home/demo13/category-4.jpg" width="270" height="182" alt="">
-              <div class="text-center border-top py-4">
-                <a href="?act=chitiet" class="menu-link menu-link_us-s text-uppercase fw-semi-bold">ROUND</a>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <img loading="lazy" class="w-100 h-auto mb-3" src="<?= BASE_URL ?>assets/images/home/demo13/category-5.jpg" width="270" height="182" alt="">
-              <div class="text-center border-top py-4">
-                <a href="?act=chitiet" class="menu-link menu-link_us-s text-uppercase fw-semi-bold">OVAL</a>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <img loading="lazy" class="w-100 h-auto mb-3" src="<?= BASE_URL ?>assets/images/home/demo13/category-6.jpg" width="270" height="182" alt="">
-              <div class="text-center border-top py-4">
-                <a href="?act=chitiet" class="menu-link menu-link_us-s text-uppercase fw-semi-bold">GEOMETRIC</a>
-              </div>
-            </div>
+          <?php endforeach; ?>
+
           </div><!-- /.swiper-wrapper -->
         </div><!-- /.swiper-container js-swiper-slider -->
       </div><!-- /.position-relative -->

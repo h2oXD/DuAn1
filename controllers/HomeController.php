@@ -1,6 +1,7 @@
 <?php
     function homeIndex(){
         $view = "home";
+        $categories = Show_All_Categories();
         require PATH_VIEW.'layouts/master.php';
     }
     function viewcart(){
