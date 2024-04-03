@@ -25,6 +25,7 @@
         'account_dashboard' => accountDashboard(),
 
         // Giỏ hàng
+        'add-cart' => addCart($_GET['id']),
         'view-cart' => viewcart(),
         'ship-checkout' => ship(),
         'confirm' => confirm(),

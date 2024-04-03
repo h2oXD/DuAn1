@@ -44,7 +44,7 @@
             <div class="swiper-slide">
               <img loading="lazy" class="w-100 h-auto mb-3" src="<?= $category['thumbnail'] ?>" width="270" height="182" alt="">
               <div class="text-center border-top py-4">
-                <a href="?act=list_sp&id=<?= $category['id'] ?>" class="menu-link menu-link_us-s text-uppercase fw-semi-bold"><?= $category['name'] ?></a>
+                <a href="?act=list_sp&category=<?= $category['id'] ?>" class="menu-link menu-link_us-s text-uppercase fw-semi-bold"><?= $category['name'] ?></a>
               </div>
             </div>
           <?php endforeach; ?>

@@ -32,7 +32,7 @@
         'category-create' => Category_Create(),
         'category-update' => Category_Update($_GET['id']),
         'category-delete' => Category_Delete($_GET['id']),
-//product
+        //product
         'products' => productListtAll(),
         'products-detail' => productShowOne($_GET['id']),
         'products-create' => productCreate(),
@@ -82,6 +82,11 @@
         'brands-create' => brand_Create(),
         'brands-update' => brand_Update($_GET['id']),
         'brands-delete' => brand_Delete($_GET['id']),
+        //attribute
+        'attribute' => attributeShow($_GET['id']),
+        'delete-attribute' => attributeDelete($_GET['id']),
+        //size
+        'sizes' => sizeListAll(),
     };
 
 

@@ -70,7 +70,7 @@
                                     <div class="mb-3 mt-3 col-md-4">
                                         <label for="brand" class="form-label">Brand:</label>
                                         <Select class="form-select" name="product_brand_id">
-                                            <option value="">--Chọn-brand--</option>
+                                            <option value="">--Chọn-Thương-Hiệu--</option>
                                             <?php foreach ($brands as $brand): ?>
                                                 <option <?= isset($_SESSION['data']) && $_SESSION['data']['product_brand_id'] == $brand['id'] ? 'selected' : null ?> value="<?= $brand['id'] ?>">
                                                     <?= $brand['name'] ?>
@@ -104,9 +104,20 @@
                                             <?php endforeach ?>
                                         </Select>
                                     </div>
+                                    <div class="mb-3 mt-3 col-md-4">
+                                        <label for="sizes" class="form-label">Sizes:</label>                                      
+                                        <Select class="form-select" class="form-control" name="sizes">
+                                        <option value="">--Chọn-Kích-Thước--</option>
+                                            <?php foreach ($sizes as $size): ?>
+                                                <option value="<?= $size['id'] ?>">
+                                                    <?= $size['size'] ?>
+                                                </option>
+                                            <?php endforeach ?>
+                                        </Select>
+                                    </div>
                                     <div class="col-md-4 mt-2">
-                                        <label for="product-images">Galleries</label>
-                                        <div class="multiple-file-upload">
+                                        <!-- <label for="product-images">Galleries</label> -->
+                                        <!-- <div class="multiple-file-upload"> -->
                                             <!-- <input type="file" name="files[]"
                                                 class="filepond file-upload-multiple"
                                                 id="product-images" 
@@ -114,13 +125,13 @@
                                                 data-allow-reorder="true"
                                                 data-max-file-size="3MB"
                                                 data-max-files="5"> -->
-                                            <input type="file" name="files[]"
+                                            <!-- <input type="file" name="files[]"
                                                 
                                                 id="product-images" 
                                                 multiple 
                                                 data-allow-reorder="true"
                                                 data-max-file-size="3MB"
-                                                data-max-files="5">
+                                                data-max-files="5"> -->
                                         </div>
                                     </div>
 

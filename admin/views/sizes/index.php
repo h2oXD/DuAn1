@@ -8,7 +8,7 @@
                 <h4>
                     <?= $title ?? null ?>
                 </h4>
-                <a href="?act=products-create"><button class="btn btn-success  mb-2 me-4 btn-lg">Thêm mới</button></a>
+                <a href="?act=sizes-create"><button class="btn btn-success  mb-2 me-4 btn-lg">Thêm mới</button></a>
             </div>
             <!-- /BREADCRUMB -->
             <div class="seperator-header">
@@ -35,50 +35,27 @@
                                 <thead>
                                     <tr>
                                         <th>ID</th>
-                                        <th>Title</th>
-                                        <th>Category</th>
-                                        <th>Brands</th>
-                                        <th>Price</th>
-                                        <th>Sale</th>
-                                        <th>Thumbnail</th>
+                                        <th>Size</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php foreach ($products as $product): ?>
+                                    <?php foreach ($sizes as $size): ?>
 
 
                                         <tr>
                                             <td>
-                                                <?= $product['id'] ?>
+                                                <?= $size['id'] ?>
                                             </td>
                                             <td>
-                                                <?= $product['title'] ?>
+                                                <?= $size['size'] ?>
                                             </td>
                                             <td>
-                                                <?= $product['name'] ?>
-                                            </td>
-                                            <td>
-                                                <?= $product['b_name'] ?>
-                                            </td>
-                                            <td>
-                                                <?= $product['price'] ?>
-                                            </td>
-                                            <td>
-                                                <?= $product['sale'] ?>
-                                            </td>
-                                            <td><img src="<?= BASE_URL . $product['thumbnail'] ?>" width="80px" alt=""></td>
-                                            <td>
-                                                <a class="btn btn-info"
-                                                    href="<?= BASE_URL_ADMIN ?>?act=products-detail&id=<?= $product['id'] ?>">Chi
-                                                    tiết</a>
                                                 <a class="btn btn-primary"
-                                                    href="<?= BASE_URL_ADMIN ?>?act=products-update&id=<?= $product['id'] ?>">Sửa</a>
+                                                    href="<?= BASE_URL_ADMIN ?>?act=sizes-update&id=<?= $size['id'] ?>">Sửa</a>
                                                 <a class="btn btn-danger"
                                                     onclick="return confirm('Bạn có chắc chắn xóa không')"
-                                                    href="<?= BASE_URL_ADMIN ?>?act=products-delete&id=<?= $product['id'] ?>">Xóa</a><br>
-                                                <a class="btn btn-primary mt-2"
-                                                    href="<?= BASE_URL_ADMIN ?>?act=attribute&id=<?= $product['id'] ?>">Quản lý thuộc tính</a>
+                                                    href="<?= BASE_URL_ADMIN ?>?act=sizes-delete&id=<?= $size['id'] ?>">Xóa</a>
 
                                             </td>
                                         </tr>
