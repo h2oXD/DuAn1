@@ -117,6 +117,7 @@ if (!function_exists('showOne')) {
     }
 }
 
+
 if (!function_exists('update')) {
     function update($tableName, $id, $data = [])
     {
@@ -145,7 +146,7 @@ if (!function_exists('update')) {
 
     }
 }
-if (!function_exists('delete')) {
+if (!function_exists('delete2')) {
     function delete2($tableName, $id)
     {
         try {
@@ -205,3 +206,63 @@ if (!function_exists('checkUniqueNameForUpdate')) {
     }
 }
 
+if (!function_exists('showAttribute')) {
+    function showAttribute($tableName, $id)
+    {
+        try {
+            $sql = "SELECT tb1.product_id,tb1.product_color_id,tb1.product_size_id,tb2.title,tb3.name,tb4.size FROM $tableName AS tb1 JOIN products AS tb2 ON tb1.product_id = tb2.id 
+            JOIN product_colors as tb3 ON tb1.product_color_id = tb3.id
+            JOIN product_sizes AS tb4 ON tb1.product_size_id = tb4.id
+             WHERE product_id = :id";
+
+            $stmt = $GLOBALS['conn']->prepare($sql);
+
+            $stmt->bindParam(":id", $id);
+
+            $stmt->execute();
+
+            return $stmt->fetchAll();
+        } catch (\Exception $e) {
+            debug($e);
+        }
+
+    }
+}
+if (!function_exists('showOneJoinProduct')) {
+    function showOneJoinProduct($tableName1,$id)
+    {
+        try {
+            $sql = "SELECT tb1.id, tb1.title, tb2.name as c_name, tb3.name as b_name, tb1.price, tb1.sale, tb1.thumbnail, tb1.description,tb1.created_at,tb1.updated_at
+            FROM  products AS tb1 JOIN product_categories AS tb2 ON tb1.product_category_id = tb2.id
+            JOIN product_brands as tb3 ON tb1.product_brand_id = tb3.id 
+            WHERE tb1.id = :id";
+            $stmt = $GLOBALS['conn']->prepare($sql);
+            $stmt->bindParam(':id',$id);
+            $stmt->execute();
+
+            return $stmt->fetchAll();
+        } catch (\Exception $e) {
+            debug($e);
+        }
+
+    }
+}
+if (!function_exists('showOneProduct')) {
+    function showOneProduct($id)
+    {
+        try {
+            $sql = "SELECT tb1.id, tb1.title, tb2.name as c_name, tb3.name as b_name, tb1.price, tb1.sale, tb1.thumbnail, tb1.description,tb1.created_at,tb1.updated_at
+            FROM  products AS tb1 JOIN product_categories AS tb2 ON tb1.product_category_id = tb2.id
+            JOIN product_brands as tb3 ON tb1.product_brand_id = tb3.id 
+            WHERE tb1.id = :id";
+            $stmt = $GLOBALS['conn']->prepare($sql);
+            $stmt->bindParam(':id',$id);
+            $stmt->execute();
+
+            return $stmt->fetch();
+        } catch (\Exception $e) {
+            debug($e);
+        }
+
+    }
+}

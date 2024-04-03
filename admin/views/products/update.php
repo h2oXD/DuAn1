@@ -55,7 +55,7 @@
                                     </div>
                                     <div class="mb-3 mt-3 col-md-4">
                                         <label for="role" class="form-label">Category:</label>
-                                        <Select class="form-control" class="form-control" name="product_category_id">
+                                        <Select class="form-select" name="product_category_id">
                                             <option value="">--Chọn-category--</option>
                                             <?php foreach ($categories as $category): ?>
                                                 <option <?= $product['product_category_id'] == $category['id'] ? 'selected' : null ?> value="<?= $category['id'] ?>">
@@ -66,7 +66,7 @@
                                     </div>
                                     <div class="mb-3 mt-3 col-md-4">
                                         <label for="brand" class="form-label">Brand:</label>
-                                        <Select class="form-control" class="form-control" name="product_brand_id">
+                                        <Select class="form-select" name="product_brand_id">
                                             <option value="">--Chọn-brand--</option>
                                             <?php foreach ($brands as $brand): ?>
                                                 <option <?= $product['product_brand_id'] == $brand['id'] ? 'selected' : null ?>
@@ -93,19 +93,6 @@
                                             <?php endforeach ?>
                                         </Select>
                                     </div>
-                                    <div class="mb-3 mt-3 col-md-4">
-                                        <label for="colors" class="form-label">Colors:</label>
-                                        <Select class="form-control" class="form-control" name="colors[]" multiple>
-                                            <?php foreach ($colors as $color): ?>
-                                                <option <?= in_array($color['id'], $idColorsForProduct) ? 'selected' : null ?>
-                                                    value="<?= $color['id'] ?>">
-                                                    <?= $color['name'] ?>
-                                                </option>
-                                            <?php endforeach ?>
-                                        </Select>
-                                    </div>
-
-
                                     <div class="mb-3 mt-3 col-md-12">
                                         <label for="description" class="form-label">Description:</label>
                                         <textarea

@@ -135,6 +135,9 @@
                         <a href="?act=colors"> Quản lý màu sắc </a>
                     </li>
                     <li>
+                        <a href="?act=sizes"> Quản lý kích thước </a>
+                    </li>
+                    <li>
                 </ul>
             </li>
             <li class="menu">
