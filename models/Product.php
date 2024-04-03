@@ -27,3 +27,23 @@ function getTagsByProduct($id)
 
 //     return $stmt->fetch();
 // }
+
+function Product_Sale(){
+    $sql = "SELECT id,title,price,sale,thumbnail FROM products ";
+
+    $stmt = $GLOBALS['conn']->prepare($sql);
+
+    $stmt->execute();
+
+    return $stmt->fetchAll();
+}
+
+function Product_Arrival(){
+    $sql = "SELECT id,title,price,sale,thumbnail,created_at FROM products ORDER BY created_at desc LIMIT 5";
+
+    $stmt = $GLOBALS['conn']->prepare($sql);
+
+    $stmt->execute();
+
+    return $stmt->fetchAll();
+}
