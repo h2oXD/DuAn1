@@ -9,19 +9,17 @@
     }
     function confirm(){
         if(!isset($_SESSION['user'])){header("Location:" . BASE_URL ."?act=login"); exit();}
-        if(isset($_POST['thanhtoan'])){
+        if(isset($_POST['thanhtoan']) && isset($_SESSION['cart'])){
             $data = [
                 'receiver' => $_POST['receiver'] ?? null,
                 'delivery_address' => $_POST['delivery_address'] ?? null,
                 'phone_number' => $_POST['phone_number'] ?? null,
                 'email' => $_POST['email'] ?? null,
             ];
-            // debug($data);
             $check = validateUserAddress($data);
             if($check){
                 $user_address = getAddressUser($_SESSION['user']['id']);
-                if(empty($user_address) && isset($_POST['saveAddress']) && $_POST['saveAddress'] == 1){
-                    debug($user_address);
+                if($user_address == null && isset($_POST['saveAddress']) && $_POST['saveAddress'] == 1){
                     $data['user_id'] = $_SESSION['user']['id'];
                     insert('user_addresses',$data);
                 }else{
@@ -29,11 +27,13 @@
                         update('user_addresses',$user_address['id'],$data);
                     }
                 }
+                
                 $data+= [
                     'total_money' => $_POST['total_money'] ?? null,
                     'user_id' => $_SESSION['user']['id'] ?? null,
                     'note' => $_POST['note'] ?? null
                 ];
+                
                 $cartUser = showOneCart($data['user_id']);
                 
                 if($cartUser){
@@ -51,6 +51,7 @@
                 
                     deleteCartItemsByCartID($_SESSION['cart'][0]['cart_id']);
                     delete2('carts',$_SESSION['cart'][0]['cart_id']);
+                    unset($_SESSION['cart']);
                     $view = "order/confirm";
                     // debug($_POST);
                     require PATH_VIEW.'layouts/master.php';
