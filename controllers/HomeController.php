@@ -2,6 +2,8 @@
     function homeIndex(){
         $view = "home";
         $categories = Show_All_Categories();
+        $productsale = Product_Sale();
+        $productarrival = Product_Arrival();
         
         
         // debug($countcart);
