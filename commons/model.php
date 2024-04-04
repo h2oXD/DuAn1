@@ -39,7 +39,7 @@ if (!function_exists('insert')) {
             $virtualParams = get_virtual_params($data);
 
             $sql = "INSERT INTO $tableName($strKeys) VALUES($virtualParams)";
-            
+
             $stmt = $GLOBALS['conn']->prepare($sql);
 
             foreach ($data as $fieldName => &$value) {
@@ -47,23 +47,21 @@ if (!function_exists('insert')) {
             }
 
             $stmt->execute();
-
         } catch (\Exception $e) {
             debug($e);
         }
-
     }
 }
 if (!function_exists('insert_get_last_id')) {
     function insert_get_last_id($tableName, $data = [])
     {
-        
+
         try {
             $strKeys = get_str_keys($data);
             $virtualParams = get_virtual_params($data);
 
             $sql = "INSERT INTO $tableName($strKeys) VALUES($virtualParams)";
-            
+
             $stmt = $GLOBALS['conn']->prepare($sql);
 
             foreach ($data as $fieldName => &$value) {
@@ -75,7 +73,6 @@ if (!function_exists('insert_get_last_id')) {
         } catch (\Exception $e) {
             debug($e);
         }
-
     }
 }
 
@@ -93,7 +90,6 @@ if (!function_exists('listAll')) {
         } catch (\Exception $e) {
             debug($e);
         }
-
     }
 }
 
@@ -113,7 +109,6 @@ if (!function_exists('showOne')) {
         } catch (\Exception $e) {
             debug($e);
         }
-
     }
 }
 
@@ -139,11 +134,9 @@ if (!function_exists('update')) {
 
 
             $stmt->execute();
-            
         } catch (\Exception $e) {
             debug($e);
         }
-
     }
 }
 if (!function_exists('delete2')) {
@@ -156,11 +149,9 @@ if (!function_exists('delete2')) {
             $stmt->bindParam(":id", $id);
 
             $stmt->execute();
-
         } catch (\Exception $e) {
             debug($e);
         }
-
     }
 }
 if (!function_exists('checkUniqueName')) {
@@ -177,7 +168,7 @@ if (!function_exists('checkUniqueName')) {
 
             $data = $stmt->fetch();
 
-            return empty ($data) ? true : false;
+            return empty($data) ? true : false;
         } catch (\Exception $e) {
             debug($e);
         }
@@ -199,7 +190,7 @@ if (!function_exists('checkUniqueNameForUpdate')) {
 
             $data = $stmt->fetch();
 
-            return empty ($data) ? true : false;
+            return empty($data) ? true : false;
         } catch (\Exception $e) {
             debug($e);
         }
@@ -225,11 +216,10 @@ if (!function_exists('showAttribute')) {
         } catch (\Exception $e) {
             debug($e);
         }
-
     }
 }
 if (!function_exists('showOneJoinProduct')) {
-    function showOneJoinProduct($tableName1,$id)
+    function showOneJoinProduct($tableName1, $id)
     {
         try {
             $sql = "SELECT tb1.id, tb1.title, tb2.name as c_name, tb3.name as b_name, tb1.price, tb1.sale, tb1.thumbnail, tb1.description,tb1.created_at,tb1.updated_at
@@ -237,14 +227,13 @@ if (!function_exists('showOneJoinProduct')) {
             JOIN product_brands as tb3 ON tb1.product_brand_id = tb3.id 
             WHERE tb1.id = :id";
             $stmt = $GLOBALS['conn']->prepare($sql);
-            $stmt->bindParam(':id',$id);
+            $stmt->bindParam(':id', $id);
             $stmt->execute();
 
             return $stmt->fetchAll();
         } catch (\Exception $e) {
             debug($e);
         }
-
     }
 }
 if (!function_exists('showOneProduct')) {
@@ -256,13 +245,90 @@ if (!function_exists('showOneProduct')) {
             JOIN product_brands as tb3 ON tb1.product_brand_id = tb3.id 
             WHERE tb1.id = :id";
             $stmt = $GLOBALS['conn']->prepare($sql);
-            $stmt->bindParam(':id',$id);
+            $stmt->bindParam(':id', $id);
             $stmt->execute();
 
             return $stmt->fetch();
         } catch (\Exception $e) {
             debug($e);
         }
+    }
+}
+if (!function_exists('OrderJoin')) {
+    function OrderJoin()
+    {
+        try {
+            $sql = "SELECT 
+        tb1.id as orderID,
+        tb1.receiver as nguoiNhan,
+        tb1.delivery_address as diaChiNhan,
+        tb1.phone_number as sdt,
+        tb1.email,
+        tb1.note,
+        tb1.order_date,
+        tb1.total_money,
+        tb1.status
+        FROM orders tb1 ";
 
+
+            $stmt = $GLOBALS['conn']->prepare($sql);
+
+            $stmt->execute();
+
+            return $stmt->fetchAll();
+        } catch (\Exception $e) {
+            debug($e);
+        }
+    }
+}
+if (!function_exists('OrderJoin2')) {
+    function OrderJoin2($id)
+    {
+        try {
+            $sql = "SELECT 
+        tb1.id as orderID,
+        tb1.receiver as nguoiNhan,
+        tb1.delivery_address as diaChiNhan,
+        tb1.phone_number as sdt,
+        tb1.email,
+        tb1.note,
+        tb1.order_date,
+        tb1.total_money,
+        tb1.status
+        FROM orders tb1 WHERE tb1.user_id = :id";
+
+
+            $stmt = $GLOBALS['conn']->prepare($sql);
+
+            $stmt->bindParam(":id", $id);
+
+            $stmt->execute();
+
+            return $stmt->fetchAll();
+        } catch (\Exception $e) {
+            debug($e);
+        }
+    }
+}
+if (!function_exists('showAllOrderDetailByOrderID')) {
+    function showAllOrderDetailByOrderID($id)
+    {
+        try {
+            $sql = "SELECT tb2.title,tb2.thumbnail,tb2.sale,tb3.name as color,tb4.size,tb1.quantity FROM order_details tb1 
+        JOIN products tb2 ON tb1.product_id = tb2.id 
+        JOIN product_colors tb3 ON tb1.color = tb3.id
+        JOIN product_sizes tb4 ON tb1.size = tb4.id
+        WHERE order_id = :id";
+
+            $stmt = $GLOBALS['conn']->prepare($sql);
+
+            $stmt->bindParam(":id", $id);
+
+            $stmt->execute();
+
+            return $stmt->fetchAll();
+        } catch (\Exception $e) {
+            debug($e);
+        }
     }
 }

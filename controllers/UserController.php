@@ -184,21 +184,6 @@ function checkUserPassword($pass, $inputPass, $newPass = null, $confirmPass = nu
 
     return $check;
 }
-
-function accountOrder()
-{
-    if (!isset($_SESSION['user'])) {
-        header("Location:" . BASE_URL . "?act=login");
-        exit();
-    }
-    $view = "users/account_order";
-    $orders = Show_Order_ById_User();
-
-
-    require PATH_VIEW . 'layouts/master.php';
-
-}
-
 function accountDashboard()
 {
     if (!isset($_SESSION['user'])) {
@@ -226,8 +211,39 @@ function accountAddress()
     require PATH_VIEW . 'layouts/master.php';
 
 }
+function accountOrder()
+{
+    if (!isset($_SESSION['user'])) {
+        header("Location:" . BASE_URL . "?act=login");
+        exit();
+    }
+    $view = "users/account_order";
+    $orders = OrderJoin2($_SESSION['user']['id']);
+    if(isset($_GET['id'])){
+        $ordersDetail = showAllOrderDetailByOrderID($_GET['id']);
+    }
+   
+
+    require PATH_VIEW . 'layouts/master.php';
+
+}
+function cancelOrder($id)
+{
+    if (!isset($_SESSION['user'])) {
+        header("Location:" . BASE_URL . "?act=login");
+        exit();
+    }
+    $order = showOne('orders',$id);
+    if(isset($order)){
+        cancelOrderByID($id);
+        header("Location: " . BASE_URL.'?act=account_order');
+    exit();
+    }
+
+}
 function userLogout()
 {
     unset($_SESSION['user']);
     header("Location: " . BASE_URL);
+    exit();
 }

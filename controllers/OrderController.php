@@ -52,6 +52,8 @@
                     deleteCartItemsByCartID($_SESSION['cart'][0]['cart_id']);
                     delete2('carts',$_SESSION['cart'][0]['cart_id']);
                     unset($_SESSION['cart']);
+                    $orderCf = getOrderByID($orderID);
+                    // debug($orderCf);
                     $view = "order/confirm";
                     // debug($_POST);
                     require PATH_VIEW.'layouts/master.php';

@@ -22,6 +22,7 @@
         'account_address' => accountAddress(),
         'account_detail' => accountDetail(),
         'account_order' => accountOrder(),
+        'huydon' => cancelOrder($_GET['id']),
         'account_dashboard' => accountDashboard(),
 
         // Giỏ hàng

@@ -68,27 +68,6 @@ function getAddressUser($id) {
 }
 
 
-function Show_Order_ById_User(){
-    try {
-
-        $id_user = $_SESSION['user']['id'];
-
-        $sql = "SELECT orders.id, receiver, total_money, status
-        FROM `orders`
-        INNER JOIN users
-        ON users.id = orders.user_id
-        WHERE users.id = $id_user";
-
-        $stmt = $GLOBALS['conn']->prepare($sql);
-
-        $stmt->execute();
-
-        return $stmt->fetchAll();
-
-    } catch (\Exception $e) {
-        debug($e);
-    }
-}
 
 function Show_Detail_Order_ById_User(){
     try {

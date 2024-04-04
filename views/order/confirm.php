@@ -46,7 +46,7 @@
           <div class="order-info__item">
             <label>Tổng tiền thanh toán</label>
             <span>$<?php $total = 0;
-                          foreach ($cartUser as $c) {
+                          foreach ($orderCf as $c) {
                             $total += ($c['quantity'] * $c['sale']);
                           }
                           echo number_format($total); ?></span>
@@ -69,7 +69,7 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <?php foreach ($cartUser as $c) : ?>
+                  <?php foreach ($orderCf as $c) : ?>
                     <tr>
                       <td>
                         <?= $c['title'] ?>
@@ -92,7 +92,7 @@
                 <tr>
                     <th>Tổng tiền thanh toán</th>
                     <td>$<?php $total = 0;
-                          foreach ($cartUser as $c) {
+                          foreach ($orderCf as $c) {
                             $total += ($c['quantity'] * $c['sale']);
                           }
                           echo number_format($total); ?></td>
