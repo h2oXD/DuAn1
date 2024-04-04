@@ -1,7 +1,9 @@
 <header id="header" class="header header_sticky header-fullwidth">
   <div class="header-desk header-desk_type_4 header-desk_sm">
     <?php require PATH_VIEW . "layouts/partials/header/logo.php"; ?>
-
+    <?php if(isset($_SESSION['user'])){
+            $countcart = countCart($_SESSION['user']['id']);
+        } ?>
     <nav class="navigation">
       <ul class="navigation__list list-unstyled d-flex">
         <li class="navigation__item">
@@ -70,7 +72,7 @@
         <svg class="d-block" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
           <use href="#icon_cart" />
         </svg>
-        <span class="cart-amount d-block position-absolute js-cart-items-count">0</span>
+        <span class="cart-amount d-block position-absolute js-cart-items-count"><?= $countcart['dem'] ?? 0 ?></span>
       </a>
             <!-- USER -->
             <?php if (!isset($_SESSION['user'])) { ?>

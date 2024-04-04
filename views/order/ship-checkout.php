@@ -1,34 +1,34 @@
 <main>
     <div class="mb-4 pb-4"></div>
     <section class="shop-checkout container">
-      <h2 class="page-title">Shipping and Checkout</h2>
+      <h2 class="page-title">Thanh toán</h2>
       <div class="checkout-steps">
         <a href="?act=view-cart" class="checkout-steps__item active">
           <span class="checkout-steps__item-number">01</span>
           <span class="checkout-steps__item-title">
-            <span>Shopping Bag</span>
-            <em>Manage Your Items List</em>
+            <span>Giỏ hàng</span>
+            <em>Quản lý giỏ hàng</em>
           </span>
         </a>
         <a href="?act=ship-checkout" class="checkout-steps__item active">
           <span class="checkout-steps__item-number">02</span>
           <span class="checkout-steps__item-title">
-            <span>Shipping and Checkout</span>
-            <em>Checkout Your Items List</em>
+            <span>Thanh toán</span>
+            <em>Thanh toán cho sản phẩm</em>
           </span>
         </a>
         <a href="?act=confirm" class="checkout-steps__item">
           <span class="checkout-steps__item-number">03</span>
           <span class="checkout-steps__item-title">
-            <span>Confirmation</span>
-            <em>Review And Submit Your Order</em>
+            <span>Xác nhận thanh toán</span>
+            <em></em>
           </span>
         </a>
       </div>
       <form name="checkout-form" action="https://uomo-html.flexkitux.com/Demo13/shop_order_complete.html">
         <div class="checkout-form">
           <div class="billing-info__wrapper">
-            <h4>BILLING DETAILS</h4>
+            <h4>Hoàn thiện hóa đơn thanh toán</h4>
             <div class="row">
               <div class="col-md-6">
                 <div class="form-floating my-3">
@@ -123,7 +123,7 @@
                   </label>
                 </div>
               </div>
-              <button class="btn btn-primary btn-checkout">PLACE ORDER</button>
+              <a class="btn btn-primary btn-checkout" href="?act=confirm">Thanh toán</a>
             </div>
           </div>
         </div>

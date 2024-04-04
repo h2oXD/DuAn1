@@ -39,29 +39,30 @@
               </tr>
             </thead>
             <tbody>
+              <?php foreach($cartUser as $cU): ?>
               <tr>
                 <td>
                   <div class="shopping-cart__product-item">
                     <a href="product1_simple.html">
-                      <img loading="lazy" src="../images/cart-item-1.jpg" width="120" height="120" alt="">
+                      <img loading="lazy" src="<?= $cU['thumbnail'] ?>" width="120" height="120" alt="">
                     </a>
                   </div>
                 </td>
                 <td>
                   <div class="shopping-cart__product-item__detail">
-                    <h4><a href="product1_simple.html">Zessi Dresses</a></h4>
+                    <h4><a href="product1_simple.html"><?= $cU['title'] ?></a></h4>
                     <ul class="shopping-cart__product-item__options">
-                      <li>Color: Yellow</li>
-                      <li>Size: L</li>
+                      <li>Color: <?= $cU['name'] ?></li>
+                      <li>Size: <?= $cU['size'] ?></li>
                     </ul>
                   </div>
                 </td>
                 <td>
-                  <span class="shopping-cart__product-price">$99</span>
+                  <span class="shopping-cart__product-price">$<?= $cU['sale'] ?></span>
                 </td>
                 <td>
                   <div class="qty-control position-relative">
-                    <input type="number" name="quantity" value="3" min="1" class="qty-control__number text-center">
+                    <input type="number" name="quantity" value="<?= $cU['quantity'] ?>" min="1" class="qty-control__number text-center">
                     <div class="qty-control__reduce">-</div>
                     <div class="qty-control__increase">+</div>
                   </div><!-- .qty-control -->
@@ -70,7 +71,7 @@
                   <span class="shopping-cart__subtotal">$297</span>
                 </td>
                 <td>
-                  <a href="#" class="remove-cart">
+                  <a href="?act=delete-cart&item=<?= $cU['item'] ?>">
                     <svg width="10" height="10" viewBox="0 0 10 10" fill="#767676" xmlns="http://www.w3.org/2000/svg">
                       <path d="M0.259435 8.85506L9.11449 0L10 0.885506L1.14494 9.74056L0.259435 8.85506Z"/>
                       <path d="M0.885506 0.0889838L9.74057 8.94404L8.85506 9.82955L0 0.97449L0.885506 0.0889838Z"/>
@@ -78,84 +79,7 @@
                   </a>
                 </td>
               </tr>
-              <tr>
-                <td>
-                  <div class="shopping-cart__product-item">
-                    <a href="product1_simple.html">
-                      <img loading="lazy" src="../images/cart-item-2.jpg" width="120" height="120" alt="">
-                    </a>
-                  </div>
-                </td>
-                <td>
-                  <div class="shopping-cart__product-item__detail">
-                    <h4><a href="product1_simple.html">Kirby T-Shirt</a></h4>
-                    <ul class="shopping-cart__product-item__options">
-                      <li>Color: Yellow</li>
-                      <li>Size: L</li>
-                    </ul>
-                  </div>
-                </td>
-                <td>
-                  <span class="shopping-cart__product-price">$99</span>
-                </td>
-                <td>
-                  <div class="qty-control position-relative">
-                    <input type="number" name="quantity" value="3" min="1" class="qty-control__number text-center">
-                    <div class="qty-control__reduce">-</div>
-                    <div class="qty-control__increase">+</div>
-                  </div><!-- .qty-control -->
-                </td>
-                <td>
-                  <span class="shopping-cart__subtotal">$297</span>
-                </td>
-                <td>
-                  <a href="#" class="remove-cart">
-                    <svg width="10" height="10" viewBox="0 0 10 10" fill="#767676" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.259435 8.85506L9.11449 0L10 0.885506L1.14494 9.74056L0.259435 8.85506Z"/>
-                      <path d="M0.885506 0.0889838L9.74057 8.94404L8.85506 9.82955L0 0.97449L0.885506 0.0889838Z"/>
-                    </svg>                  
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="shopping-cart__product-item">
-                    <a href="product1_simple.html">
-                      <img loading="lazy" src="../images/cart-item-3.jpg" width="120" height="120" alt="">
-                    </a>
-                  </div>
-                </td>
-                <td>
-                  <div class="shopping-cart__product-item__detail">
-                    <h4><a href="product1_simple.html">Cobleknit Shawl</a></h4>
-                    <ul class="shopping-cart__product-item__options">
-                      <li>Color: Yellow</li>
-                      <li>Size: L</li>
-                    </ul>
-                  </div>
-                </td>
-                <td>
-                  <span class="shopping-cart__product-price">$99</span>
-                </td>
-                <td>
-                  <div class="qty-control position-relative">
-                    <input type="number" name="quantity" value="3" min="1" class="qty-control__number text-center">
-                    <div class="qty-control__reduce">-</div>
-                    <div class="qty-control__increase">+</div>
-                  </div><!-- .qty-control -->
-                </td>
-                <td>
-                  <span class="shopping-cart__subtotal">$297</span>
-                </td>
-                <td>
-                  <a href="#" class="remove-cart">
-                    <svg width="10" height="10" viewBox="0 0 10 10" fill="#767676" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.259435 8.85506L9.11449 0L10 0.885506L1.14494 9.74056L0.259435 8.85506Z"/>
-                      <path d="M0.885506 0.0889838L9.74057 8.94404L8.85506 9.82955L0 0.97449L0.885506 0.0889838Z"/>
-                    </svg>                  
-                  </a>
-                </td>
-              </tr>
+              <?php endforeach; ?>
             </tbody>
           </table>
           <div class="cart-table-footer">
@@ -174,26 +98,29 @@
                 <tbody>
                   <tr>
                     <th>Sản phẩm</th>
+                    <th>Đơn giá</th>
                     <th>Số lượng</th>
+                    <th>Tổng tiền</th>
                   </tr>
+                  <?php foreach($cartUser as $cU): ?>
                   <tr>
-                    <td>Sản phẩm 1</td>
-                    <td>x2</td>
+                    <td><?= $cU['title'] ?></td>
+                    <td><?= $cU['sale'] ?>$</td>
+                    <td><?= $cU['quantity'] ?></td>
                   </tr>
+                  <?php endforeach; ?>
                   <tr>
-                    <td>Sản phẩm 1</td>
-                    <td>x2</td>
-                  </tr>
-                  <tr>
-                    <th>Tổng</th>
-                    <td>$1319</td>
+                    <td>Tổng giá</td>
+                    <td></td>
+                    <td></td>
+                    <td>1000$</td>
                   </tr>
                 </tbody>
               </table>
             </div>
             <div class="mobile_fixed-btn_wrapper">
               <div class="button-wrapper container">
-                <button class="btn btn-primary btn-checkout">Thanh toán</button>
+                <a class="btn btn-primary btn-checkout" href="?act=ship-checkout">Thanh toán</a>
               </div>
             </div>
           </div>
