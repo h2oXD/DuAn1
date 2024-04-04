@@ -69,9 +69,9 @@
                         echo "Chờ xác nhận";
                       } else if ($order['status'] == 1) {
                         echo "Chờ lấy hàng";
-                      } else if ($order['status'] == 1) {
+                      } else if ($order['status'] == 2) {
                         echo "Đang giao hàng";
-                      } else if ($order['status'] == 1) {
+                      } else if ($order['status'] == 3) {
                         echo "Đã giao";
                       } else {
                         echo "Đơn hàng đã bị hủy";
