@@ -25,7 +25,7 @@
                 <ul class="list list-inline mb-0">
                   <li class="list-item">
                     <?php foreach($categories as $category): ?>
-                    <a href="?act=list_sp&category=<?= $category['id'] ?>" class="menu-link py-1"><?= $category['name'] ?></a>
+                    <a href="?act=list_sp&category=<?= $category['id'] ?>" class="menu-link py-1"><?= $category['name'] ?></a><br>
                     <?php endforeach; ?>
                   </li>
                 </ul>
@@ -50,16 +50,9 @@
             <div id="accordion-filter-2" class="accordion-collapse collapse show border-0" aria-labelledby="accordion-heading-1" data-bs-parent="#color-filters">
               <div class="accordion-body px-0 pb-0">
                 <div class="d-flex flex-wrap">
-                  <a href="#" class="swatch-color js-filter" style="color: #0a2472"></a>
-                  <a href="#" class="swatch-color js-filter" style="color: #d7bb4f"></a>
-                  <a href="#" class="swatch-color js-filter" style="color: #282828"></a>
-                  <a href="#" class="swatch-color js-filter" style="color: #b1d6e8"></a>
-                  <a href="#" class="swatch-color js-filter" style="color: #9c7539"></a>
-                  <a href="#" class="swatch-color js-filter" style="color: #d29b48"></a>
-                  <a href="#" class="swatch-color js-filter" style="color: #e6ae95"></a>
-                  <a href="#" class="swatch-color js-filter" style="color: #d76b67"></a>
-                  <a href="#" class="swatch-color swatch_active js-filter" style="color: #bababa"></a>
-                  <a href="#" class="swatch-color js-filter" style="color: #bfdcc4"></a>
+                  <?php foreach($colors as $color): ?>
+                    <a href="#" class="swatch-size btn btn-sm btn-outline-light mb-3 me-3 js-filter"><?= $color['name'] ?></a>
+                  <?php endforeach; ?>
                 </div>
               </div>
             </div>
@@ -80,9 +73,9 @@
             <div id="accordion-filter-size" class="accordion-collapse collapse show border-0" aria-labelledby="accordion-heading-size" data-bs-parent="#size-filters">
               <div class="accordion-body px-0 pb-0">
                 <div class="d-flex flex-wrap">
-                  <a href="#" class="swatch-size btn btn-sm btn-outline-light mb-3 me-3 js-filter">56-17-145</a>
-                  <a href="#" class="swatch-size btn btn-sm btn-outline-light mb-3 me-3 js-filter">53-19-145</a>
-                  <a href="#" class="swatch-size btn btn-sm btn-outline-light mb-3 me-3 js-filter">54-17-138</a>
+                  <?php foreach($sizes as $size): ?>
+                  <a href="#" class="swatch-size btn btn-sm btn-outline-light mb-3 me-3 js-filter"><?= $size['size'] ?></a>
+                  <?php endforeach; ?>
                 </div>
               </div>
             </div>
@@ -102,47 +95,16 @@
             </h5>
             <div id="accordion-filter-brand" class="accordion-collapse collapse show border-0" aria-labelledby="accordion-heading-brand" data-bs-parent="#brand-filters">
               <div class="search-field multi-select accordion-body px-0 pb-0">
-                <select class="d-none" multiple name="total-numbers-list">
-                  <option value="1">Adidas</option>
-                  <option value="2">Balmain</option>
-                  <option value="3">Balenciaga</option>
-                  <option value="4">Burberry</option>
-                  <option value="5">Kenzo</option>
-                  <option value="5">Givenchy</option>
-                  <option value="5">Zara</option>
-                </select>
                 <div class="search-field__input-wrapper mb-3">
                   <input type="text" name="search_text" class="search-field__input form-control form-control-sm border-light border-2" placeholder="SEARCH">
                 </div>
                 <ul class="multi-select__list list-unstyled">
-                  <li class="search-suggestion__item multi-select__item text-primary js-search-select js-multi-select">
-                    <span class="me-auto">Adidas</span>
-                    <span class="text-secondary">2</span>
-                  </li>
-                  <li class="search-suggestion__item multi-select__item text-primary js-search-select js-multi-select">
-                    <span class="me-auto">Balmain</span>
-                    <span class="text-secondary">7</span>
-                  </li>
-                  <li class="search-suggestion__item multi-select__item text-primary js-search-select js-multi-select">
-                    <span class="me-auto">Balenciaga</span>
-                    <span class="text-secondary">10</span>
-                  </li>
-                  <li class="search-suggestion__item multi-select__item text-primary js-search-select js-multi-select">
-                    <span class="me-auto">Burberry</span>
-                    <span class="text-secondary">39</span>
-                  </li>
-                  <li class="search-suggestion__item multi-select__item text-primary js-search-select js-multi-select">
-                    <span class="me-auto">Kenzo</span>
-                    <span class="text-secondary">95</span>
-                  </li>
-                  <li class="search-suggestion__item multi-select__item text-primary js-search-select js-multi-select">
-                    <span class="me-auto">Givenchy</span>
-                    <span class="text-secondary">1092</span>
-                  </li>
-                  <li class="search-suggestion__item multi-select__item text-primary js-search-select js-multi-select">
-                    <span class="me-auto">Zara</span>
-                    <span class="text-secondary">48</span>
-                  </li>
+                  <?php foreach($brands as $brand): ?>
+                    <li class="search-suggestion__item multi-select__item text-primary js-search-select js-multi-select">
+                      <span class="me-auto"><?= $brand['name'] ?></span>
+                      <span class="text-secondary"><?= $brand['SLsp'] ?></span>
+                    </li>
+                  <?php endforeach; ?>
                 </ul>
               </div>
             </div>
@@ -167,11 +129,11 @@
               <div class="price-range__info d-flex align-items-center mt-2">
                 <div class="me-auto">
                   <span class="text-secondary">Min Price: </span>
-                  <span class="price-range__min">$0</span>
+                  <span class="price-range__min">$<?= $min_price['PriceMin'] ?></span>
                 </div>
                 <div>
                   <span class="text-secondary">Max Price: </span>
-                  <span class="price-range__max">$1000</span>
+                  <span class="price-range__max">$<?= $max_price['PriceMax'] ?></span>
                 </div>
               </div>
             </div>
@@ -226,7 +188,7 @@
                     </div><!-- /.pc__img-wrapper -->
                   </div>
                 </div>
-                <button class="pc__atc btn anim_appear-bottom btn position-absolute border-0 text-uppercase fw-medium js-add-cart" data-aside="cartDrawer" title="Thêm vào giỏ hàng"><a href="?act=add-cart&id=<?= $product['id'] ?>">Thêm vào giỏ hàng</a></button>
+                <button class="pc__atc btn anim_appear-bottom btn position-absolute border-0 text-uppercase fw-medium js-add-cart" data-aside="cartDrawer" title="Thêm vào giỏ hàng"><a href="?act=chitiet&id=<?= $product['id'] ?>">Chi tiết</a></button>
               </div>
 
               <div class="pc__info position-relative">
