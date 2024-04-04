@@ -54,7 +54,7 @@
               <div class="pc__info position-relative d-flex flex-column align-items-center mb-3 mb-md-4 mb-xxl-5">
                 <h6 class="pc__title text-uppercase fw-semi-bold"><a href="?act=list_sp"><?= $productsale['title'] ?></a></h6>
                 <div class="product-card__price d-flex text-secondary mb-2">
-                  <span class="money price"><del>$<?= $productsale['price'] ?></del></span>
+                  <span class="money price"><del>$$<?= $productsale['price'] ?></del></span>
                 </div>
                 <div class="d-flex align-items-center">
                 <span class="money price">$<?= $productsale['sale'] ?></span>
