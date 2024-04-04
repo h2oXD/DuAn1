@@ -15,7 +15,7 @@ function addCart($id)
         $cart['id'] = insert_get_last_id('carts', ['user_id' => $_SESSION['user']['id']]);
         $cart['user_id'] = $_SESSION['user']['id'];
     }
-    $_SESSION['cartID'] = listAllCartByUser('cart_items', $cart['id']);
+    // $_SESSION['cartID'] = $cart['id'];
     if (isset($_POST['quantity'])) {
         // debug($_POST);
         $data = [

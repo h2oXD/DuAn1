@@ -1,24 +1,55 @@
 <?php 
 function OrderJoin(){
     try {
-        $sql = "SELECT
-        o.id AS id,
-        u.name AS u_nguoimua,
-        ud.receiver AS ud_nguoinhan,
-        ud.delivery_address AS ud_diachinhan,
-        ud.phone_number AS ud_sodienthoainhan,
-        ud.email AS ud_emailnhan,
-        p.title AS p_tensanpham,
-        od.price AS p_giasanpham,
-        od.quantity AS p_soluong,
-        o.total_money AS o_tongtien,
-        o.status AS o_trangthai
-        FROM orders AS o JOIN user_addresses AS ud ON o.user_address_id = ud.id
-        JOIN order_details AS od ON o.id = od.order_id JOIN products AS p ON od.product_id = p.id  
-        JOIN users AS u ON o.user_id = u.id
-        ";
+        $sql = "SELECT 
+        tb1.id as orderID,
+        tb1.receiver as nguoiNhan,
+        tb1.delivery_address as diaChiNhan,
+        tb1.phone_number as sdt,
+        tb1.email,
+        tb1.note,
+        tb1.order_date,
+        tb1.total_money,
+        tb1.status
+        FROM orders tb1 ";
+
 
         $stmt = $GLOBALS['conn']->prepare($sql);
+
+        $stmt->execute();
+
+        return $stmt->fetchAll();
+    } catch (\Exception $e) {
+        debug($e);
+    }
+}
+function showAllOrderDetailByOrderID($id){
+    try {
+        $sql = "SELECT tb2.title,tb2.thumbnail,tb2.sale,tb3.name as color,tb4.size,tb1.quantity FROM order_details tb1 
+        JOIN products tb2 ON tb1.product_id = tb2.id 
+        JOIN product_colors tb3 ON tb1.color = tb3.id
+        JOIN product_sizes tb4 ON tb1.size = tb4.id
+        WHERE order_id = :id";
+
+        $stmt = $GLOBALS['conn']->prepare($sql);
+
+        $stmt->bindParam(":id", $id);
+
+        $stmt->execute();
+
+        return $stmt->fetchAll();
+    } catch (\Exception $e) {
+        debug($e);
+    }
+}
+function orderStatus($id,$trangthai){
+    try {
+        $sql = "UPDATE orders SET `status` = :trangthai WHERE id = :id";
+
+        $stmt = $GLOBALS['conn']->prepare($sql);
+
+        $stmt->bindParam(":id", $id);
+        $stmt->bindParam(":trangthai", $trangthai);
 
         $stmt->execute();
 
