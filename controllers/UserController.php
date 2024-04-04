@@ -192,11 +192,13 @@ function accountOrder()
         exit();
     }
     $view = "users/account_order";
+    $orders = Show_Order_ById_User();
 
 
     require PATH_VIEW . 'layouts/master.php';
 
 }
+
 function accountDashboard()
 {
     if (!isset($_SESSION['user'])) {
