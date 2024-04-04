@@ -28,6 +28,25 @@ function getTagsByProduct($id)
 //     return $stmt->fetch();
 // }
 
+function Get_Max_Price(){
+    $sql = "SELECT id, MAX(sale) AS PriceMax FROM `products` GROUP BY id";
+
+    $stmt = $GLOBALS['conn']->prepare($sql);
+
+    $stmt->execute();
+
+    return $stmt->fetch();
+}
+
+function Get_Min_Price(){
+    $sql = "SELECT id, MIN(sale) AS PriceMin FROM `products` GROUP BY id ORDER BY sale ASC";
+
+    $stmt = $GLOBALS['conn']->prepare($sql);
+
+    $stmt->execute();
+
+    return $stmt->fetch();
+}
 function Product_Sale(){
     $sql = "SELECT id,title,price,sale,thumbnail FROM products ";
 

@@ -29,6 +29,7 @@
         'view-cart' => viewcart(),
         'ship-checkout' => ship(),
         'confirm' => confirm(),
+        'delete-cart' => deleteCart($_GET['item']),
 
         // Danh sách sản phẩm
         'list_sp' => List_sp(),

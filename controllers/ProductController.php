@@ -3,9 +3,11 @@
         $view = "danhsach_sanpham/list_sp";
         $products = listAll('products');
         $categories = listAll('product_categories');
-        $brands = listAll('product_brands');
+        $brands = Get_All_Brand_And_Count_Product();
         $colors = listAll('product_colors');
         $sizes = listAll('product_sizes');
+        $max_price = Get_Max_Price();
+        $min_price = Get_Min_Price();
         // debug($products);
         require PATH_VIEW.'layouts/master.php';
     }
