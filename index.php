@@ -22,6 +22,7 @@
         'account_address' => accountAddress(),
         'account_detail' => accountDetail(),
         'account_order' => accountOrder(),
+        'account_detail_order' => account_Detail_Order(),
         'account_dashboard' => accountDashboard(),
 
         // Giỏ hàng

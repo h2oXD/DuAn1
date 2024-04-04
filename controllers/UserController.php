@@ -192,11 +192,27 @@ function accountOrder()
         exit();
     }
     $view = "users/account_order";
+    $orders = Show_Order_ById_User();
 
 
     require PATH_VIEW . 'layouts/master.php';
 
 }
+
+function account_Detail_Order()
+{
+    if (!isset($_SESSION['user'])) {
+        header("Location:" . BASE_URL . "?act=login");
+        exit();
+    }
+    $view = "users/account_detail_order";
+    $detail_orders = Show_Detail_Order_ById_User();
+
+
+    require PATH_VIEW . 'layouts/master.php';
+
+}
+
 function accountDashboard()
 {
     if (!isset($_SESSION['user'])) {
