@@ -40,18 +40,19 @@
                 </div>
                 <div class="col-md-6">
                   <div class="form-floating my-3">
-                    <input name="email" value="<?= $user_address['email'] ?? null ?>" type="email"
-                      class="form-control" id="account_email" placeholder="Email Address" required>
-                    <label for="account_email">Địa chỉ Email</label>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-floating my-3">
                     <input name="address" value="<?= $user_address['delivery_address'] ?? null ?>" type="text" class="form-control"
                       id="account_address" placeholder="Address" required>
                     <label for="account_address">Địa chỉ nhận hàng</label>
                   </div>
                 </div>
+                <div class="col-md-6">
+                  <div class="form-floating my-3">
+                    <input name="email" value="<?= $user_address['email'] ?? null ?>" type="email"
+                      class="form-control" id="account_email" placeholder="Email Address" required>
+                    <label for="account_email">Địa chỉ Email</label>
+                  </div>
+                </div>
+
                 <div style="color:#22bb33" class=".was-validated ">
                   <?= $_SESSION['successUpdateUser'] ?? null ?>
                 </div>

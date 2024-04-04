@@ -1,7 +1,7 @@
 <main>
     <div class="mb-4 pb-4"></div>
     <section class="shop-checkout container">
-      <h2 class="page-title">Xác nhận thành toán</h2>
+      <h2 class="page-title">Hoàn tất đặt hàng</h2>
       <div class="checkout-steps">
         <a href="?act=view-cart" class="checkout-steps__item active">
           <span class="checkout-steps__item-number">01</span>
@@ -20,7 +20,7 @@
         <a href="?act=confirm" class="checkout-steps__item active">
           <span class="checkout-steps__item-number">03</span>
           <span class="checkout-steps__item-title">
-            <span>Xác nhận thanh toán</span>
+            <span>Hoàn tất đặt hàng</span>
             <em></em>
           </span>
         </a>
@@ -36,69 +36,67 @@
         </div>
         <div class="order-info">
           <div class="order-info__item">
-            <label>Order Number</label>
+            <label>Mã đơn hàng</label>
             <span>13119</span>
           </div>
           <div class="order-info__item">
-            <label>Date</label>
+            <label>Ngày đặt hàng</label>
             <span>27/10/2023</span>
           </div>
           <div class="order-info__item">
-            <label>Total</label>
-            <span>$81.40</span>
+            <label>Tổng tiền thanh toán</label>
+            <span>$<?php $total = 0;
+                          foreach ($cartUser as $c) {
+                            $total += ($c['quantity'] * $c['sale']);
+                          }
+                          echo number_format($total); ?></span>
           </div>
           <div class="order-info__item">
-            <label>Paymetn Method</label>
-            <span>Direct Bank Transfer</span>
+            <label>Phương thức thanh toán</label>
+            <span>Thanh toán khi nhận hàng</span>
           </div>
         </div>
         <div class="checkout__totals-wrapper">
           <div class="checkout__totals">
-            <h3>Order Details</h3>
+            <h3>Chi tiết hóa đơn</h3>
             <table class="checkout-cart-items">
-              <thead>
-                <tr>
-                  <th>PRODUCT</th>
-                  <th>SUBTOTAL</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>
-                    Zessi Dresses x 2
-                  </td>
-                  <td>
-                    $32.50
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Kirby T-Shirt
-                  </td>
-                  <td>
-                    $29.90
-                  </td>
-                </tr>
-              </tbody>
+            <thead>
+                  <tr>
+                    <th>Sản phẩm</th>
+                    <th>Đơn giá</th>
+                    <th>Số lượng</th>
+                    <th>Tổng giá</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <?php foreach ($cartUser as $c) : ?>
+                    <tr>
+                      <td>
+                        <?= $c['title'] ?>
+                      </td>
+                      <td><?= number_format($c['sale']) ?></td>
+                      <td>x<?= $c['quantity'] ?></td>
+                      <td>
+                        $<?= $c['quantity'] * $c['sale'] ?>
+                      </td>
+                    </tr>
+                  <?php endforeach; ?>
+                </tbody>
             </table>
             <table class="checkout-totals">
               <tbody>
-                <tr>
-                  <th>SUBTOTAL</th>
-                  <td>$62.40</td>
-                </tr>
                 <tr>
                   <th>SHIPPING</th>
                   <td>Free shipping</td>
                 </tr>
                 <tr>
-                  <th>VAT</th>
-                  <td>$19</td>
-                </tr>
-                <tr>
-                  <th>TOTAL</th>
-                  <td>$81.40</td>
-                </tr>
+                    <th>Tổng tiền thanh toán</th>
+                    <td>$<?php $total = 0;
+                          foreach ($cartUser as $c) {
+                            $total += ($c['quantity'] * $c['sale']);
+                          }
+                          echo number_format($total); ?></td>
+                  </tr>
               </tbody>
             </table>
           </div>

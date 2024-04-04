@@ -56,6 +56,8 @@
                   <label class="swatch js-swatch" for="swatch-<?= $key ?>" aria-label="<?= $value ?>" data-bs-toggle="tooltip" data-bs-placement="top" title="<?= $value ?>"><?= $value ?></label>
                 <?php endforeach; ?>
               </div>
+              <span><?= $_SESSION['errors']['errorColor'] ?? null ?></span>
+              <?php unset($_SESSION['errors']['errorColor']); ?>
             </div>
             <div class="product-swatch text-swatches">
               <label>Sizes</label>
@@ -65,6 +67,8 @@
                   <label class="swatch js-swatch" for="swatch-<?= $key ?>" aria-label="<?= $value ?>" data-bs-toggle="tooltip" data-bs-placement="top" title="<?= $value ?>"><?= $value ?></label>
                 <?php endforeach; ?>
               </div>
+              <span><?= $_SESSION['errors']['errorSize'] ?? null ?></span>
+              <?php unset($_SESSION['errors']['errorSize']); ?>
             </div>
           </div>
           <div class="product-single__addtocart">
@@ -73,7 +77,7 @@
               <div class="qty-control__reduce">-</div>
               <div class="qty-control__increase">+</div>
             </div><!-- .qty-control -->
-            <button type="submit" id="submitBtn" class="btn btn-primary btn-addtocart">Thêm vào giỏ hàng</button>
+            <button type="submit" id="submitBtn" class="btn btn-primary btn-addtocart hover">Thêm vào giỏ hàng</button>
           </div>
         </form>
         <div class="product-single__meta-info">

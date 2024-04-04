@@ -1,4 +1,21 @@
 <?php 
+function listAllCartByUser($tableName,$id)
+{
+    try {
+        $sql = "SELECT * FROM $tableName WHERE cart_id = :id";
+
+        $stmt = $GLOBALS['conn']->prepare($sql);
+
+        $stmt->bindParam(":id", $id);
+
+        $stmt->execute();
+
+        return $stmt->fetchAll();
+    } catch (\Exception $e) {
+        debug($e);
+    }
+
+}
 function showOneCart($id)
 {
     try {
@@ -70,6 +87,23 @@ function updateCart($cart_id,$product_id,$color,$size,$quantity)
         $stmt->bindParam(":product_id", $product_id);
         $stmt->bindParam(":color", $color);
         $stmt->bindParam(":sizeID", $size);
+
+        $stmt->execute();
+        
+    } catch (\Exception $e) {
+        debug($e);
+    }
+
+}
+function  updateQuantityByItem($item,$quantity)
+{   
+    
+    try {
+        $sql = "UPDATE cart_items SET quantity=quantity$quantity WHERE item = :item";
+        // debug($sql);
+        $stmt = $GLOBALS['conn']->prepare($sql);
+
+        $stmt->bindParam(":item", $item);
 
         $stmt->execute();
         
