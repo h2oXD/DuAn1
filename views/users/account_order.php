@@ -14,11 +14,7 @@
       </div>
       <div class="col-lg-9">
         <div class="page-content my-account__orders-list">
-          <?php
-          if (isset($_GET['detail']) && ($_GET['detail']) == 1) {
-
-
-            ?>
+          <?php if (isset($_GET['detail']) && ($_GET['detail']) == 1) { ?>
             <table class="orders-table">
               <thead>
                 <tr>
