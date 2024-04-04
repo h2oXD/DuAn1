@@ -59,8 +59,8 @@ function getAddressUser($id) {
         $stmt->execute();
 
         $data = $stmt->fetch();
-        
             return $data;
+ 
         
     } catch (\Exception $e) {
         debug($e);
