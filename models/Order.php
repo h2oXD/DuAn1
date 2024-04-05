@@ -16,7 +16,7 @@ function deleteCartItemsByCartID($cart_id){
 }
 function getOrderByID($order_id){
     try {
-        $sql = "SELECT tb1.id,tb3.title,tb3.sale,tb2.quantity FROM orders tb1 
+        $sql = "SELECT tb1.id,tb3.title,tb3.sale,tb2.quantity,tb1.order_date FROM orders tb1 
         JOIN order_details tb2 ON tb1.id = tb2.order_id
         JOIN products tb3 ON tb2.product_id = tb3.id
         WHERE tb1.id = :id";
