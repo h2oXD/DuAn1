@@ -252,6 +252,7 @@ function productUpdate($id)
             "thumbnail" => get_file_upload('thumbnail', $product['thumbnail']),
             "description" => $_POST['description'] ?? $product['description'],
             "product_category_id" => $_POST['product_category_id'] ?? $product['product_category_id'],
+            "product_brand_id" => $_POST['product_brand_id'] ?? $product['product_brand_id'],
             "updated_at" => date('Y-m-d H:i:s'),
         ];
 

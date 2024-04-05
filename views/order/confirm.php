@@ -37,11 +37,11 @@
         <div class="order-info">
           <div class="order-info__item">
             <label>Mã đơn hàng</label>
-            <span>13119</span>
+            <span><?= $orderCf[0]['id'] ?></span>
           </div>
           <div class="order-info__item">
             <label>Ngày đặt hàng</label>
-            <span>27/10/2023</span>
+            <span><?= $orderCf[0]['order_date'] ?></span>
           </div>
           <div class="order-info__item">
             <label>Tổng tiền thanh toán</label>
