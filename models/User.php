@@ -67,6 +67,26 @@ function getAddressUser($id) {
     }
 }
 
+function insertAddressUser($id) {
+    try {
+        $sql = 'SELECT * FROM user_addresses WHERE user_id = :id';
+        
+        $stmt = $GLOBALS['conn']->prepare($sql);
+
+        $stmt->bindParam(':id', $id);
+
+        $stmt->execute();
+
+        $data = $stmt->fetch();
+            
+        return $data;
+ 
+        
+    } catch (\Exception $e) {
+        debug($e);
+    }
+}
+
 
 
 function Show_Detail_Order_ById_User(){

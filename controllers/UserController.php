@@ -203,7 +203,32 @@ function accountAddress()
         exit();
     }
     $user_address = getAddressUser($_SESSION['user']['id']);
-    // debug($user_address);
+
+    
+    if(isset($_POST['account_edit_form'])){
+
+        $data = [
+            "receiver" => $_POST['name'] ?? null,
+            "phone_number" => $_POST['phone_number'] ?? null,
+            "delivery_address" => $_POST['address'] ?? null,
+            "email" => $_POST['email'] ?? null
+        ];
+        // debug($data);
+
+        $check = validateUserAddress($data);
+        if($check){
+            $user_address = getAddressUser($_SESSION['user']['id']);
+            
+            if($user_address == null){
+                $data['user_id'] = $_SESSION['user']['id'];
+                insert('user_addresses',$data);
+            }else{
+                update('user_addresses',$user_address['id'],$data);
+            }
+        }
+        header("Location:" . BASE_URL . "?act=account_address");
+    }
+
 
     $view = "users/account_address";
 
