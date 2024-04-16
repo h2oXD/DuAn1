@@ -60,3 +60,20 @@ function update_category_by_old_image($id,$name,$old_thumbnail,$active)
         }
 
     }
+function showOneByCategory($id)
+    {
+        try {
+            $sql = "SELECT * FROM products WHERE product_category_id = :id";
+
+            $stmt = $GLOBALS['conn']->prepare($sql);
+
+            $stmt->bindParam(":id", $id);
+
+            $stmt->execute();
+
+            return $stmt->fetch() ? true : false;
+        } catch (\Exception $e) {
+            debug($e);
+        }
+
+    }

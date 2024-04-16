@@ -59,3 +59,20 @@ if (!function_exists('deleteBrand')) {
         }
     }
 }
+function showOneByBrand($id)
+    {
+        try {
+            $sql = "SELECT * FROM products WHERE product_brand_id = :id";
+
+            $stmt = $GLOBALS['conn']->prepare($sql);
+
+            $stmt->bindParam(":id", $id);
+
+            $stmt->execute();
+
+            return $stmt->fetch() ? true : false;
+        } catch (\Exception $e) {
+            debug($e);
+        }
+
+    }

@@ -21,3 +21,22 @@ if (!function_exists('checkUniqueColorNameForUpdate')) {
 
     }
 }
+function listAllAttributes($color)
+    {
+        try {
+            $sql = "SELECT * FROM product_attributes WHERE product_color_id = :product_color_id";
+
+            $stmt = $GLOBALS['conn']->prepare($sql);
+
+            $stmt->bindParam(":product_color_id", $color);
+
+            $stmt->execute();
+
+            $data = $stmt->fetch();
+
+            return $data ? true : false;
+        } catch (\Exception $e) {
+            debug($e);
+        }
+
+    }

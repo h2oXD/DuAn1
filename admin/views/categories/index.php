@@ -14,13 +14,18 @@
             <div class="seperator-header">
                 <!-- <h4 class=""></h4> -->
             </div>
-
+            <?php if(isset($_SESSION['xoakhongthanhcong'])): ?>
+            <div class="alert alert-warning alert-dismissible fade show mb-4" role="alert">
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"><svg> ... </svg></button>
+                <strong>Không thành công!</strong> Vui lòng xóa các sản phẩm đang có danh mục này trước.
+            </div>
+            <?php endif; unset($_SESSION['xoakhongthanhcong']); ?>
             <div class="row layout-spacing">
                 <div class="col-lg-12">
                     <div class="statbox widget box box-shadow">
                         <div class="widget-content widget-content-area">
 
-                            <?php if (isset($_SESSION['success'])): ?>
+                            <?php if (isset($_SESSION['success'])) : ?>
                                 <div class="alert alert-success">
                                     <ul>
 
@@ -43,7 +48,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php foreach ($categories as $category): ?>
+                                    <?php foreach ($categories as $category) : ?>
 
 
                                         <tr>
@@ -63,11 +68,8 @@
                                             </td>
 
                                             <td>
-                                                <a class="btn btn-primary"
-                                                    href="<?= BASE_URL_ADMIN ?>?act=category-update&id=<?= $category['id'] ?>">Sửa</a>
-                                                <a class="btn btn-danger"
-                                                    onclick="return confirm('Bạn có chắc chắn xóa không')"
-                                                    href="<?= BASE_URL_ADMIN ?>?act=category-delete&id=<?= $category['id'] ?>">Xóa</a>
+                                                <a class="btn btn-primary" href="<?= BASE_URL_ADMIN ?>?act=category-update&id=<?= $category['id'] ?>">Sửa</a>
+                                                <a class="btn btn-danger" onclick="return confirm('Bạn có chắc chắn xóa không')" href="<?= BASE_URL_ADMIN ?>?act=category-delete&id=<?= $category['id'] ?>">Xóa</a>
 
                                             </td>
                                         </tr>

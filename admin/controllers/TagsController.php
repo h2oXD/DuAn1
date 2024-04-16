@@ -91,6 +91,7 @@ function validateTagUpdate($id, $data)
 }
 function tagDelete($id)
 {
-    delete2('tags', $id);
+    deleteTag($id); 
+    delete2('product_tags', $id);
     header("Location: " . BASE_URL_ADMIN . "?act=tags");
 }

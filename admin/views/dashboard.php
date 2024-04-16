@@ -172,7 +172,7 @@
                             </div>
                         </div>
 
-                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12 layout-spacing">
+                        <!-- <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12 layout-spacing">
                             <div class="widget widget-activity-five">
 
                                 <div class="widget-heading">
@@ -278,9 +278,9 @@
                                     <div class="w-shadow-bottom"></div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
-                        <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 layout-spacing">
+                        <!-- <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 layout-spacing">
                             <div class="widget-four">
                                 <div class="widget-heading">
                                     <h5 class="">Visitors by Browser</h5>
@@ -350,9 +350,9 @@
 
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
-                        <div class="col-xl-8 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <!-- <div class="col-xl-8 col-lg-12 col-md-12 col-sm-12 col-12">
                             <div class="row widget-statistic">
                                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12 layout-spacing">
                                     <div class="widget widget-one_hybrid widget-followers">
@@ -415,9 +415,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
-                        <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 layout-spacing">
+                        <!-- <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 layout-spacing">
                             <div class="widget widget-five">
 
                                 <div class="widget-heading">
@@ -502,9 +502,9 @@
 
                             </div>
 
-                        </div>
+                        </div> -->
 
-                        <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 layout-spacing">
+                        <!-- <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 layout-spacing">
                             <div class="widget widget-card-one">
                                 <div class="widget-content">
 
@@ -560,7 +560,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
                     </div>
 

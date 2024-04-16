@@ -8,7 +8,7 @@
                 <h4>
                     <?= $title ?? null ?>
                 </h4>
-                <a href="?act=users-create"><button class="btn btn-success  mb-2 me-4 btn-lg">Thêm mới</button></a>
+                
             </div>
             <!-- /BREADCRUMB -->
             <div class="seperator-header">

@@ -6,7 +6,7 @@
       <div class="block-newsletter text-center position-relative mt-2 mb-2">
         <h3 class="block__title fs-35 fw-semi-bold mb-2">DON'T MISS THE CHANGE TO GET 40% OFF</h3>
         <p>Get the latest products and news update daily in fastest.</p>
-        <form action="https://uomo-html.flexkitux.com/Demo13/index.html" class="block-newsletter__form">
+        <form action="" method="post" class="block-newsletter__form">
           <input class="form-control" type="email" name="email" placeholder="Your email address">
           <button class="btn btn-secondary fw-medium theme-bg-color border-0" type="submit">JOIN</button>
         </form>

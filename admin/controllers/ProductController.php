@@ -307,7 +307,8 @@ function productDelete($id)
         $GLOBALS['conn']->beginTransaction();
 
         deleteTagsByProductID($id);
-
+        deleteAttributeByProductID($id);
+        deleteOrderDetailByProductID($id);
         delete2('products', $id);
 
         $GLOBALS['conn']->commit();

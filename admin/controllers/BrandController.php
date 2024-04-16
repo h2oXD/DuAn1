@@ -69,8 +69,13 @@ function brand_Update($id){
 }
 
 function brand_Delete($id){
-
-    delete2('product_brands',$id);
+    $brand = showOneByBrand($id);
+    if($brand){
+        $_SESSION['xoakhongthanhcong'] = 'Xóa không thành công';
+    }else{
+        delete2('product_brands',$id);
+    }
+    
     header("Location: ".BASE_URL_ADMIN."?act=brands");
 }
 

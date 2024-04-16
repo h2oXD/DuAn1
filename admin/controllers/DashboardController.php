@@ -1,7 +1,7 @@
 <?php 
 function dashboard(){
     $view = 'dashboard';
-    $title = '';
+    $title = 'Dashboard';
     $style = 'dashboard';
     $script = 'dashboard';
     

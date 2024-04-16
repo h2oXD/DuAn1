@@ -68,7 +68,13 @@ function color_Update($id){
 }
 
 function color_Delete($id){
-    delete2('product_colors',$id);
+    $color = listAllAttributes($id);
+    if($color){
+        $_SESSION['xoakhongthanhcong'] = 'Xóa không thành công';
+    }else{
+        delete2('product_colors',$id);
+    }
+    
     header("Location: ".BASE_URL_ADMIN."?act=colors");
 }
 

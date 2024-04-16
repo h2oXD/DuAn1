@@ -83,7 +83,13 @@ function Category_Update($id){
 }
 
 function Category_Delete($id){
-    delete2('product_categories',$id);
+    $cate = showOneByCategory($id);
+    if($cate){
+        $_SESSION['xoakhongthanhcong'] = 'Xóa không thành công';
+    }else{
+        delete2('product_categories',$id);
+        
+    }
     header("Location: ".BASE_URL_ADMIN."?act=categories");
 }
 

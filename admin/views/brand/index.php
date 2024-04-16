@@ -14,7 +14,12 @@
             <div class="seperator-header">
                 <!-- <h4 class=""></h4> -->
             </div>
-
+            <?php if(isset($_SESSION['xoakhongthanhcong'])): ?>
+            <div class="alert alert-warning alert-dismissible fade show mb-4" role="alert">
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"><svg> ... </svg></button>
+                <strong>Không thành công!</strong> Vui lòng xóa các sản phẩm đang có thương hiệu này trước.
+            </div>
+            <?php endif; unset($_SESSION['xoakhongthanhcong']); ?>
             <div class="row layout-spacing">
                 <div class="col-lg-12">
                     <div class="statbox widget box box-shadow">

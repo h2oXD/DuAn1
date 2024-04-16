@@ -95,7 +95,7 @@ if (!function_exists('deleteColorandSizeByProductID')) {
 
             $stmt->execute();
 
-            return $stmt->fetchAll();
+            
         } catch (\Exception $e) {
             debug($e);
         }
@@ -119,5 +119,35 @@ if (!function_exists('checkAttribute')) {
             debug($e);
         }
 
+    }
+}
+function deleteAttributeByProductID($productID) {
+    try {
+        $sql = "DELETE FROM product_attributes WHERE product_id = :product_id;";
+        
+        $stmt = $GLOBALS['conn']->prepare($sql);
+
+        $stmt->bindParam(':product_id', $productID);
+
+        $stmt->execute();
+
+        
+    } catch (\Exception $e) {
+        debug($e);
+    }
+}
+function deleteOrderDetailByProductID($productID) {
+    try {
+        $sql = "DELETE FROM order_details WHERE product_id = :product_id;";
+        
+        $stmt = $GLOBALS['conn']->prepare($sql);
+
+        $stmt->bindParam(':product_id', $productID);
+
+        $stmt->execute();
+
+        
+    } catch (\Exception $e) {
+        debug($e);
     }
 }

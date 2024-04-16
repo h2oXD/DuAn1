@@ -44,3 +44,71 @@ if (!function_exists('checkUniqueEmailForUpdate')) {
 
     }
 }
+function showOneByUserID($id)
+{
+    try {
+        $sql = "SELECT id FROM orders WHERE user_id = :id";
+
+        $stmt = $GLOBALS['conn']->prepare($sql);
+
+        $stmt->bindParam(":id", $id);
+
+        $stmt->execute();
+
+        return $stmt->fetchAll();
+    } catch (\Exception $e) {
+        debug($e);
+    }
+
+}
+function deleteOrderDetails($id)
+{
+    try {
+        $sql = "DELETE FROM order_details WHERE order_id = :id";
+
+        $stmt = $GLOBALS['conn']->prepare($sql);
+
+        $stmt->bindParam(":id", $id);
+
+        $stmt->execute();
+
+        
+    } catch (\Exception $e) {
+        debug($e);
+    }
+
+}
+function deleteOrderByUserID($id)
+{
+    try {
+        $sql = "DELETE FROM orders WHERE user_id = :id";
+
+        $stmt = $GLOBALS['conn']->prepare($sql);
+
+        $stmt->bindParam(":id", $id);
+
+        $stmt->execute();
+
+        
+    } catch (\Exception $e) {
+        debug($e);
+    }
+
+}
+function deleteUserAddressByUserID($id)
+{
+    try {
+        $sql = "DELETE FROM user_addresses WHERE user_id = :id";
+
+        $stmt = $GLOBALS['conn']->prepare($sql);
+
+        $stmt->bindParam(":id", $id);
+
+        $stmt->execute();
+
+        
+    } catch (\Exception $e) {
+        debug($e);
+    }
+
+}

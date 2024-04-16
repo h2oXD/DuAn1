@@ -77,6 +77,9 @@
         'delete-attribute' => attributeDelete($_GET['id']),
         //size
         'sizes' => sizeListAll(),
+        'sizes-create' =>sizeCreate(),
+        'sizes-update' =>sizeUpdate($_GET['id']),
+        'sizes-delete' =>sizeDelete($_GET['id']),
     };
 
 

@@ -14,7 +14,7 @@ function userCreate()
 {
     $view = 'users/create';
     $title = 'Thêm mới';
-    if (!empty ($_POST)) {
+    if (!empty($_POST)) {
         $data = [
             "name" => $_POST['name'] ?? null,
             "email" => $_POST['email'] ?? null,
@@ -22,7 +22,7 @@ function userCreate()
             "role" => $_POST['role'] ?? null
         ];
         $errors = validateCreate($data);
-        if (!empty ($errors)) {
+        if (!empty($errors)) {
             $_SESSION['errors'] = $errors;
             $_SESSION['data'] = $data;
         } else {
@@ -30,7 +30,6 @@ function userCreate()
             $_SESSION['success'] = "Thao tác thành công";
             header("Location: " . BASE_URL_ADMIN . "?act=users");
         }
-
     }
     require_once PATH_VIEW_ADMIN . "layouts/master.php";
 }
@@ -38,13 +37,13 @@ function validateUpdate($id, $data)
 {
     $errors = [];
     //
-    if (empty ($data['name'])) {
+    if (empty($data['name'])) {
         $errors[] = "Tên không được để trống";
     } else if (strlen($data['name']) > 50) {
         $errors[] = 'Tên không được quá 50 ký tự';
     }
     //
-    if (empty ($data['email'])) {
+    if (empty($data['email'])) {
         $errors[] = "Email không được để trống";
     } else if (!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
         $errors[] = 'Email không đúng định dạng';
@@ -52,7 +51,7 @@ function validateUpdate($id, $data)
         $errors[] = 'Email đã được sử dụng';
     }
     //
-    if (empty ($data['password'])) {
+    if (empty($data['password'])) {
         $errors[] = "Password không được để trống";
     } else if (strlen($data['password']) < 8 || strlen($data['password']) > 20) {
         $errors[] = 'Password phải lơn hơn 8 ký tự và không được quá 20 ký tự';
@@ -68,13 +67,13 @@ function validateCreate($data)
 {
     $errors = [];
     //
-    if (empty ($data['name'])) {
+    if (empty($data['name'])) {
         $errors[] = "Tên không được để trống";
     } else if (strlen($data['name']) > 50) {
         $errors[] = 'Tên không được quá 50 ký tự';
     }
     //
-    if (empty ($data['email'])) {
+    if (empty($data['email'])) {
         $errors[] = "Email không được để trống";
     } else if (!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
         $errors[] = 'Email không đúng định dạng';
@@ -82,7 +81,7 @@ function validateCreate($data)
         $errors[] = 'Email đã được sử dụng';
     }
     //
-    if (empty ($data['password'])) {
+    if (empty($data['password'])) {
         $errors[] = "Password không được để trống";
     } else if (strlen($data['password']) < 8 || strlen($data['password']) > 20) {
         $errors[] = 'Password phải lơn hơn 8 ký tự và không được quá 20 ký tự';
@@ -97,7 +96,7 @@ function validateCreate($data)
 function userShowOne($id)
 {
     $user = showOne('users', $id);
-    if (empty ($user)) {
+    if (empty($user)) {
         e404();
     }
     $view = 'users/show';
@@ -107,10 +106,10 @@ function userShowOne($id)
 function userUpdate($id)
 {
     $user = showOne('users', $id);
-    if (empty ($user)) {
+    if (empty($user)) {
         e404();
     }
-    if (!empty ($_POST)) {
+    if (!empty($_POST)) {
         $data = [
             "name" => $_POST['name'] ?? $user['name'],
             "email" => $_POST['email'] ?? $user['email'],
@@ -120,7 +119,7 @@ function userUpdate($id)
             "role" => $_POST['role'] ?? $user['role']
         ];
         $errors = validateUpdate($id, $data);
-        if (!empty ($errors)) {
+        if (!empty($errors)) {
             $_SESSION['errors'] = $errors;
             $_SESSION['data'] = $data;
         } else {
@@ -128,7 +127,6 @@ function userUpdate($id)
             $_SESSION['success'] = "Thao tác thành công";
             header("Location: " . BASE_URL_ADMIN . "?act=users");
         }
-
     }
     $view = 'users/update';
     $title = 'Cập nhật';
@@ -139,7 +137,7 @@ function userAddressDetail($id)
     $user = showOne('users', $id);
     $user_address = showOneAddress($id);
     // debug($user_address);
-    if (empty ($user)) {
+    if (empty($user)) {
         e404();
     }
 
@@ -149,6 +147,17 @@ function userAddressDetail($id)
 }
 function userDelete($id)
 {
-    delete2('users', $id);
+    $user = showOneByUserID($id);    
+    if($user){
+        foreach($user as $u){
+            deleteOrderDetails($u['id']);
+        }
+        deleteOrderByUserID($id);
+        deleteUserAddressByUserID($id);
+        delete2('users', $id);
+    }else{
+        delete2('users', $id);
+    }
+    
     header("Location: " . BASE_URL_ADMIN . "?act=users");
 }
