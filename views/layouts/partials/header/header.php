@@ -22,7 +22,7 @@
     <div class="header-tools d-flex align-items-center">
       <div class="header-tools__item hover-container">
         <div class="js-hover__open position-relative">
-          <a class="js-search-popup search-field__actor" href="#">
+          <a class="js-search-popup search-field__actor" href="?act=list_sp">
             <svg class="d-block" width="20" height="20" viewBox="0 0 20 20" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <use href="#icon_search" />
@@ -31,7 +31,7 @@
           </a>
         </div>
 
-        <div class="search-popup js-hidden-content">
+        <!-- <div class="search-popup js-hidden-content">
           <form action="https://uomo-html.flexkitux.com/Demo13/search_result.html" method="GET"
             class="search-field container">
             <p class="text-uppercase text-secondary fw-medium mb-4">What are you looking for?</p>
@@ -61,8 +61,8 @@
 
               <div class="search-result row row-cols-5"></div>
             </div>
-          </form><!-- /.header-search -->
-        </div><!-- /.search-popup -->
+          </form>
+        </div> -->
       </div><!-- /.header-tools__item hover-container -->
       <?php if(!isset($_SESSION['user'])){ ?>
         <a href="?act=login" class="header-tools__item header-tools__cart">

@@ -7,7 +7,7 @@
         </div><!-- /.aside-header -->
 
         <div class="pt-4 pt-lg-0"></div>
-
+        <form action="" method="post">
         <div class="accordion" id="categories-list">
           <div class="accordion-item mb-4 pb-3">
             <h5 class="accordion-header" id="accordion-heading-11">
@@ -24,9 +24,12 @@
               <div class="accordion-body px-0 pb-0 pt-3">
                 <ul class="list list-inline mb-0">
                   <li class="list-item">
-                    <?php foreach($categories as $category): ?>
-                    <a href="?act=list_sp&category=<?= $category['id'] ?>" class="menu-link py-1"><?= $category['name'] ?></a><br>
+                  <select name="category" id="">
+                    <option value="">--Chọn-loại-kính--</option>
+                    <?php foreach($categories as $category): ?> 
+                          <option value="<?= $category['id'] ?>"><?= $category['name'] ?></option>
                     <?php endforeach; ?>
+                    </select>
                   </li>
                 </ul>
               </div>
@@ -35,9 +38,9 @@
         </div><!-- /.accordion-item -->
 
 
-        <div class="accordion" id="color-filters">
-          <div class="accordion-item mb-4 pb-3">
-            <h5 class="accordion-header" id="accordion-heading-1">
+        <!-- <div class="accordion" id="color-filters"> -->
+          <!-- <div class="accordion-item mb-4 pb-3"> -->
+            <!-- <h5 class="accordion-header" id="accordion-heading-1">
               <button class="accordion-button p-0 border-0 fs-5 text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-filter-2" aria-expanded="true" aria-controls="accordion-filter-2">
                 Màu sắc
                 <svg class="accordion-button__icon type2" viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg">
@@ -46,21 +49,24 @@
                   </g>
                 </svg>
               </button>
-            </h5>
-            <div id="accordion-filter-2" class="accordion-collapse collapse show border-0" aria-labelledby="accordion-heading-1" data-bs-parent="#color-filters">
+            </h5> -->
+            <!-- <div id="accordion-filter-2" class="accordion-collapse collapse show border-0" aria-labelledby="accordion-heading-1" data-bs-parent="#color-filters">
               <div class="accordion-body px-0 pb-0">
-                <div class="d-flex flex-wrap">
+                <div class="">
+                  <select name="color" id="">
+                    <option value="">-Chọn-màu-sắc-</option>
                   <?php foreach($colors as $color): ?>
-                    <a href="#" class="swatch-size btn btn-sm btn-outline-light mb-3 me-3 js-filter"><?= $color['name'] ?></a>
+                    <option value="<?= $color['id'] ?>"><?= $color['name'] ?></option>
                   <?php endforeach; ?>
+                  </select>
                 </div>
               </div>
-            </div>
-          </div><!-- /.accordion-item -->
-        </div><!-- /.accordion -->
-        <div class="accordion" id="size-filters">
-          <div class="accordion-item mb-4 pb-3">
-            <h5 class="accordion-header" id="accordion-heading-size">
+            </div> -->
+          <!-- </div> -->
+        <!-- </div> -->
+        <!-- <div class="accordion" id="size-filters"> -->
+          <!-- <div class="accordion-item mb-4 pb-3"> -->
+            <!-- <h5 class="accordion-header" id="accordion-heading-size">
               <button class="accordion-button p-0 border-0 fs-5 text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-filter-size" aria-expanded="true" aria-controls="accordion-filter-size">
                 Kích thước
                 <svg class="accordion-button__icon type2" viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg">
@@ -69,18 +75,21 @@
                   </g>
                 </svg>
               </button>
-            </h5>
-            <div id="accordion-filter-size" class="accordion-collapse collapse show border-0" aria-labelledby="accordion-heading-size" data-bs-parent="#size-filters">
+            </h5> -->
+            <!-- <div id="accordion-filter-size" class="accordion-collapse collapse show border-0" aria-labelledby="accordion-heading-size" data-bs-parent="#size-filters">
               <div class="accordion-body px-0 pb-0">
-                <div class="d-flex flex-wrap">
+                <div class="">
+                  <select name="size" id="">
+                    <option value="">-Chọn-kích-thước-</option>
                   <?php foreach($sizes as $size): ?>
-                  <a href="#" class="swatch-size btn btn-sm btn-outline-light mb-3 me-3 js-filter"><?= $size['size'] ?></a>
+                    <option value="<?= $size['id'] ?>"><?= $size['size'] ?></option>
                   <?php endforeach; ?>
+                  </select>
                 </div>
               </div>
-            </div>
-          </div><!-- /.accordion-item -->
-        </div>
+            </div> -->
+          <!-- </div> -->
+        <!-- </div> -->
         <div class="accordion" id="brand-filters">
           <div class="accordion-item mb-4 pb-3">
             <h5 class="accordion-header" id="accordion-heading-brand">
@@ -95,16 +104,13 @@
             </h5>
             <div id="accordion-filter-brand" class="accordion-collapse collapse show border-0" aria-labelledby="accordion-heading-brand" data-bs-parent="#brand-filters">
               <div class="search-field multi-select accordion-body px-0 pb-0">
-                <div class="search-field__input-wrapper mb-3">
-                  <input type="text" name="search_text" class="search-field__input form-control form-control-sm border-light border-2" placeholder="SEARCH">
-                </div>
                 <ul class="multi-select__list list-unstyled">
+                  <select name="brand" id="">
+                    <option value="">-Chọn-thương-hiệu-</option>
                   <?php foreach($brands as $brand): ?>
-                    <li class="search-suggestion__item multi-select__item text-primary js-search-select js-multi-select">
-                      <span class="me-auto"><?= $brand['name'] ?></span>
-                      <span class="text-secondary"><?= $brand['SLsp'] ?></span>
-                    </li>
+                    <option value="<?= $brand['id'] ?>"><?= $brand['name'] ?></option>
                   <?php endforeach; ?>
+                  </select>
                 </ul>
               </div>
             </div>
@@ -129,18 +135,20 @@
               <div class="price-range__info d-flex align-items-center mt-2">
                 <div class="me-auto">
                   <span class="text-secondary">Min Price: </span>
-                  <span class="price-range__min">$<?= $min_price['PriceMin'] ?></span>
+                  <span class="price-range__min">$10</span>
                 </div>
                 <div>
                   <span class="text-secondary">Max Price: </span>
-                  <span class="price-range__max">$<?= $max_price['PriceMax'] ?></span>
+                  <span class="price-range__max">$1000</span>
                 </div>
               </div>
+              <br>
+              <input type="submit" name="find" class="btn btn-primary" value="Tìm kiếm">
             </div>
           </div><!-- /.accordion-item -->
         </div><!-- /.accordion -->
       </div><!-- /.shop-sidebar -->
-
+      </form>              
       <div class="shop-list flex-grow-1">
         <div class="mb-3 pb-2 pb-xl-3"></div>
 
@@ -192,7 +200,7 @@
               </div>
 
               <div class="pc__info position-relative">
-                <p class="pc__category">Dresses</p>
+                <p class="pc__category">Kính</p>
                 <h6 class="pc__title"><a href="?act=chitiet&id=<?= $product['id'] ?>"><?= $product['title'] ?></a></h6>
                 <div class="product-card__price d-flex">
                   <span class="money price"><?= $product['sale'] ?>$</span>

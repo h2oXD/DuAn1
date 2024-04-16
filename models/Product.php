@@ -12,21 +12,34 @@ function getTagsByProduct($id)
 
     return $stmt->fetchAll();
 }
-// function showOneJoinBrandJoinCategories($id)
-// {
-//     $sql = "SELECT tb1.title,tb2.name,tb3.name,tb1.price,tb1.sale,tb1.thumbnail,tb1.description FROM products AS tb1 
-//     JOIN product_categories AS tb2 ON tb1.product_category_id = tb2.id 
-//     JOIN product_brands AS tb3 ON tb1.product_brand_id = tb3.id
-//     WHERE id = :id";
+function findProduct($category,$color,$size,$brand,$minprice,$maxprice)
+{
+    $sql = "SELECT * FROM products";
+    if($category || $color || $size || $brand || $minprice || $maxprice){
+        $query= [];
+        if($category){
+            $query[] = "product_category_id = $category";
+        }
+        if($category){
+            $query[] = "product_brand_id = $brand";
+        }
+        if($minprice && $maxprice){
+            $query[] = "sale BETWEEN $minprice AND $maxprice";
+        }elseif($minprice && !$maxprice){
+            $query[] = "sale >= $minprice";
+        }
+        elseif(!$minprice && $maxprice){
+            $query[] = "sale <= $maxprice";
+        }
+        $queryStr = implode(' AND ',$query);
+        $sql .= ' WHERE '.$queryStr;
+    }
+    $stmt = $GLOBALS['conn']->prepare($sql);
+    // debug($sql);
+    $stmt->execute();
 
-//     $stmt = $GLOBALS['conn']->prepare($sql);
-
-//     $stmt->bindParam(":id", $id);
-
-//     $stmt->execute();
-
-//     return $stmt->fetch();
-// }
+    return $stmt->fetchAll();
+}
 
 function Get_Max_Price(){
     $sql = "SELECT id, MAX(sale) AS PriceMax FROM `products` GROUP BY id";
