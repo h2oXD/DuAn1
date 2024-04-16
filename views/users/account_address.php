@@ -22,9 +22,9 @@
                       id="account_last_name" placeholder="Name" required>
                     <label for="account_name">Họ và tên người nhận hàng</label>
                     <div style="color:rgba(231,74,59,.9)" class=".was-validated ">
-                      <?= $_SESSION['errorName'] ?? null ?>
+                      <?= $_SESSION['errors']['errorReceiver'] ?? null ?>
                     </div>
-                    <?php unset($_SESSION['errorName']); ?>
+                    
                   </div>
                 </div>
                 <div class="col-md-6">
@@ -33,9 +33,9 @@
                       class="form-control" id="account_last_name" placeholder="Name" required>
                     <label for="account_name">Số điện thoại</label>
                     <div style="color:rgba(231,74,59,.9)" class=".was-validated">
-                      <?= $_SESSION['errorSDT'] ?? null ?>
+                      <?= $_SESSION['errors']['phone_number'] ?? null ?>
                     </div>
-                    <?php unset($_SESSION['errorSDT']); ?>
+                    
                   </div>
                 </div>
                 <div class="col-md-6">
@@ -43,6 +43,10 @@
                     <input name="address" value="<?= $user_address['delivery_address'] ?? null ?>" type="text" class="form-control"
                       id="account_address" placeholder="Address" required>
                     <label for="account_address">Địa chỉ nhận hàng</label>
+                    <div style="color:rgba(231,74,59,.9)" class=".was-validated">
+                      <?= $_SESSION['errors']['delivery_address'] ?? null ?>
+                    </div>
+
                   </div>
                 </div>
                 <div class="col-md-6">
@@ -50,20 +54,24 @@
                     <input name="email" value="<?= $user_address['email'] ?? null ?>" type="email"
                       class="form-control" id="account_email" placeholder="Email Address" required>
                     <label for="account_email">Địa chỉ Email</label>
+                    <div style="color:rgba(231,74,59,.9)" class=".was-validated">
+                      <?= $_SESSION['errors']['email'] ?? null ?>
+                    </div>
+
                   </div>
                 </div>
 
                 <div style="color:#22bb33" class=".was-validated ">
                   <?= $_SESSION['successUpdateUser'] ?? null ?>
                 </div>
-                <?php unset($_SESSION['successUpdateUser']); ?>
+                
                 <div style="color:#ffc107" class=".was-validated ">
                   <?= $_SESSION['nothing'] ?? null ?>
                 </div>
-                <?php unset($_SESSION['nothing']); ?>
+                
                 <div class="col-md-12">
                   <div class="my-3">
-                    <button name="account_edit_form" type="submit" class="btn btn-primary">Lưu thay đổi</button>
+                    <a href=""><button name="account_edit_form" type="submit" class="btn btn-primary">Lưu thay đổi</button></a>
                   </div>
                 </div>
             </form>
@@ -72,3 +80,4 @@
         </div>
     </section>
 </main>
+<?php unset($_SESSION['errors']); ?>
