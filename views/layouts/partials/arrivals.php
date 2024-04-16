@@ -44,7 +44,7 @@
             <div class="swiper-slide product-card product-card_style10">
               <div class="position-relative pb-3">
                 <div class="pc__img-wrapper pc__img-wrapper_wide3">
-                  <a href="?act=list_sp"><img loading="lazy" src="<?= $productarrival['thumbnail']?>" width="256" height="201" alt="Cropped Faux leather Jacket" class="pc__img"></a>
+                  <a href="?act=chitiet&id=<?= $productarrival['id'] ?>"><img loading="lazy" src="<?= $productarrival['thumbnail']?>" width="256" height="201" alt="Cropped Faux leather Jacket" class="pc__img"></a>
                   <button class="pc__btn-wl position-absolute rounded-circle border-0 text-secondary js-add-wishlist bg-transparent" title="Add To Wishlist">
                     <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><use href="#icon_heart"></use></svg>
                   </button>
@@ -52,7 +52,7 @@
               </div>
 
               <div class="pc__info position-relative d-flex flex-column align-items-center mb-3 mb-md-4 mb-xxl-5">
-                <h6 class="pc__title text-uppercase fw-semi-bold"><a href="?act=list_sp"><?= $productarrival['title'] ?></a></h6>
+                <h6 class="pc__title text-uppercase fw-semi-bold"><a href="?act=chitiet&id=<?= $productarrival['id'] ?>"><?= $productarrival['title'] ?></a></h6>
                 <div class="product-card__price d-flex text-secondary mb-2">
                   <span class="money price"><del>$<?= $productarrival['price'] ?></del></span>
                 </div>

@@ -158,7 +158,7 @@
                                                                     tiết</a>
                                                                 <a style="font-size: 11px; padding: 7px;" class="btn btn-success" href="<?= BASE_URL_ADMIN ?>?act=orderStatus&id=<?= $order['orderID'] ?>&trangthai=2">Xác
                                                                     nhận lấy hàng</a>
-                                                                <a style="font-size: 11px; padding: 7px;" class="btn btn-danger" onclick="return confirm('Bạn có chắc chắn muốn hủy không')" href="<?= BASE_URL_ADMIN ?>?act=order-delete&id=<?= $order['orderID'] ?>&trangthai=4">Hủy đơn hàng</a>
+                                                                <a style="font-size: 11px; padding: 7px;" class="btn btn-danger" onclick="return confirm('Bạn có chắc chắn muốn hủy không')" href="<?= BASE_URL_ADMIN ?>?act=orderStatus&id=<?= $order['orderID'] ?>&trangthai=4">Hủy</a>
 
                                                             </td>
                                                         </tr>

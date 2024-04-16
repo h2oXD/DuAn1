@@ -44,7 +44,7 @@
         <h1 class="product-single__name"><?= $product['title'] ?></h1>
 
         <div class="product-single__price">
-          <span class="current-price"><?= $product['sale'] ?>$</span>
+          <span class="current-price">Giá: $<?= $product['sale'] ?></span>
         </div>
         <form action="?act=add-cart&id=<?= $product['id'] ?>" name="addtocart-form" method="post">
           <div class="product-single__swatches">
